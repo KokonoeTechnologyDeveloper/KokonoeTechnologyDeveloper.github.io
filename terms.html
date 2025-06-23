@@ -481,8 +481,61 @@
         </div>
     </footer>
 
+
     <script>
-        // [Previous JavaScript code for language switching remains the same]
+        // Language switching functionality
+        const languageButtons = document.querySelectorAll('.language-btn');
+        const contentSections = document.querySelectorAll('.content-section');
+
+        // Set default language based on browser preference
+        function getDefaultLanguage() {
+            const lang = navigator.language.toLowerCase();
+            if (lang.includes('zh')) {
+                return lang.includes('hant') || lang.includes('tw') || lang.includes('hk') 
+                    ? 'zh-hant' 
+                    : 'zh-hans';
+            }
+            return 'en';
+        }
+
+        // Initialize with default language
+        function initializeLanguage() {
+            const defaultLang = getDefaultLanguage();
+            switchLanguage(defaultLang);
+        }
+
+        function switchLanguage(lang) {
+            // Update buttons
+            languageButtons.forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+
+            // Update content visibility
+            contentSections.forEach(section => {
+                section.classList.toggle('active', section.id === `content-${lang}`);
+            });
+
+            // Update page language
+            document.documentElement.lang = lang;
+
+            // Store preference
+            localStorage.setItem('preferred-language', lang);
+        }
+
+        // Event listeners
+        languageButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                switchLanguage(btn.dataset.lang);
+            });
+        });
+
+        // Initialize with stored preference or default
+        const storedLang = localStorage.getItem('preferred-language');
+        if (storedLang) {
+            switchLanguage(storedLang);
+        } else {
+            initializeLanguage();
+        }
     </script>
 </body>
 </html>
