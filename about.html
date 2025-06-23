@@ -3,14 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>關於我們 - 多語言聽寫助手</title>
+    <title>關於我們 - 學習科技開發</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            line-height: 1.6;
+            line-height: 1.8;
             margin: 0;
             padding: 0;
             color: #333;
+            background-color: #f5f5f5;
         }
         .container {
             max-width: 800px;
@@ -38,27 +39,26 @@
         nav ul li a:hover {
             text-decoration: underline;
         }
-        .story-section {
+        .vision-section {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
             margin: 40px 0;
-            padding: 20px;
-            background: #f9f9f9;
-            border-radius: 8px;
+        }
+        .vision-text {
+            font-size: 1.1em;
+            line-height: 1.8;
         }
         .highlight {
             color: #2c3e50;
             font-weight: bold;
         }
-        .values {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+        .principle {
             margin: 30px 0;
-        }
-        .value-card {
             padding: 20px;
-            background: #fff;
             border-left: 4px solid #2c3e50;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            background: #f8f9fa;
         }
         footer {
             background: #34495e;
@@ -72,11 +72,11 @@
 <body>
     <header>
         <div class="container">
-            <h1>多語言聽寫助手</h1>
+            <h1>學習科技開發</h1>
             <nav>
                 <ul>
                     <li><a href="index.html">首頁</a></li>
-                    <li><a href="about.html">關於產品</a></li>
+                    <li><a href="about.html">關於我們</a></li>
                     <li><a href="contact.html">聯絡我們</a></li>
                     <li><a href="privacy.html">隱私政策</a></li>
                 </ul>
@@ -85,50 +85,35 @@
     </header>
 
     <main class="container">
-        <h2>關於產品</h2>
-        
-        <section class="story-section">
-            <h3>產品理念</h3>
-            <p>多語言聽寫助手源於一個簡單的想法：讓語言學習變得更輕鬆、更有效率。作為一位軟體開發者，我深知科技如何改變學習方式。這款應用程式誕生於對教育科技的熱情，以及對解決實際學習問題的承諾。</p>
-        </section>
+        <div class="vision-section">
+            <h2>開發理念</h2>
+            
+            <div class="vision-text">
+                <p>在這個資訊爆炸的時代，學習方式和教育資源都在快速變化。科技不應該只是知識的載體，而應該成為真正助力學習的工具。</p>
 
-        <section class="values">
-            <div class="value-card">
-                <h3>使命</h3>
-                <p>打造一個全方位的語言學習工具，幫助自學者提升聽寫能力，同時為家長準備教材提供便利的解決方案。</p>
+                <p>懷著這樣的信念，我們的每一個產品都秉持三個核心理念：</p>
+
+                <div class="principle">
+                    <h3><span class="highlight">靈活多元</span></h3>
+                    <p>教育沒有固定模式，學習更不該被侷限。我們的產品設計以兼容並蓄為核心，能夠適應各種學習內容和教學方式。無論是傳統教材、網路資源，還是自創內容，都能輕鬆整合運用，讓學習不受形式所限。</p>
+                </div>
+
+                <div class="principle">
+                    <h3><span class="highlight">化繁為簡</span></h3>
+                    <p>時間是最寶貴的資源。我們致力於將複雜的學習準備過程簡化為幾個點擊，讓教師能專注於教學，讓家長能騰出更多陪伴時間，讓學習者能把精力投注在真正的學習上。一鍵完成原本需要半小時的準備工作，這就是我們對效率的追求。</p>
+                </div>
+
+                <div class="principle">
+                    <h3><span class="highlight">創造可能</span></h3>
+                    <p>科技應該打破學習的界限，創造新的可能性。透過創新的功能設計，我們讓單調的練習變得有趣，讓獨自學習不再孤單，讓知識的獲取不再受時間和空間的限制。我們相信，每一項新功能都應該為學習開啟一扇新的大門。</p>
+                </div>
             </div>
-            <div class="value-card">
-                <h3>願景</h3>
-                <p>期望透過科技創新，讓語言學習變得更有趣、更高效，並持續優化功能以滿足用戶需求。</p>
-            </div>
-        </section>
-
-        <section>
-            <h3>我們的特色</h3>
-            <p>作為一個獨立開發者，我專注於：</p>
-            <ul>
-                <li>持續優化用戶體驗</li>
-                <li>快速回應用戶反饋</li>
-                <li>提供個人化的技術支援</li>
-                <li>保持產品的穩定性和可靠性</li>
-            </ul>
-        </section>
-
-        <section>
-            <h3>未來發展</h3>
-            <p>我們將持續擴展功能，包括：</p>
-            <ul>
-                <li>加入更多語言支援</li>
-                <li>開發更多客製化選項</li>
-                <li>優化文字識別功能</li>
-                <li>提供更多學習數據分析</li>
-            </ul>
-        </section>
+        </div>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 多語言聽寫助手. 版權所有.</p>
+            <p>&copy; 2025 學習科技開發. 版權所有.</p>
         </div>
     </footer>
 </body>
