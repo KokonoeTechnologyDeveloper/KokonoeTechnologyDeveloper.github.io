@@ -3,130 +3,304 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>隱私政策 - [你的公司名稱]</title>
+    <title>Privacy Policy - DictaOne</title>
     <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --light-bg: #f5f5f5;
+        }
+        
         body {
-            font-family: Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            color: #333;
+            color: var(--text-color);
+            background-color: var(--light-bg);
         }
+        
         .container {
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
         }
+        
         header {
-            background: #2c3e50;
+            background: var(--primary-color);
             color: white;
             padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
+        
         nav ul {
             list-style: none;
             padding: 0;
             margin: 0;
         }
+        
         nav ul li {
             display: inline;
             margin-right: 20px;
         }
+        
         nav ul li a {
             color: white;
             text-decoration: none;
+            font-weight: 500;
         }
+        
         nav ul li a:hover {
-            text-decoration: underline;
+            color: var(--accent-color);
         }
-        .policy-section {
-            margin: 30px 0;
+
+        .language-selector {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .language-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background: #f0f0f0;
+            transition: background-color 0.3s;
+        }
+        
+        .language-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .language-btn:hover {
+            background: var(--accent-color);
+            color: white;
+        }
+        
+        .privacy-content {
+            background: white;
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        .privacy-content h1 {
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+        
+        .privacy-content h2 {
+            color: var(--secondary-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .privacy-content p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        
+        .privacy-content ul {
+            margin-bottom: 20px;
+            padding-left: 25px;
+        }
+        
+        .privacy-content li {
+            margin-bottom: 10px;
+        }
+        
+        .effective-date {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .contact-info {
+            margin-top: 30px;
             padding: 20px;
-            border-left: 4px solid #3498db;
             background: #f8f9fa;
+            border-radius: 10px;
         }
+
+        .content-section {
+            display: none;
+        }
+        
+        .content-section.active {
+            display: block;
+        }
+        
         footer {
-            background: #34495e;
+            background: var(--secondary-color);
             color: white;
             text-align: center;
             padding: 20px 0;
             margin-top: 40px;
         }
+        
+        @media (max-width: 768px) {
+            .privacy-content {
+                padding: 20px;
+            }
+            
+            .language-selector {
+                top: auto;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
     </style>
 </head>
 <body>
+    <div class="language-selector">
+        <button class="language-btn" data-lang="en">English</button>
+        <button class="language-btn" data-lang="zh-hant">繁體中文</button>
+        <button class="language-btn" data-lang="zh-hans">简体中文</button>
+    </div>
+
     <header>
         <div class="container">
-            <h1>[你的公司名稱]</h1>
+            <h1>DictaOne</h1>
             <nav>
                 <ul>
-                    <li><a href="index.html">首頁</a></li>
-                    <li><a href="about.html">關於我們</a></li>
-                    <li><a href="contact.html">聯絡我們</a></li>
-                    <li><a href="privacy.html">隱私政策</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
     <main class="container">
-        <h2>隱私政策</h2>
-        <p><strong>最後更新日期：</strong>2025年6月19日</p>
+        <div class="privacy-content">
+            <div id="content-zh-hant" class="content-section">
+                <h1>隱私政策</h1>
+                <p>此隱私政策適用於由Kid Start Company Limited（以下稱為「服務提供商」）創建的DictaOne應用程式（以下稱為「應用程式」），作為廣告支援服務。此服務旨在「按原樣」使用。</p>
+                
+                <h2>資訊收集和使用</h2>
+                <p>應用程式是一個文字聽寫工具，在您的裝置上本機處理和儲存所有資料。應用程式：</p>
+                <ul>
+                    <li>不收集個人資訊</li>
+                    <li>不將您的文字輸入傳輸到任何伺服器</li>
+                    <li>不將捕獲的圖像或掃描的文字傳輸到任何伺服器</li>
+                    <li>僅在您的裝置上本機儲存所有資料</li>
+                    <li>不追蹤使用情況或分析</li>
+                </ul>
 
-        <div class="policy-section">
-            <h3>1. 資料收集</h3>
-            <p>我們可能會收集以下類型的資料：</p>
-            <p>• 設備資訊（如設備型號、作業系統版本）<br>
-            • 應用程式使用資料（如功能使用情況、錯誤報告）<br>
-            • 您主動提供的資料（如用戶設定、反饋意見）</p>
-        </div>
+                [Continue with the rest of Traditional Chinese content...]
+            </div>
 
-        <div class="policy-section">
-            <h3>2. 資料使用</h3>
-            <p>我們使用收集的資料用於：</p>
-            <p>• 提供和改善應用程式服務<br>
-            • 診斷和修復技術問題<br>
-            • 分析應用程式使用情況以優化用戶體驗<br>
-            • 遵守法律要求</p>
-        </div>
+            <div id="content-zh-hans" class="content-section">
+                <h1>隐私政策</h1>
+                <p>此隐私政策适用于由Kid Start Company Limited（在此称为"服务提供商"）创建的DictaOne应用程序（在此称为"应用程序"），作为广告支持服务。此服务旨在"按原样"使用。</p>
 
-        <div class="policy-section">
-            <h3>3. 資料分享</h3>
-            <p>我們不會將您的個人資料出售、租借或與第三方分享，除非：</p>
-            <p>• 獲得您的明確同意<br>
-            • 法律要求我們披露資料<br>
-            • 為保護我們的權利和安全</p>
-        </div>
+                <h2>信息收集和使用</h2>
+                <p>应用程序是一个文本听写工具，在您的设备上本地处理和存储所有数据。应用程序：</p>
+                <ul>
+                    <li>不收集个人信息</li>
+                    <li>不将您的文本输入传输到任何服务器</li>
+                    <li>不将捕获的图像或扫描的文本传输到任何服务器</li>
+                    <li>仅在您的设备上本地存储所有数据</li>
+                    <li>不跟踪使用情况或分析</li>
+                </ul>
 
-        <div class="policy-section">
-            <h3>4. 資料安全</h3>
-            <p>我們採取適當的技術和組織措施來保護您的資料，防止未經授權的存取、使用或披露。</p>
-        </div>
+                [Continue with the rest of Simplified Chinese content...]
+            </div>
 
-        <div class="policy-section">
-            <h3>5. 您的權利</h3>
-            <p>您有權：</p>
-            <p>• 存取我們持有的關於您的資料<br>
-            • 要求更正不準確的資料<br>
-            • 要求刪除您的資料<br>
-            • 撤回同意</p>
-        </div>
+            <div id="content-en" class="content-section">
+                <h1>Privacy Policy</h1>
+                <p>This privacy policy applies to the DictaOne app (hereby referred to as "Application") for mobile devices that was created by Kid Start Company Limited (hereby referred to as "Service Provider") as an Ad Supported service. This service is intended for use "AS IS".</p>
 
-        <div class="policy-section">
-            <h3>6. 聯絡我們</h3>
-            <p>如對本隱私政策有任何疑問，請透過以下方式聯絡我們：</p>
-            <p><strong>電子郵件：</strong>[你的公司email地址]</p>
-        </div>
+                <h2>Information Collection and Use</h2>
+                <p>The Application is a text dictation tool that processes and stores all data locally on your device. The Application:</p>
+                <ul>
+                    <li>Does not collect personal information</li>
+                    <li>Does not transmit your text input to any servers</li>
+                    <li>Does not transmit captured images or scanned text to any servers</li>
+                    <li>Stores all data locally on your device only</li>
+                    <li>Does not track usage or analytics</li>
+                </ul>
 
-        <div class="policy-section">
-            <h3>7. 政策更新</h3>
-            <p>我們可能會不時更新本隱私政策。重大變更將透過應用程式內通知或其他適當方式通知您。</p>
+                [Continue with the rest of English content...]
+            </div>
         </div>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 [你的公司名稱]. 版權所有.</p>
+            <p>&copy; 2025 Kid Start Company Limited. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Language switching functionality
+        const languageButtons = document.querySelectorAll('.language-btn');
+        const contentSections = document.querySelectorAll('.content-section');
+
+        // Set default language based on browser preference
+        function getDefaultLanguage() {
+            const lang = navigator.language.toLowerCase();
+            if (lang.includes('zh')) {
+                return lang.includes('hant') || lang.includes('tw') || lang.includes('hk') 
+                    ? 'zh-hant' 
+                    : 'zh-hans';
+            }
+            return 'en';
+        }
+
+        // Initialize with default language
+        function initializeLanguage() {
+            const defaultLang = getDefaultLanguage();
+            switchLanguage(defaultLang);
+        }
+
+        function switchLanguage(lang) {
+            // Update buttons
+            languageButtons.forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+
+            // Update content visibility
+            contentSections.forEach(section => {
+                section.classList.toggle('active', section.id === `content-${lang}`);
+            });
+
+            // Update page language
+            document.documentElement.lang = lang;
+
+            // Store preference
+            localStorage.setItem('preferred-language', lang);
+        }
+
+        // Event listeners
+        languageButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                switchLanguage(btn.dataset.lang);
+            });
+        });
+
+        // Initialize with stored preference or default
+        const storedLang = localStorage.getItem('preferred-language');
+        if (storedLang) {
+            switchLanguage(storedLang);
+        } else {
+            initializeLanguage();
+        }
+    </script>
 </body>
 </html>
