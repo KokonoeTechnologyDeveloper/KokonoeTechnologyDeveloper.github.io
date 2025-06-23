@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>學習科技開發</title>
+    <title>DictaOne - Kid Start Company Limited</title>
     <style>
         :root {
             --primary-color: #2c3e50;
@@ -54,6 +54,38 @@
         
         nav ul li a:hover {
             color: var(--accent-color);
+        }
+
+        .language-selector {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            gap: 10px;
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .language-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            background: #f0f0f0;
+            transition: background-color 0.3s;
+        }
+        
+        .language-btn.active {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .language-btn:hover {
+            background: var(--accent-color);
+            color: white;
         }
         
         .app-showcase {
@@ -139,6 +171,14 @@
             padding: 20px 0;
             margin-top: 40px;
         }
+
+        .content-section {
+            display: none;
+        }
+        
+        .content-section.active {
+            display: block;
+        }
         
         @media (max-width: 768px) {
             .app-content {
@@ -158,13 +198,19 @@
     </style>
 </head>
 <body>
+    <div class="language-selector">
+        <button class="language-btn" data-lang="en">English</button>
+        <button class="language-btn" data-lang="zh-hant">繁體中文</button>
+        <button class="language-btn" data-lang="zh-hans">简体中文</button>
+    </div>
+
     <header>
         <div class="container">
-            <h1>學習科技開發</h1>
+            <h1>DictaOne</h1>
             <nav>
                 <ul>
-                    <li><a href="index.html">首頁</a></li>
-                    <li><a href="about.html">關於我們</a></li>
+                    <li><a href="index.html" class="nav-link" data-key="nav.home">首頁</a></li>
+                    <li><a href="about.html" class="nav-link" data-key="nav.about">關於我們</a></li>
                 </ul>
             </nav>
         </div>
@@ -172,24 +218,74 @@
 
     <main class="container">
         <section class="app-showcase">
-            <div class="app-content">
-                <img src="path-to-your-app-icon.png" alt="多語言聽寫助手" class="app-icon">
-                <div class="app-info">
-                    <h2 class="app-title">多語言聽寫助手</h2>
-                    <p class="app-description">
-                        專為語言學習者設計的智能工具，支援多種語言的聽寫練習，
-                        讓學習更有效率、更有趣味。
-                    </p>
-                    
-                    <div class="app-links">
-                        <a href="your-android-app-link" class="store-button" target="_blank">
-                            在 Google Play 下載
-                        </a>
+            <div id="content-en" class="content-section">
+                <div class="app-content">
+                    <img src="path-to-your-app-icon.png" alt="DictaOne" class="app-icon">
+                    <div class="app-info">
+                        <h2 class="app-title">DictaOne</h2>
+                        <p class="app-description">
+                            An intelligent tool designed for language learners, supporting multi-language dictation practice
+                            for more efficient and engaging learning.
+                        </p>
+                        
+                        <div class="app-links">
+                            <a href="your-android-app-link" class="store-button" target="_blank">
+                                Download on Google Play
+                            </a>
+                        </div>
+                        
+                        <div class="legal-links">
+                            <a href="terms.html">Terms of Service</a>
+                            <a href="privacy.html">Privacy Policy</a>
+                        </div>
                     </div>
-                    
-                    <div class="legal-links">
-                        <a href="terms.html">服務條款</a>
-                        <a href="privacy.html">隱私政策</a>
+                </div>
+            </div>
+
+            <div id="content-zh-hant" class="content-section">
+                <div class="app-content">
+                    <img src="path-to-your-app-icon.png" alt="DictaOne" class="app-icon">
+                    <div class="app-info">
+                        <h2 class="app-title">DictaOne</h2>
+                        <p class="app-description">
+                            專為語言學習者設計的智能工具，支援多種語言的聽寫練習，
+                            讓學習更有效率、更有趣味。
+                        </p>
+                        
+                        <div class="app-links">
+                            <a href="your-android-app-link" class="store-button" target="_blank">
+                                在 Google Play 下載
+                            </a>
+                        </div>
+                        
+                        <div class="legal-links">
+                            <a href="terms.html">服務條款</a>
+                            <a href="privacy.html">隱私政策</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="content-zh-hans" class="content-section">
+                <div class="app-content">
+                    <img src="path-to-your-app-icon.png" alt="DictaOne" class="app-icon">
+                    <div class="app-info">
+                        <h2 class="app-title">DictaOne</h2>
+                        <p class="app-description">
+                            专为语言学习者设计的智能工具，支持多种语言的听写练习，
+                            让学习更有效率、更有趣味。
+                        </p>
+                        
+                        <div class="app-links">
+                            <a href="your-android-app-link" class="store-button" target="_blank">
+                                在 Google Play 下载
+                            </a>
+                        </div>
+                        
+                        <div class="legal-links">
+                            <a href="terms.html">服务条款</a>
+                            <a href="privacy.html">隐私政策</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -198,8 +294,64 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 學習科技開發. 版權所有.</p>
+            <p>&copy; 2025 Kid Start Company Limited. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Language switching functionality
+        const languageButtons = document.querySelectorAll('.language-btn');
+        const contentSections = document.querySelectorAll('.content-section');
+
+        // Set default language based on browser preference
+        function getDefaultLanguage() {
+            const lang = navigator.language.toLowerCase();
+            if (lang.includes('zh')) {
+                return lang.includes('hant') || lang.includes('tw') || lang.includes('hk') 
+                    ? 'zh-hant' 
+                    : 'zh-hans';
+            }
+            return 'en';
+        }
+
+        // Initialize with default language
+        function initializeLanguage() {
+            const defaultLang = getDefaultLanguage();
+            switchLanguage(defaultLang);
+        }
+
+        function switchLanguage(lang) {
+            // Update buttons
+            languageButtons.forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+
+            // Update content visibility
+            contentSections.forEach(section => {
+                section.classList.toggle('active', section.id === `content-${lang}`);
+            });
+
+            // Update page language
+            document.documentElement.lang = lang;
+
+            // Store preference
+            localStorage.setItem('preferred-language', lang);
+        }
+
+        // Event listeners
+        languageButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                switchLanguage(btn.dataset.lang);
+            });
+        });
+
+        // Initialize with stored preference or default
+        const storedLang = localStorage.getItem('preferred-language');
+        if (storedLang) {
+            switchLanguage(storedLang);
+        } else {
+            initializeLanguage();
+        }
+    </script>
 </body>
 </html>
