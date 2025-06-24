@@ -81,35 +81,47 @@
         }
 
         .language-selector {
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 4px;
+            display: flex;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            padding: 2px;
             border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
         }
         
         .language-btn {
-            padding: 6px 12px;
+            padding: 8px 14px;
             border: none;
-            border-radius: 16px;
+            border-radius: 6px;
             cursor: pointer;
             background: transparent;
-            color: white;
-            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 13px;
             font-weight: 500;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
             position: relative;
-            min-width: 40px;
+            min-width: 45px;
+            z-index: 2;
         }
         
         .language-btn.active {
             background: white;
             color: var(--primary-color);
-            box-shadow: var(--shadow-light);
+            font-weight: 600;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
         }
         
         .language-btn:hover:not(.active) {
-            background: rgba(255, 255, 255, 0.2);
             color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .separator {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            padding: 0 4px;
         }
         
         .app-showcase {
@@ -142,6 +154,14 @@
             color: white;
             font-size: 3em;
             font-weight: bold;
+            overflow: hidden;
+        }
+
+        .app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 36px;
         }
         
         .app-info {
@@ -239,9 +259,14 @@
             }
             
             .language-btn {
-                padding: 5px 10px;
-                font-size: 13px;
+                padding: 6px 10px;
+                font-size: 12px;
                 min-width: 35px;
+            }
+
+            .separator {
+                font-size: 12px;
+                padding: 0 3px;
             }
             
             .app-content {
@@ -275,9 +300,14 @@
 
         @media (max-width: 480px) {
             .language-btn {
-                padding: 4px 8px;
-                font-size: 12px;
+                padding: 5px 8px;
+                font-size: 11px;
                 min-width: 30px;
+            }
+
+            .separator {
+                font-size: 11px;
+                padding: 0 2px;
             }
         }
     </style>
@@ -290,14 +320,16 @@
                     <h1>DictaOne</h1>
                     <nav>
                         <ul>
-                            <li><a href="index.html" class="nav-link" data-key="nav.home">首頁</a></li>
-                            <li><a href="about.html" class="nav-link" data-key="nav.about">關於我們</a></li>
+                            <li><a href="index.html" class="nav-link nav-home">首頁</a></li>
+                            <li><a href="about.html" class="nav-link nav-about">關於我們</a></li>
                         </ul>
                     </nav>
                 </div>
                 <div class="language-selector">
                     <button class="language-btn" data-lang="en">Eng</button>
+                    <span class="separator">|</span>
                     <button class="language-btn" data-lang="zh-hant">繁</button>
+                    <span class="separator">|</span>
                     <button class="language-btn" data-lang="zh-hans">简</button>
                 </div>
             </div>
@@ -308,7 +340,9 @@
         <section class="app-showcase">
             <div id="content-en" class="content-section">
                 <div class="app-content">
-                    <div class="app-icon">D1</div>
+                    <div class="app-icon">
+                        <img src="images/DictaOneIcon.PNG" alt="DictaOne App Icon" onerror="this.style.display='none'; this.parentNode.innerHTML='D1';">
+                    </div>
                     <div class="app-info">
                         <h2 class="app-title">DictaOne</h2>
                         <p class="app-description">
@@ -332,7 +366,9 @@
 
             <div id="content-zh-hant" class="content-section">
                 <div class="app-content">
-                    <div class="app-icon">D1</div>
+                    <div class="app-icon">
+                        <img src="images/DictaOneIcon.PNG" alt="DictaOne App Icon" onerror="this.style.display='none'; this.parentNode.innerHTML='D1';">
+                    </div>
                     <div class="app-info">
                         <h2 class="app-title">DictaOne</h2>
                         <p class="app-description">
@@ -356,7 +392,9 @@
 
             <div id="content-zh-hans" class="content-section">
                 <div class="app-content">
-                    <div class="app-icon">D1</div>
+                    <div class="app-icon">
+                        <img src="images/DictaOneIcon.PNG" alt="DictaOne App Icon" onerror="this.style.display='none'; this.parentNode.innerHTML='D1';">
+                    </div>
                     <div class="app-info">
                         <h2 class="app-title">DictaOne</h2>
                         <p class="app-description">
@@ -391,6 +429,22 @@
         const languageButtons = document.querySelectorAll('.language-btn');
         const contentSections = document.querySelectorAll('.content-section');
 
+        // Translation data
+        const translations = {
+            'en': {
+                'nav.home': 'Home',
+                'nav.about': 'About Us'
+            },
+            'zh-hant': {
+                'nav.home': '首頁',
+                'nav.about': '關於我們'
+            },
+            'zh-hans': {
+                'nav.home': '首页',
+                'nav.about': '关于我们'
+            }
+        };
+
         // Set default language based on browser preference
         function getDefaultLanguage() {
             const lang = navigator.language.toLowerCase();
@@ -400,6 +454,15 @@
                     : 'zh-hans';
             }
             return 'en';
+        }
+
+        // Update navigation text
+        function updateNavigation(lang) {
+            const navHome = document.querySelector('.nav-home');
+            const navAbout = document.querySelector('.nav-about');
+            
+            if (navHome) navHome.textContent = translations[lang]['nav.home'];
+            if (navAbout) navAbout.textContent = translations[lang]['nav.about'];
         }
 
         // Initialize with default language
@@ -418,6 +481,9 @@
             contentSections.forEach(section => {
                 section.classList.toggle('active', section.id === `content-${lang}`);
             });
+
+            // Update navigation
+            updateNavigation(lang);
 
             // Update page language
             document.documentElement.lang = lang;
