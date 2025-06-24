@@ -3,14 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - DictaOne</title>
+    <title>隱私政策 - 科技有限公司</title>
+    <link rel="icon" type="image/png" href="images/Company_Icon.png">
     <style>
         :root {
             --primary-color: #2c3e50;
             --secondary-color: #34495e;
             --accent-color: #3498db;
             --text-color: #333;
-            --light-bg: #f5f5f5;
+            --light-bg: #f8f9fa;
+            --border-color: #e9ecef;
+            --shadow-light: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-medium: 0 4px 16px rgba(0,0,0,0.12);
         }
         
         body {
@@ -23,16 +27,48 @@
         }
         
         .container {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
         
         header {
-            background: var(--primary-color);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
             color: white;
             padding: 1rem 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: var(--shadow-medium);
+            position: relative;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-left {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .company-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 0;
+        }
+
+        .company-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .company-name {
+            font-size: 1.5em;
+            font-weight: 600;
         }
         
         nav ul {
@@ -50,92 +86,133 @@
             color: white;
             text-decoration: none;
             font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
         }
         
         nav ul li a:hover {
-            color: var(--accent-color);
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
         }
 
         .language-selector {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
             display: flex;
-            gap: 10px;
-            background: white;
-            padding: 10px;
+            background: rgba(255, 255, 255, 0.15);
             border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 2px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
         }
         
         .language-btn {
-            padding: 8px 16px;
+            padding: 8px 14px;
             border: none;
-            border-radius: 4px;
+            border-radius: 6px;
             cursor: pointer;
-            background: #f0f0f0;
-            transition: background-color 0.3s;
+            background: transparent;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            position: relative;
+            min-width: 45px;
+            z-index: 2;
         }
         
         .language-btn.active {
-            background: var(--primary-color);
-            color: white;
+            background: white;
+            color: var(--primary-color);
+            font-weight: 600;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
         }
         
-        .language-btn:hover {
-            background: var(--accent-color);
+        .language-btn:hover:not(.active) {
             color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .separator {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            padding: 0 4px;
+        }
+
+        .privacy-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
         }
         
         .privacy-content {
             background: white;
-            padding: 40px;
+            padding: 60px 50px;
             margin: 40px 0;
-            border-radius: 20px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-radius: 24px;
+            box-shadow: var(--shadow-medium);
+            border: 1px solid var(--border-color);
         }
         
         .privacy-content h1 {
             color: var(--primary-color);
             margin-bottom: 30px;
-            font-size: 2em;
+            font-size: 2.5em;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
         
         .privacy-content h2 {
-            color: var(--secondary-color);
-            margin-top: 30px;
-            margin-bottom: 15px;
-            font-size: 1.5em;
+            color: var(--primary-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.6em;
+            font-weight: 600;
         }
         
         .privacy-content p {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             line-height: 1.8;
+            color: #5a6c7d;
+            font-size: 1.05em;
         }
         
         .privacy-content ul {
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             padding-left: 25px;
         }
         
         .privacy-content li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
+            line-height: 1.7;
+            color: #5a6c7d;
         }
         
         .effective-date {
             margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            color: #666;
+            padding-top: 25px;
+            border-top: 2px solid var(--border-color);
+            color: #6c757d;
             font-style: italic;
+            font-size: 1.05em;
         }
         
         .contact-info {
-            margin-top: 30px;
-            padding: 20px;
-            background: #f8f9fa;
-            border-radius: 10px;
+            margin-top: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 16px;
+            border-left: 4px solid var(--primary-color);
+            box-shadow: var(--shadow-light);
+        }
+
+        .contact-info h2 {
+            margin-top: 0;
+            color: var(--primary-color);
         }
 
         .content-section {
@@ -147,50 +224,234 @@
         }
         
         footer {
-            background: var(--secondary-color);
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
             color: white;
             text-align: center;
-            padding: 20px 0;
-            margin-top: 40px;
+            padding: 30px 0;
+            margin-top: 60px;
         }
         
         @media (max-width: 768px) {
-            .privacy-content {
-                padding: 20px;
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+
+            .language-selector {
+                align-self: flex-end;
             }
             
-            .language-selector {
-                top: auto;
-                bottom: 20px;
-                right: 20px;
+            .language-btn {
+                padding: 6px 10px;
+                font-size: 12px;
+                min-width: 35px;
+            }
+
+            .separator {
+                font-size: 12px;
+                padding: 0 3px;
+            }
+
+            .company-title {
+                gap: 12px;
+            }
+
+            .company-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .company-name {
+                font-size: 1.3em;
+            }
+
+            .privacy-container {
+                padding: 15px;
+            }
+            
+            .privacy-content {
+                padding: 40px 30px;
+            }
+            
+            .privacy-content h1 {
+                font-size: 2em;
+            }
+            
+            .privacy-content h2 {
+                font-size: 1.4em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .language-btn {
+                padding: 5px 8px;
+                font-size: 11px;
+                min-width: 30px;
+            }
+
+            .separator {
+                font-size: 11px;
+                padding: 0 2px;
+            }
+
+            .company-title {
+                gap: 10px;
+            }
+
+            .company-icon {
+                width: 35px;
+                height: 35px;
+            }
+
+            .company-name {
+                font-size: 1.2em;
+            }
+            
+            .privacy-content {
+                padding: 30px 20px;
+            }
+            
+            .contact-info {
+                padding: 20px;
             }
         }
     </style>
 </head>
 <body>
-    <div class="language-selector">
-        <button class="language-btn" data-lang="en">English</button>
-        <button class="language-btn" data-lang="zh-hant">繁體中文</button>
-        <button class="language-btn" data-lang="zh-hans">简体中文</button>
-    </div>
-
     <header>
         <div class="container">
-            <h1>DictaOne</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                </ul>
-            </nav>
+            <div class="header-content">
+                <div class="header-left">
+                    <h1 class="company-title">
+                        <img src="images/Company_Icon.png" alt="Company Icon" class="company-icon">
+                        <span class="company-name">科技有限公司</span>
+                    </h1>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html" class="nav-link nav-home">首頁</a></li>
+                            <li><a href="about.html" class="nav-link nav-about">關於我們</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="language-selector">
+                    <button class="language-btn" data-lang="en">Eng</button>
+                    <span class="separator">|</span>
+                    <button class="language-btn" data-lang="zh-hant">繁</button>
+                    <span class="separator">|</span>
+                    <button class="language-btn" data-lang="zh-hans">简</button>
+                </div>
+            </div>
         </div>
     </header>
 
-    <main class="container">
+    <main class="privacy-container">
         <div class="privacy-content">
+            <div id="content-en" class="content-section">
+                <h1>Privacy Policy</h1>
+                <p>This privacy policy applies to the DictaOne app (hereby referred to as "Application") for mobile devices that was created by Technology Company Limited (hereby referred to as "Service Provider") as an Ad Supported service. This service is intended for use "AS IS".</p>
+
+                <h2>Information Collection and Use</h2>
+                <p>The Application is a text dictation tool that processes and stores all data locally on your device. The Application:</p>
+                <ul>
+                    <li>Does not collect personal information</li>
+                    <li>Does not transmit your text input to any servers</li>
+                    <li>Does not transmit captured images or scanned text to any servers</li>
+                    <li>Stores all data locally on your device only</li>
+                    <li>Does not track usage or analytics</li>
+                </ul>
+
+                <p>The Application features include:</p>
+                <ul>
+                    <li>Text processing and dictation practice</li>
+                    <li>Text scanning and recognition from images</li>
+                    <li>Password protection for hidden text</li>
+                    <li>Multi-language support</li>
+                    <li>Local storage of dictation materials</li>
+                </ul>
+
+                <p>All these features operate locally on your device without data transmission.</p>
+                <p>The Application does not gather precise information about the location of your mobile device.</p>
+
+                <h2>Camera Access</h2>
+                <p>The Application requests camera access solely for text scanning functionality. Camera usage:</p>
+                <ul>
+                    <li>Images are processed locally on your device for text recognition</li>
+                    <li>No images are transmitted to external servers</li>
+                    <li>Camera data is not stored permanently unless explicitly saved by the user</li>
+                    <li>Text recognition is performed using on-device Google ML Kit services</li>
+                </ul>
+
+                <h2>Ad Support</h2>
+                <p>The Application uses Google AdMob for displaying advertisements. Google AdMob may collect and process certain device information and usage data for advertising purposes. For more information, please refer to Google's Privacy Policy.</p>
+
+                <h2>Data Storage</h2>
+                <ul>
+                    <li>All text input is stored locally on your device only</li>
+                    <li>Captured images for text scanning are processed locally and can be deleted</li>
+                    <li>No data is transmitted to external servers</li>
+                    <li>The Service Provider has no access to your stored data</li>
+                    <li>Users are responsible for their own data backup</li>
+                    <li>Data can be permanently deleted by uninstalling the Application</li>
+                    <li>Password-protected content remains local to your device</li>
+                    <li>Dictation materials and practice records are stored locally</li>
+                    <li>Language settings and preferences are stored on device only</li>
+                    <li>No cloud backup is provided by the Application</li>
+                </ul>
+
+                <h2>Third Party Access</h2>
+                <p>Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in improving the Application and their service. The Service Provider may share your information with third parties in the ways that are described in this privacy statement.</p>
+                <p>Please note that the Application utilizes third-party services that have their own Privacy Policy about handling data. Below are the links to the Privacy Policy of the third-party service providers used by the Application:</p>
+                <ul>
+                    <li>Google Play Services</li>
+                    <li>Google ML Kit (for text recognition)</li>
+                </ul>
+
+                <h2>Opt-Out Rights</h2>
+                <p>You can stop all use of the Application by uninstalling it. You may use the standard uninstall processes available on your mobile device or via the Google Play store.</p>
+
+                <h2>Children</h2>
+                <p>The Application does not address anyone under the age of 13. The Service Provider does not knowingly collect personally identifiable information from children under 13 years of age. Since all data is stored locally, parents can control app usage through standard device controls.</p>
+
+                <h2>Security</h2>
+                <p>Since all data is processed and stored locally on your device:</p>
+                <ul>
+                    <li>Data security depends on your device's security settings</li>
+                    <li>Camera data is processed locally for text recognition</li>
+                    <li>No server-side security is needed as no data is transmitted</li>
+                    <li>Users are responsible for their device security</li>
+                    <li>Users should regularly backup important data</li>
+                    <li>Password protection security depends on user-chosen passwords</li>
+                    <li>Users are responsible for remembering their passwords as they cannot be recovered</li>
+                </ul>
+
+                <h2>Changes</h2>
+                <p>This Privacy Policy may be updated from time to time for any reason. The Service Provider will notify you of any changes to the Privacy Policy by updating this page with the new Privacy Policy. You are advised to consult this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes.</p>
+
+                <div class="effective-date">
+                    This privacy policy is effective as of 2025-06-11
+                </div>
+
+                <h2>Your Consent</h2>
+                <p>By using the Application, you consent to:</p>
+                <ul>
+                    <li>Local storage of your text input on your device</li>
+                    <li>Camera access for text scanning functionality</li>
+                    <li>Local processing of captured images for text recognition</li>
+                    <li>Local storage of dictation materials and practice records</li>
+                    <li>Viewing of advertisements through Google AdMob</li>
+                    <li>The terms outlined in this Privacy Policy</li>
+                </ul>
+
+                <div class="contact-info">
+                    <h2>Contact Us</h2>
+                    <p>If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at support@kidstart.com.</p>
+                </div>
+            </div>
+
             <div id="content-zh-hant" class="content-section">
                 <h1>隱私政策</h1>
-                <p>此隱私政策適用於由Kid Start Company Limited（以下稱為「服務提供商」）創建的DictaOne應用程式（以下稱為「應用程式」），作為廣告支援服務。此服務旨在「按原樣」使用。</p>
+                <p>此隱私政策適用於由科技有限公司（以下稱為「服務提供商」）創建的DictaOne應用程式（以下稱為「應用程式」），作為廣告支援服務。此服務旨在「按原樣」使用。</p>
                 
                 <h2>資訊收集和使用</h2>
                 <p>應用程式是一個文字聽寫工具，在您的裝置上本機處理和儲存所有資料。應用程式：</p>
@@ -292,7 +553,7 @@
 
             <div id="content-zh-hans" class="content-section">
                 <h1>隐私政策</h1>
-                <p>此隐私政策适用于由Kid Start Company Limited（在此称为"服务提供商"）创建的DictaOne应用程序（在此称为"应用程序"），作为广告支持服务。此服务旨在"按原样"使用。</p>
+                <p>此隐私政策适用于由科技有限公司（在此称为"服务提供商"）创建的DictaOne应用程序（在此称为"应用程序"），作为广告支持服务。此服务旨在"按原样"使用。</p>
 
                 <h2>信息收集和使用</h2>
                 <p>应用程序是一个文本听写工具，在您的设备上本地处理和存储所有数据。应用程序：</p>
@@ -391,114 +652,12 @@
                     <p>如果您在使用应用程序时对隐私有任何问题，或对做法有疑问，请通过support@kidstart.com联系服务提供商。</p>
                 </div>
             </div>
-
-            <div id="content-en" class="content-section">
-                <h1>Privacy Policy</h1>
-                <p>This privacy policy applies to the DictaOne app (hereby referred to as "Application") for mobile devices that was created by Kid Start Company Limited (hereby referred to as "Service Provider") as an Ad Supported service. This service is intended for use "AS IS".</p>
-
-                <h2>Information Collection and Use</h2>
-                <p>The Application is a text dictation tool that processes and stores all data locally on your device. The Application:</p>
-                <ul>
-                    <li>Does not collect personal information</li>
-                    <li>Does not transmit your text input to any servers</li>
-                    <li>Does not transmit captured images or scanned text to any servers</li>
-                    <li>Stores all data locally on your device only</li>
-                    <li>Does not track usage or analytics</li>
-                </ul>
-
-                <p>The Application features include:</p>
-                <ul>
-                    <li>Text processing and dictation practice</li>
-                    <li>Text scanning and recognition from images</li>
-                    <li>Password protection for hidden text</li>
-                    <li>Multi-language support</li>
-                    <li>Local storage of dictation materials</li>
-                </ul>
-
-                <p>All these features operate locally on your device without data transmission.</p>
-                <p>The Application does not gather precise information about the location of your mobile device.</p>
-
-                <h2>Camera Access</h2>
-                <p>The Application requests camera access solely for text scanning functionality. Camera usage:</p>
-                <ul>
-                    <li>Images are processed locally on your device for text recognition</li>
-                    <li>No images are transmitted to external servers</li>
-                    <li>Camera data is not stored permanently unless explicitly saved by the user</li>
-                    <li>Text recognition is performed using on-device Google ML Kit services</li>
-                </ul>
-
-                <h2>Ad Support</h2>
-                <p>The Application uses Google AdMob for displaying advertisements. Google AdMob may collect and process certain device information and usage data for advertising purposes. For more information, please refer to Google's Privacy Policy.</p>
-
-                <h2>Data Storage</h2>
-                <ul>
-                    <li>All text input is stored locally on your device only</li>
-                    <li>Captured images for text scanning are processed locally and can be deleted</li>
-                    <li>No data is transmitted to external servers</li>
-                    <li>The Service Provider has no access to your stored data</li>
-                    <li>Users are responsible for their own data backup</li>
-                    <li>Data can be permanently deleted by uninstalling the Application</li>
-                    <li>Password-protected content remains local to your device</li>
-                    <li>Dictation materials and practice records are stored locally</li>
-                    <li>Language settings and preferences are stored on device only</li>
-                    <li>No cloud backup is provided by the Application</li>
-                </ul>
-
-                <h2>Third Party Access</h2>
-                <p>Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in improving the Application and their service. The Service Provider may share your information with third parties in the ways that are described in this privacy statement.</p>
-                <p>Please note that the Application utilizes third-party services that have their own Privacy Policy about handling data. Below are the links to the Privacy Policy of the third-party service providers used by the Application:</p>
-                <ul>
-                    <li>Google Play Services</li>
-                    <li>Google ML Kit (for text recognition)</li>
-                </ul>
-
-                <h2>Opt-Out Rights</h2>
-                <p>You can stop all use of the Application by uninstalling it. You may use the standard uninstall processes available on your mobile device or via the Google Play store.</p>
-
-                <h2>Children</h2>
-                <p>The Application does not address anyone under the age of 13. The Service Provider does not knowingly collect personally identifiable information from children under 13 years of age. Since all data is stored locally, parents can control app usage through standard device controls.</p>
-
-                <h2>Security</h2>
-                <p>Since all data is processed and stored locally on your device:</p>
-                <ul>
-                    <li>Data security depends on your device's security settings</li>
-                    <li>Camera data is processed locally for text recognition</li>
-                    <li>No server-side security is needed as no data is transmitted</li>
-                    <li>Users are responsible for their device security</li>
-                    <li>Users should regularly backup important data</li>
-                    <li>Password protection security depends on user-chosen passwords</li>
-                    <li>Users are responsible for remembering their passwords as they cannot be recovered</li>
-                </ul>
-
-                <h2>Changes</h2>
-                <p>This Privacy Policy may be updated from time to time for any reason. The Service Provider will notify you of any changes to the Privacy Policy by updating this page with the new Privacy Policy. You are advised to consult this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes.</p>
-
-                <div class="effective-date">
-                    This privacy policy is effective as of 2025-06-11
-                </div>
-
-                <h2>Your Consent</h2>
-                <p>By using the Application, you consent to:</p>
-                <ul>
-                    <li>Local storage of your text input on your device</li>
-                    <li>Camera access for text scanning functionality</li>
-                    <li>Local processing of captured images for text recognition</li>
-                    <li>Local storage of dictation materials and practice records</li>
-                    <li>Viewing of advertisements through Google AdMob</li>
-                    <li>The terms outlined in this Privacy Policy</li>
-                </ul>
-
-                <div class="contact-info">
-                    <h2>Contact Us</h2>
-                    <p>If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at support@kidstart.com.</p>
-                </div>
-            </div>
         </div>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Kid Start Company Limited. All rights reserved.</p>
+            <p>&copy; 2025 <span class="footer-company">科技有限公司</span>. <span class="footer-rights">版權所有</span>.</p>
         </div>
     </footer>
 
@@ -506,6 +665,31 @@
         // Language switching functionality
         const languageButtons = document.querySelectorAll('.language-btn');
         const contentSections = document.querySelectorAll('.content-section');
+
+        // Translation data
+        const translations = {
+            'en': {
+                'nav.home': 'Home',
+                'nav.about': 'About Us',
+                'company.name': 'Technology Company Limited',
+                'footer.company': 'Technology Company Limited',
+                'footer.rights': 'All rights reserved'
+            },
+            'zh-hant': {
+                'nav.home': '首頁',
+                'nav.about': '關於我們',
+                'company.name': '科技有限公司',
+                'footer.company': '科技有限公司',
+                'footer.rights': '版權所有'
+            },
+            'zh-hans': {
+                'nav.home': '首页',
+                'nav.about': '关于我们',
+                'company.name': '科技有限公司',
+                'footer.company': '科技有限公司',
+                'footer.rights': '版权所有'
+            }
+        };
 
         // Set default language based on browser preference
         function getDefaultLanguage() {
@@ -516,6 +700,21 @@
                     : 'zh-hans';
             }
             return 'en';
+        }
+
+        // Update navigation and company name
+        function updateTranslations(lang) {
+            const navHome = document.querySelector('.nav-home');
+            const navAbout = document.querySelector('.nav-about');
+            const companyName = document.querySelector('.company-name');
+            const footerCompany = document.querySelector('.footer-company');
+            const footerRights = document.querySelector('.footer-rights');
+            
+            if (navHome) navHome.textContent = translations[lang]['nav.home'];
+            if (navAbout) navAbout.textContent = translations[lang]['nav.about'];
+            if (companyName) companyName.textContent = translations[lang]['company.name'];
+            if (footerCompany) footerCompany.textContent = translations[lang]['footer.company'];
+            if (footerRights) footerRights.textContent = translations[lang]['footer.rights'];
         }
 
         // Initialize with default language
@@ -535,8 +734,19 @@
                 section.classList.toggle('active', section.id === `content-${lang}`);
             });
 
-            // Update page language
+            // Update translations
+            updateTranslations(lang);
+
+            // Update page language and title
             document.documentElement.lang = lang;
+            
+            // Update page title based on language
+            const titles = {
+                'en': 'Privacy Policy - Technology Company Limited',
+                'zh-hant': '隱私政策 - 科技有限公司',
+                'zh-hans': '隐私政策 - 科技有限公司'
+            };
+            document.title = titles[lang];
 
             // Store preference
             localStorage.setItem('preferred-language', lang);
