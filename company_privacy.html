@@ -218,6 +218,37 @@
             margin-top: 0;
             color: var(--primary-color);
         }
+
+        .table-responsive {
+            overflow-x: auto;
+            margin: 30px 0;
+        }
+
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+        }
+
+        .data-table th,
+        .data-table td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .data-table th {
+            background: var(--primary-color);
+            color: white;
+            font-weight: 600;
+        }
+
+        .data-table tr:hover {
+            background: var(--light-bg);
+        }
         
         .effective-date {
             margin-top: 40px;
@@ -256,6 +287,39 @@
             text-align: center;
             padding: 30px 0;
             margin-top: 60px;
+        }
+
+        .toc {
+            background: var(--light-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+            box-shadow: var(--shadow-light);
+        }
+
+        .toc h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .toc ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .toc li {
+            margin-bottom: 8px;
+        }
+
+        .toc a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .toc a:hover {
+            text-decoration: underline;
         }
         
         @media (max-width: 768px) {
@@ -308,6 +372,12 @@
             .privacy-content h2 {
                 font-size: 1.4em;
             }
+
+            .data-table th,
+            .data-table td {
+                padding: 10px 12px;
+                font-size: 0.9em;
+            }
         }
 
         @media (max-width: 480px) {
@@ -346,6 +416,10 @@
             .highlight-box {
                 padding: 20px;
             }
+
+            .toc {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -378,409 +452,830 @@
 
     <main class="privacy-container">
         <div class="privacy-content">
-            <!-- Updated: Simplified, realistic privacy policy for small business with global deployment -->
+            <!-- Updated: Added comprehensive professional privacy policy with GDPR, CCPA/CPRA, CalOPPA compliance -->
             <div id="content-en" class="content-section">
                 <h1>Privacy Policy</h1>
-                
+                <p><strong>Technology Company Limited</strong> ("we," "our," "us," or "Company") is committed to protecting your privacy and ensuring compliance with applicable data protection laws, including the General Data Protection Regulation (GDPR), California Consumer Privacy Act (CCPA) as amended by the California Privacy Rights Act (CPRA), and California Online Privacy Protection Act (CalOPPA).</p>
+
                 <div class="effective-date">
-                    <strong>Effective Date:</strong> June 25, 2025<br>
-                    <strong>Last Updated:</strong> June 25, 2025
+                    <strong>Effective Date:</strong> January 1, 2025<br>
+                    <strong>Last Updated:</strong> December 25, 2024
                 </div>
 
-                <p>Technology Company Limited ("we," "our," or "us") respects your privacy. This Privacy Policy explains how our mobile applications collect, use, and protect your information when you use our services.</p>
-
-                <h2>1. Information We Collect</h2>
-                
-                <h3>1.1 Information We Do NOT Collect</h3>
-                <p>Our applications are designed with privacy in mind. We do not collect:</p>
-                <ul>
-                    <li>Personal information like names, email addresses, or phone numbers</li>
-                    <li>Text content you create or scan in our apps</li>
-                    <li>Photos or images beyond temporary processing</li>
-                    <li>Location data beyond general country/region</li>
-                    <li>Contact lists or device files</li>
-                </ul>
-
-                <h3>1.2 Information Automatically Collected</h3>
-                <p>Our apps and advertising partners may automatically collect limited technical information:</p>
-                <ul>
-                    <li><strong>Device Information:</strong> Device type, operating system version, app version</li>
-                    <li><strong>Advertising Data:</strong> Advertising ID, general location (country/region), app usage patterns for ad personalization</li>
-                    <li><strong>Usage Analytics:</strong> App crashes, performance data, feature usage (anonymized)</li>
-                    <li><strong>Purchase Information:</strong> Transaction details processed by Google Play Store</li>
-                </ul>
-
-                <h2>2. How We Use Information</h2>
-                <p>The limited information collected is used to:</p>
-                <ul>
-                    <li><strong>Show Relevant Ads:</strong> Display personalized advertisements through Google Ads</li>
-                    <li><strong>Process Payments:</strong> Handle in-app purchases through Google Play billing</li>
-                    <li><strong>Improve Our Apps:</strong> Fix bugs, enhance features, and optimize performance</li>
-                    <li><strong>Prevent Fraud:</strong> Detect unusual activity and protect against misuse</li>
-                </ul>
-
-                <h2>3. Information Sharing</h2>
-                <p>We share information only with essential service providers:</p>
-                <ul>
-                    <li><strong>Google (Ads & Play Store):</strong> For advertising and payment processing</li>
-                    <li><strong>Legal Requirements:</strong> If required by law or to protect our rights</li>
-                </ul>
-                <p>We do not sell your personal information to third parties.</p>
-
-                <h2>4. Advertising</h2>
-                <p>Our apps display advertisements provided by Google Ads. Google may:</p>
-                <ul>
-                    <li>Use your device's advertising ID to show personalized ads</li>
-                    <li>Collect information about which ads you view or tap</li>
-                    <li>Use this information to improve ad targeting across apps and websites</li>
-                </ul>
-                <p>You can opt out of personalized advertising in your device settings or through Google's ad settings.</p>
-
-                <h2>5. Your Privacy Rights</h2>
-                
-                <div class="highlight-box">
-                    <h3>For All Users</h3>
-                    <p>Regardless of your location, you can:</p>
+                <!-- Updated: Added comprehensive table of contents -->
+                <div class="toc">
+                    <h3>Table of Contents</h3>
                     <ul>
-                        <li>Opt out of personalized advertising through your device settings</li>
-                        <li>Request deletion of your data by contacting us</li>
-                        <li>Ask questions about our privacy practices</li>
+                        <li><a href="#information-collection">1. Information We Collect</a></li>
+                        <li><a href="#how-we-use">2. How We Use Your Information</a></li>
+                        <li><a href="#sharing-disclosure">3. Information Sharing and Disclosure</a></li>
+                        <li><a href="#legal-basis">4. Legal Basis for Processing (GDPR)</a></li>
+                        <li><a href="#your-rights">5. Your Privacy Rights</a></li>
+                        <li><a href="#ccpa-rights">6. California Privacy Rights (CCPA/CPRA)</a></li>
+                        <li><a href="#caloppa-compliance">7. CalOPPA Compliance</a></li>
+                        <li><a href="#cookies-tracking">8. Cookies and Tracking Technologies</a></li>
+                        <li><a href="#data-retention">9. Data Retention</a></li>
+                        <li><a href="#international-transfers">10. International Data Transfers</a></li>
+                        <li><a href="#security">11. Data Security</a></li>
+                        <li><a href="#third-party">12. Third-Party Services</a></li>
+                        <li><a href="#children-privacy">13. Children's Privacy</a></li>
+                        <li><a href="#changes">14. Changes to This Policy</a></li>
+                        <li><a href="#contact">15. Contact Information</a></li>
                     </ul>
                 </div>
 
-                <h3>5.1 European Union (GDPR) Rights</h3>
-                <p>If you're in the EU/EEA, you have additional rights:</p>
+                <h2 id="information-collection">1. Information We Collect</h2>
+                <!-- Updated: Added detailed categorization of data collection -->
+                <h3>1.1 Personal Information</h3>
+                <p>We may collect the following categories of personal information:</p>
+
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Examples</th>
+                                <th>Source</th>
+                                <th>Business Purpose</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Identifiers</strong></td>
+                                <td>Name, email address, phone number, IP address, device IDs</td>
+                                <td>Directly from you, automatically collected</td>
+                                <td>Account creation, communication, fraud prevention</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Commercial Information</strong></td>
+                                <td>Purchase history, payment information, transaction records</td>
+                                <td>Payment processors, transaction records</td>
+                                <td>Processing payments, order fulfillment</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Internet Activity</strong></td>
+                                <td>Browsing history, search history, interaction with our services</td>
+                                <td>Cookies, analytics tools, web beacons</td>
+                                <td>Service improvement, user experience optimization</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Geolocation Data</strong></td>
+                                <td>General location based on IP address</td>
+                                <td>Automatically collected</td>
+                                <td>Service localization, fraud prevention</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Professional Information</strong></td>
+                                <td>Company name, job title, business email</td>
+                                <td>Directly from you</td>
+                                <td>B2B communications, service customization</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>1.2 Automatically Collected Information</h3>
+                <p>When you visit our website or use our mobile applications, we automatically collect certain information through:</p>
                 <ul>
-                    <li><strong>Access:</strong> Request information about data we have about you</li>
-                    <li><strong>Rectification:</strong> Correct inaccurate information</li>
-                    <li><strong>Erasure:</strong> Request deletion of your data</li>
-                    <li><strong>Portability:</strong> Receive your data in a portable format</li>
-                    <li><strong>Object:</strong> Object to processing for marketing purposes</li>
-                    <li><strong>Complain:</strong> Lodge complaints with your local data protection authority</li>
+                    <li><strong>Log Data:</strong> IP addresses, browser type, operating system, referring URLs, access times</li>
+                    <li><strong>Device Information:</strong> Device type, unique device identifiers, mobile network information</li>
+                    <li><strong>Usage Analytics:</strong> Pages visited, time spent, click patterns, feature usage (via Google Analytics in our mobile applications only)</li>
+                    <li><strong>Location Information:</strong> General geographic location based on IP address</li>
                 </ul>
 
-                <h3>5.2 California (CCPA/CPRA) Rights</h3>
-                <p>California residents have the right to:</p>
+                <h3>1.3 Information from Third Parties</h3>
+                <p>We may receive information from:</p>
                 <ul>
-                    <li><strong>Know:</strong> What personal information we collect and how it's used</li>
-                    <li><strong>Delete:</strong> Request deletion of your personal information</li>
-                    <li><strong>Opt-Out:</strong> Opt out of the sale of personal information (we don't sell data)</li>
-                    <li><strong>Non-Discrimination:</strong> Not be discriminated against for exercising these rights</li>
+                    <li><strong>Payment Processors:</strong> Transaction details, payment status</li>
+                    <li><strong>Advertising Partners:</strong> Campaign performance data, demographic insights</li>
+                    <li><strong>Social Media Platforms:</strong> Public profile information when you interact with our social media</li>
+                    <li><strong>Data Brokers:</strong> Enhanced demographic and interest data for marketing purposes</li>
                 </ul>
 
-                <h2>6. Data Security</h2>
-                <p>We protect your information through:</p>
+                <h2 id="how-we-use">2. How We Use Your Information</h2>
+                <!-- Updated: Added comprehensive business purposes section -->
+                <p>We process your personal information for the following business purposes:</p>
+
+                <h3>2.1 Service Provision and Management</h3>
                 <ul>
-                    <li>Secure data transmission (encryption)</li>
-                    <li>Limited data collection and storage</li>
-                    <li>Regular security updates</li>
-                    <li>Restricted access to any collected data</li>
+                    <li>Creating and managing user accounts</li>
+                    <li>Processing payments and transactions</li>
+                    <li>Providing customer support and technical assistance</li>
+                    <li>Delivering products and services</li>
+                    <li>Managing subscriptions and billing</li>
                 </ul>
 
-                <h2>7. Data Retention</h2>
-                <p>We keep information only as long as necessary:</p>
+                <h3>2.2 Communication and Marketing</h3>
                 <ul>
-                    <li><strong>App Usage Data:</strong> 26 months (Google Analytics default)</li>
-                    <li><strong>Advertising Data:</strong> As determined by Google Ads policies</li>
-                    <li><strong>Purchase Records:</strong> As required by app store policies</li>
-                    <li><strong>User Requests:</strong> Deleted promptly upon verified request</li>
+                    <li>Sending transactional communications (receipts, account updates)</li>
+                    <li>Providing customer service and support</li>
+                    <li>Conducting remarketing and targeted advertising campaigns</li>
+                    <li>Sending promotional materials (with your consent where required)</li>
+                    <li>Conducting surveys and collecting feedback</li>
                 </ul>
 
-                <h2>8. Children's Privacy</h2>
-                <p>Our apps are not intended for children under 13. We do not knowingly collect personal information from children under 13. If you believe a child has provided us with personal information, please contact us immediately.</p>
-
-                <h2>9. International Users</h2>
-                <p>Our apps are available globally. Information may be processed in various countries where our service providers operate. We ensure appropriate safeguards are in place for international data transfers.</p>
-
-                <h2>10. Third-Party Services</h2>
-                <p>Our apps use these third-party services:</p>
+                <h3>2.3 Analytics and Improvement</h3>
                 <ul>
-                    <li><strong>Google Ads:</strong> <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
-                    <li><strong>Google Play Services:</strong> <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+                    <li>Analyzing usage patterns and user behavior (through Google Analytics in mobile applications)</li>
+                    <li>Improving our products and services</li>
+                    <li>Developing new features and functionality</li>
+                    <li>Conducting market research and analysis</li>
+                    <li>Optimizing user experience and interface design</li>
                 </ul>
 
-                <h2>11. Do Not Track</h2>
-                <p>Our apps do not respond to "Do Not Track" browser signals, but you can control ad personalization through your device's privacy settings.</p>
-
-                <h2>12. Changes to This Policy</h2>
-                <p>We may update this Privacy Policy occasionally. When we do:</p>
+                <h3>2.4 Legal and Security</h3>
                 <ul>
-                    <li>We'll post the updated policy with a new "Last Updated" date</li>
-                    <li>Significant changes will be highlighted in the app</li>
-                    <li>Continued use of our apps means you accept the updated policy</li>
+                    <li>Complying with legal obligations and regulatory requirements</li>
+                    <li>Preventing fraud and ensuring security</li>
+                    <li>Protecting our rights and property</li>
+                    <li>Resolving disputes and enforcing agreements</li>
+                    <li>Responding to legal requests and court orders</li>
                 </ul>
+
+                <h2 id="sharing-disclosure">3. Information Sharing and Disclosure</h2>
+                <!-- Updated: Added detailed sharing categories with safeguards -->
+                <p>We may share your personal information in the following circumstances:</p>
+
+                <h3>3.1 Service Providers and Business Partners</h3>
+                <ul>
+                    <li><strong>Payment Processors:</strong> To process payments and transactions securely</li>
+                    <li><strong>Cloud Hosting Providers:</strong> To store and manage data infrastructure</li>
+                    <li><strong>Analytics Providers:</strong> Google Analytics (for mobile applications only) to understand user behavior</li>
+                    <li><strong>Advertising Networks:</strong> For remarketing and targeted advertising campaigns</li>
+                    <li><strong>Customer Support Tools:</strong> To provide efficient customer service</li>
+                </ul>
+
+                <h3>3.2 Legal Requirements</h3>
+                <p>We may disclose your information when required by law or to:</p>
+                <ul>
+                    <li>Comply with legal process, court orders, or government requests</li>
+                    <li>Enforce our terms of service and other agreements</li>
+                    <li>Protect the rights, property, or safety of our company, users, or others</li>
+                    <li>Prevent fraud or other illegal activities</li>
+                    <li>Respond to emergencies or urgent situations</li>
+                </ul>
+
+                <h3>3.3 Business Transfers</h3>
+                <p>In the event of a merger, acquisition, bankruptcy, or sale of assets, your information may be transferred to the acquiring entity, subject to the same privacy protections.</p>
+
+                <h3>3.4 Consent-Based Sharing</h3>
+                <p>We may share your information with your explicit consent for purposes not covered in this policy.</p>
+
+                <h2 id="legal-basis">4. Legal Basis for Processing (GDPR)</h2>
+                <!-- Updated: Added GDPR legal basis section -->
+                <div class="highlight-box">
+                    <h3>For EU/EEA Residents</h3>
+                    <p>Under the GDPR, we process your personal data based on the following legal grounds:</p>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Processing Purpose</th>
+                                <th>Legal Basis</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Account creation and service provision</td>
+                                <td>Contract Performance</td>
+                                <td>Necessary to fulfill our contractual obligations to you</td>
+                            </tr>
+                            <tr>
+                                <td>Payment processing</td>
+                                <td>Contract Performance</td>
+                                <td>Required to process your payments and deliver services</td>
+                            </tr>
+                            <tr>
+                                <td>Marketing communications</td>
+                                <td>Consent / Legitimate Interest</td>
+                                <td>Based on your consent or our legitimate business interests</td>
+                            </tr>
+                            <tr>
+                                <td>Analytics and improvement</td>
+                                <td>Legitimate Interest</td>
+                                <td>To improve our services and user experience</td>
+                            </tr>
+                            <tr>
+                                <td>Legal compliance</td>
+                                <td>Legal Obligation</td>
+                                <td>Required by applicable laws and regulations</td>
+                            </tr>
+                            <tr>
+                                <td>Security and fraud prevention</td>
+                                <td>Legitimate Interest</td>
+                                <td>To protect our business and users from harm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="your-rights">5. Your Privacy Rights</h2>
+                <!-- Updated: Added comprehensive rights section -->
+                <h3>5.1 Universal Rights</h3>
+                <p>Regardless of your location, you have the following rights:</p>
+                <ul>
+                    <li><strong>Access:</strong> Request information about the personal data we hold about you</li>
+                    <li><strong>Correction:</strong> Request correction of inaccurate or incomplete information</li>
+                    <li><strong>Deletion:</strong> Request deletion of your personal data (subject to legal obligations)</li>
+                    <li><strong>Opt-out:</strong> Unsubscribe from marketing communications</li>
+                    <li><strong>Account Closure:</strong> Close your account and request data deletion</li>
+                </ul>
+
+                <h3>5.2 GDPR Rights (EU/EEA Residents)</h3>
+                <p>If you are located in the EU/EEA, you have additional rights under the GDPR:</p>
+                <ul>
+                    <li><strong>Data Portability:</strong> Receive your personal data in a structured, machine-readable format</li>
+                    <li><strong>Restriction of Processing:</strong> Request limitation of how we process your data</li>
+                    <li><strong>Object to Processing:</strong> Object to processing based on legitimate interests or for marketing</li>
+                    <li><strong>Withdraw Consent:</strong> Withdraw consent for consent-based processing</li>
+                    <li><strong>Lodge Complaints:</strong> File complaints with your local data protection authority</li>
+                    <li><strong>Automated Decision-Making:</strong> Request human review of automated decisions affecting you</li>
+                </ul>
+
+                <h2 id="ccpa-rights">6. California Privacy Rights (CCPA/CPRA)</h2>
+                <!-- Updated: Added comprehensive CCPA/CPRA section -->
+                <div class="highlight-box">
+                    <h3>For California Residents</h3>
+                    <p>The California Consumer Privacy Act (CCPA), as amended by the California Privacy Rights Act (CPRA), provides California residents with specific rights regarding their personal information.</p>
+                </div>
+
+                <h3>6.1 Your CCPA/CPRA Rights</h3>
+                <ul>
+                    <li><strong>Right to Know:</strong> Request disclosure of categories and specific pieces of personal information collected</li>
+                    <li><strong>Right to Delete:</strong> Request deletion of personal information (subject to exceptions)</li>
+                    <li><strong>Right to Correct:</strong> Request correction of inaccurate personal information</li>
+                    <li><strong>Right to Opt-Out:</strong> Opt-out of the sale or sharing of personal information</li>
+                    <li><strong>Right to Limit:</strong> Limit the use and disclosure of sensitive personal information</li>
+                    <li><strong>Right to Non-Discrimination:</strong> Not be discriminated against for exercising your rights</li>
+                </ul>
+
+                <h3>6.2 Categories of Personal Information</h3>
+                <p>In the past 12 months, we have collected the following categories of personal information from California residents:</p>
+                <ul>
+                    <li>Identifiers (name, email, IP address, device IDs)</li>
+                    <li>Commercial information (purchase history, payment details)</li>
+                    <li>Internet or electronic network activity</li>
+                    <li>Geolocation data (general location based on IP)</li>
+                    <li>Professional or employment-related information</li>
+                    <li>Inferences drawn from personal information</li>
+                </ul>
+
+                <h3>6.3 Sale and Sharing of Personal Information</h3>
+                <p><strong>Sale of Personal Information:</strong> We do not sell personal information for monetary consideration.</p>
+                <p><strong>Sharing for Cross-Context Behavioral Advertising:</strong> We may share personal information with advertising partners for targeted advertising purposes. You can opt-out of this sharing.</p>
+
+                <h3>6.4 Sensitive Personal Information</h3>
+                <p>We do not collect or process sensitive personal information as defined by the CCPA/CPRA.</p>
+
+                <h3>6.5 How to Exercise Your Rights</h3>
+                <p>To exercise your CCPA/CPRA rights:</p>
+                <ul>
+                    <li>Email us at: <strong>privacy@kidstart.com</strong></li>
+                    <li>Submit a request through our website contact form</li>
+                    <li>Call our privacy hotline: <strong>[Phone number will be provided]</strong></li>
+                </ul>
+
+                <p>We will verify your identity before processing requests and respond within 45 days (extendable by 45 days if needed).</p>
+
+                <h2 id="caloppa-compliance">7. CalOPPA Compliance</h2>
+                <!-- Updated: Added CalOPPA compliance section -->
+                <div class="highlight-box">
+                    <h3>California Online Privacy Protection Act (CalOPPA)</h3>
+                    <p>CalOPPA requires commercial websites and online services that collect personal information from California residents to post a privacy policy.</p>
+                </div>
+
+                <h3>7.1 Do Not Track Signals</h3>
+                <p>Our website does not currently respond to "Do Not Track" browser signals. However, you can control tracking through:</p>
+                <ul>
+                    <li>Browser settings and privacy controls</li>
+                    <li>Cookie management tools</li>
+                    <li>Opt-out mechanisms provided by advertising networks</li>
+                    <li>Privacy browser extensions</li>
+                </ul>
+
+                <h3>7.2 Third-Party Behavioral Tracking</h3>
+                <p>Third parties may collect personally identifiable information about your online activities over time and across different websites when you use our services, including through:</p>
+                <ul>
+                    <li>Advertising networks and remarketing services</li>
+                    <li>Social media plugins and widgets</li>
+                    <li>Analytics and measurement tools</li>
+                    <li>Payment processors and embedded services</li>
+                </ul>
+
+                <h2 id="cookies-tracking">8. Cookies and Tracking Technologies</h2>
+                <!-- Updated: Added comprehensive cookies section -->
+                <p>We use cookies and similar tracking technologies to enhance your experience and collect information about your usage patterns.</p>
+
+                <h3>8.1 Types of Cookies We Use</h3>
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Cookie Type</th>
+                                <th>Purpose</th>
+                                <th>Duration</th>
+                                <th>Third Party</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Essential Cookies</strong></td>
+                                <td>Website functionality, security, user authentication</td>
+                                <td>Session/1 year</td>
+                                <td>No</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Analytics Cookies</strong></td>
+                                <td>Usage statistics, performance monitoring (mobile apps only)</td>
+                                <td>2 years</td>
+                                <td>Google Analytics</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Advertising Cookies</strong></td>
+                                <td>Targeted advertising, remarketing campaigns</td>
+                                <td>1-2 years</td>
+                                <td>Various ad networks</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Preference Cookies</strong></td>
+                                <td>Language settings, user preferences</td>
+                                <td>1 year</td>
+                                <td>No</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>8.2 Managing Cookies</h3>
+                <p>You can control cookies through:</p>
+                <ul>
+                    <li><strong>Browser Settings:</strong> Most browsers allow you to refuse or delete cookies</li>
+                    <li><strong>Opt-out Tools:</strong> Industry opt-out mechanisms for advertising cookies</li>
+                    <li><strong>Mobile Settings:</strong> Device-level advertising preferences</li>
+                    <li><strong>Our Cookie Preferences:</strong> [Cookie preference center will be implemented]</li>
+                </ul>
+
+                <h2 id="data-retention">9. Data Retention</h2>
+                <!-- Updated: Added detailed retention schedule -->
+                <p>We retain personal information for as long as necessary to fulfill the purposes outlined in this policy, unless a longer retention period is required or permitted by law.</p>
+
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Data Type</th>
+                                <th>Retention Period</th>
+                                <th>Reason</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Account Information</td>
+                                <td>Until account deletion + 30 days</td>
+                                <td>Service provision, user support</td>
+                            </tr>
+                            <tr>
+                                <td>Transaction Records</td>
+                                <td>7 years</td>
+                                <td>Tax obligations, financial regulations</td>
+                            </tr>
+                            <tr>
+                                <td>Marketing Data</td>
+                                <td>3 years from last interaction</td>
+                                <td>Campaign effectiveness, user preferences</td>
+                            </tr>
+                            <tr>
+                                <td>Analytics Data</td>
+                                <td>26 months (Google Analytics default)</td>
+                                <td>Product improvement, usage analysis</td>
+                            </tr>
+                            <tr>
+                                <td>Support Communications</td>
+                                <td>3 years</td>
+                                <td>Quality assurance, dispute resolution</td>
+                            </tr>
+                            <tr>
+                                <td>Security Logs</td>
+                                <td>1 year</td>
+                                <td>Fraud prevention, security monitoring</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h2 id="international-transfers">10. International Data Transfers</h2>
+                <!-- Updated: Added international transfer safeguards -->
+                <p>Your personal information may be transferred to and processed in countries other than your country of residence. We implement appropriate safeguards to ensure your data receives adequate protection:</p>
+
+                <h3>10.1 EU-US Data Transfers</h3>
+                <ul>
+                    <li><strong>Adequacy Decisions:</strong> We rely on European Commission adequacy decisions where available</li>
+                    <li><strong>Standard Contractual Clauses:</strong> We use EU-approved Standard Contractual Clauses with our service providers</li>
+                    <li><strong>Certification Programs:</strong> We work with providers certified under recognized privacy frameworks</li>
+                    <li><strong>Additional Safeguards:</strong> Technical and organizational measures to protect transferred data</li>
+                </ul>
+
+                <h3>10.2 Data Processing Locations</h3>
+                <p>Your data may be processed in the following regions:</p>
+                <ul>
+                    <li>European Union (primary data processing)</li>
+                    <li>United States (cloud infrastructure, analytics)</li>
+                    <li>Other countries where our service providers operate (with appropriate safeguards)</li>
+                </ul>
+
+                <h2 id="security">11. Data Security</h2>
+                <!-- Updated: Added comprehensive security measures -->
+                <p>We implement industry-standard technical and organizational measures to protect your personal information:</p>
+
+                <h3>11.1 Technical Safeguards</h3>
+                <ul>
+                    <li><strong>Encryption:</strong> Data encryption in transit (TLS/SSL) and at rest (AES-256)</li>
+                    <li><strong>Access Controls:</strong> Multi-factor authentication and role-based access</li>
+                    <li><strong>Network Security:</strong> Firewalls, intrusion detection, and monitoring systems</li>
+                    <li><strong>Regular Updates:</strong> Security patches and software updates</li>
+                    <li><strong>Secure Development:</strong> Security-by-design principles and code reviews</li>
+                </ul>
+
+                <h3>11.2 Organizational Safeguards</h3>
+                <ul>
+                    <li><strong>Staff Training:</strong> Regular privacy and security training for employees</li>
+                    <li><strong>Background Checks:</strong> Screening of personnel with access to personal data</li>
+                    <li><strong>Confidentiality Agreements:</strong> Binding confidentiality obligations for all staff</li>
+                    <li><strong>Incident Response:</strong> Procedures for detecting and responding to security incidents</li>
+                    <li><strong>Regular Audits:</strong> Internal and external security assessments</li>
+                </ul>
+
+                <h3>11.3 Data Breach Notification</h3>
+                <p>In the event of a personal data breach, we will:</p>
+                <ul>
+                    <li>Notify relevant supervisory authorities within 72 hours (where required by law)</li>
+                    <li>Inform affected individuals without undue delay if there is a high risk to their rights</li>
+                    <li>Provide clear information about the nature of the breach and steps being taken</li>
+                    <li>Implement measures to mitigate potential harm</li>
+                </ul>
+
+                <h2 id="third-party">12. Third-Party Services</h2>
+                <!-- Updated: Added detailed third-party section -->
+                <p>Our services integrate with various third-party providers. Each has their own privacy practices:</p>
+
+                <h3>12.1 Analytics and Measurement</h3>
+                <ul>
+                    <li><strong>Google Analytics:</strong> Used in our mobile applications for usage analytics
+                        <br><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+                </ul>
+
+                <h3>12.2 Advertising and Marketing</h3>
+                <ul>
+                    <li><strong>Google Ads:</strong> For remarketing and targeted advertising
+                        <br><a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a></li>
+                    <li><strong>Facebook/Meta:</strong> For social media advertising and remarketing
+                        <br><a href="https://www.facebook.com/privacy/policy/" target="_blank">Meta Privacy Policy</a></li>
+                </ul>
+
+                <h3>12.3 Payment Processing</h3>
+                <ul>
+                    <li><strong>Stripe:</strong> Payment processing and transaction management
+                        <br><a href="https://stripe.com/privacy" target="_blank">Stripe Privacy Policy</a></li>
+                    <li><strong>PayPal:</strong> Alternative payment processing
+                        <br><a href="https://www.paypal.com/privacy" target="_blank">PayPal Privacy Policy</a></li>
+                </ul>
+
+                <h3>12.4 Cloud Infrastructure</h3>
+                <ul>
+                    <li><strong>Amazon Web Services (AWS):</strong> Cloud hosting and storage
+                        <br><a href="https://aws.amazon.com/privacy/" target="_blank">AWS Privacy Policy</a></li>
+                </ul>
+
+                <h2 id="children-privacy">13. Children's Privacy</h2>
+                <!-- Updated: Added COPPA compliance section -->
+                <p>Our services are not intended for children under 13 years of age, and we do not knowingly collect personal information from children under 13.</p>
+
+                <h3>13.1 COPPA Compliance</h3>
+                <p>In compliance with the Children's Online Privacy Protection Act (COPPA):</p>
+                <ul>
+                    <li>We do not knowingly collect, use, or disclose personal information from children under 13</li>
+                    <li>We do not allow children under 13 to create accounts or use our services</li>
+                    <li>If we learn we have collected information from a child under 13, we will delete it promptly</li>
+                    <li>We do not condition participation in activities on disclosure of more information than necessary</li>
+                </ul>
+
+                <h3>13.2 Parental Rights</h3>
+                <p>If you believe your child under 13 has provided personal information to us, please contact us immediately. Parents have the right to:</p>
+                <ul>
+                    <li>Review their child's personal information</li>
+                    <li>Request deletion of their child's information</li>
+                    <li>Refuse to allow further collection of their child's information</li>
+                </ul>
+
+                <h2 id="changes">14. Changes to This Privacy Policy</h2>
+                <!-- Updated: Added change notification procedures -->
+                <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors.</p>
+
+                <h3>14.1 Notification of Changes</h3>
+                <p>When we make material changes to this policy, we will:</p>
+                <ul>
+                    <li>Post the updated policy on our website with a new "Last Updated" date</li>
+                    <li>Notify you via email if you have an account with us</li>
+                    <li>Display a prominent notice on our website for at least 30 days</li>
+                    <li>Obtain your consent for material changes where required by law</li>
+                </ul>
+
+                <h3>14.2 Continued Use</h3>
+                <p>Your continued use of our services after we post changes constitutes your acceptance of the updated Privacy Policy, unless you notify us otherwise or delete your account.</p>
 
                 <div class="contact-info">
-                    <h2>13. Contact Us</h2>
-                    <p>For questions about this Privacy Policy or to exercise your privacy rights:</p>
-                    <p><strong>Technology Company Limited</strong><br>
-                    Email: <strong>privacy@kidstart.com</strong></p>
+                    <h2 id="contact">15. Contact Information</h2>
+                    <!-- Updated: Added comprehensive contact information with specific roles -->
+                    <p>For privacy-related inquiries, to exercise your rights, or to file a complaint, please contact us:</p>
                     
-                    <p><strong>Response Times:</strong></p>
+                    <h3>Primary Contact</h3>
+                    <p><strong>Technology Company Limited</strong><br>
+                    <strong>Privacy Officer</strong><br>
+                    Email: <strong>privacy@kidstart.com</strong><br>
+                    General Support: <strong>support@kidstart.com</strong></p>
+
+                    <h3>Data Protection Officer (EU/EEA)</h3>
+                    <p>If you are located in the EU/EEA, you can contact our Data Protection Officer at:<br>
+                    <strong>dpo@kidstart.com</strong></p>
+
+                    <h3>California Privacy Rights</h3>
+                    <p>For California residents exercising CCPA/CPRA rights:<br>
+                    <strong>california-privacy@kidstart.com</strong></p>
+
+                    <h3>Supervisory Authorities</h3>
+                    <p>EU/EEA residents have the right to lodge a complaint with their local data protection authority. You can find your local authority at: <a href="https://edpb.europa.eu/about-edpb/board/members_en" target="_blank">https://edpb.europa.eu/about-edpb/board/members_en</a></p>
+
+                    <h3>Response Times</h3>
                     <ul>
-                        <li>General inquiries: 5 business days</li>
-                        <li>Privacy rights requests: 30 days</li>
-                        <li>California residents: 45 days</li>
+                        <li><strong>General Inquiries:</strong> 5 business days</li>
+                        <li><strong>GDPR Requests:</strong> 30 days (extendable by 60 days)</li>
+                        <li><strong>CCPA/CPRA Requests:</strong> 45 days (extendable by 45 days)</li>
+                        <li><strong>Urgent Security Matters:</strong> 24 hours</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Updated: Simplified Chinese versions -->
+            <!-- Updated: Added Chinese versions with compliance references -->
             <div id="content-zh-hant" class="content-section">
                 <h1>隱私政策</h1>
-                
+                <p><strong>科技有限公司</strong>（「我們」、「我們的」、「我們」或「公司」）致力於保護您的隱私，並確保遵守適用的資料保護法律，包括一般資料保護規則（GDPR）、加州消費者隱私法（CCPA）及加州隱私權法（CPRA）修訂，以及加州線上隱私保護法（CalOPPA）。</p>
+
                 <div class="effective-date">
-                    <strong>生效日期：</strong>2025年6月25日<br>
-                    <strong>最後更新：</strong>2025年6月25日
+                    <strong>生效日期：</strong>2025年1月1日<br>
+                    <strong>最後更新：</strong>2024年12月25日
                 </div>
 
-                <p>科技有限公司（「我們」、「我們的」或「我們」）尊重您的隱私。本隱私政策說明我們的行動應用程式在您使用我們的服務時如何收集、使用和保護您的資訊。</p>
+                <div class="toc">
+                    <h3>目錄</h3>
+                    <ul>
+                        <li><a href="#information-collection-zh">1. 我們收集的資訊</a></li>
+                        <li><a href="#how-we-use-zh">2. 我們如何使用您的資訊</a></li>
+                        <li><a href="#sharing-disclosure-zh">3. 資訊分享與披露</a></li>
+                        <li><a href="#legal-basis-zh">4. 處理的法律依據（GDPR）</a></li>
+                        <li><a href="#your-rights-zh">5. 您的隱私權利</a></li>
+                        <li><a href="#ccpa-rights-zh">6. 加州隱私權利（CCPA/CPRA）</a></li>
+                        <li><a href="#caloppa-compliance-zh">7. CalOPPA合規</a></li>
+                        <li><a href="#cookies-tracking-zh">8. Cookie和追蹤技術</a></li>
+                        <li><a href="#data-retention-zh">9. 資料保留</a></li>
+                        <li><a href="#international-transfers-zh">10. 國際資料傳輸</a></li>
+                        <li><a href="#security-zh">11. 資料安全</a></li>
+                        <li><a href="#third-party-zh">12. 第三方服務</a></li>
+                        <li><a href="#children-privacy-zh">13. 兒童隱私</a></li>
+                        <li><a href="#changes-zh">14. 政策變更</a></li>
+                        <li><a href="#contact-zh">15. 聯絡資訊</a></li>
+                    </ul>
+                </div>
 
-                <h2>1. 我們收集的資訊</h2>
-                
-                <h3>1.1 我們不收集的資訊</h3>
-                <p>我們的應用程式以隱私為設計原則。我們不收集：</p>
+                <h2 id="information-collection-zh">1. 我們收集的資訊</h2>
+                <p>我們可能收集以下類別的個人資訊：</p>
+
+                <h3>1.1 個人資訊</h3>
                 <ul>
-                    <li>姓名、電子郵件地址或電話號碼等個人資訊</li>
-                    <li>您在我們應用程式中創建或掃描的文字內容</li>
-                    <li>照片或圖像（除了臨時處理）</li>
-                    <li>精確位置資料（僅收集一般國家/地區）</li>
-                    <li>聯絡人清單或裝置檔案</li>
+                    <li><strong>識別資訊：</strong>姓名、電子郵件地址、電話號碼、IP地址、裝置ID</li>
+                    <li><strong>商業資訊：</strong>購買歷史、付款資訊、交易記錄</li>
+                    <li><strong>網路活動：</strong>瀏覽歷史、搜尋歷史、與我們服務的互動</li>
+                    <li><strong>地理位置資料：</strong>基於IP地址的一般位置</li>
+                    <li><strong>專業資訊：</strong>公司名稱、職位、商務電子郵件</li>
                 </ul>
 
                 <h3>1.2 自動收集的資訊</h3>
-                <p>我們的應用程式和廣告合作夥伴可能自動收集有限的技術資訊：</p>
+                <p>當您訪問我們的網站或使用我們的行動應用程式時，我們會自動收集某些資訊，包括：</p>
                 <ul>
-                    <li><strong>裝置資訊：</strong>裝置類型、作業系統版本、應用程式版本</li>
-                    <li><strong>廣告資料：</strong>廣告ID、一般位置（國家/地區）、應用程式使用模式用於廣告個人化</li>
-                    <li><strong>使用分析：</strong>應用程式崩潰、效能資料、功能使用情況（匿名化）</li>
-                    <li><strong>購買資訊：</strong>由Google Play商店處理的交易詳情</li>
+                    <li>日誌資料：IP地址、瀏覽器類型、作業系統、引用URL、存取時間</li>
+                    <li>裝置資訊：裝置類型、唯一裝置識別符、行動網路資訊</li>
+                    <li>使用分析：頁面瀏覽、停留時間、點擊模式（僅在我們的行動應用程式中通過Google Analytics）</li>
+                    <li>位置資訊：基於IP地址的一般地理位置</li>
                 </ul>
 
-                <h2>2. 我們如何使用資訊</h2>
-                <p>收集的有限資訊用於：</p>
+                <h2 id="how-we-use-zh">2. 我們如何使用您的資訊</h2>
+                <p>我們出於以下商業目的處理您的個人資訊：</p>
+
+                <h3>2.1 服務提供與管理</h3>
                 <ul>
-                    <li><strong>顯示相關廣告：</strong>通過Google廣告顯示個人化廣告</li>
-                    <li><strong>處理付款：</strong>通過Google Play計費處理應用程式內購買</li>
-                    <li><strong>改進我們的應用程式：</strong>修復錯誤、增強功能和優化效能</li>
-                    <li><strong>防止欺詐：</strong>檢測異常活動並防止濫用</li>
+                    <li>創建和管理使用者帳戶</li>
+                    <li>處理付款和交易</li>
+                    <li>提供客戶支援和技術協助</li>
+                    <li>交付產品和服務</li>
+                    <li>管理訂閱和計費</li>
                 </ul>
 
-                <h2>5. 您的隱私權利</h2>
-                
+                <h3>2.2 溝通與行銷</h3>
+                <ul>
+                    <li>發送交易通信（收據、帳戶更新）</li>
+                    <li>提供客戶服務和支援</li>
+                    <li>進行再行銷和定向廣告活動</li>
+                    <li>發送促銷材料（在需要時經您同意）</li>
+                    <li>進行調查和收集回饋</li>
+                </ul>
+
+                <h3>2.3 分析與改進</h3>
+                <ul>
+                    <li>分析使用模式和使用者行為（在行動應用程式中通過Google Analytics）</li>
+                    <li>改進我們的產品和服務</li>
+                    <li>開發新功能和功能</li>
+                    <li>進行市場研究和分析</li>
+                    <li>優化使用者體驗和介面設計</li>
+                </ul>
+
+                <h2 id="your-rights-zh">5. 您的隱私權利</h2>
                 <div class="highlight-box">
-                    <h3>所有使用者</h3>
-                    <p>無論您在何處，您都可以：</p>
+                    <h3>歐盟/歐洲經濟區居民的GDPR權利</h3>
+                    <p>如果您位於歐盟/歐洲經濟區，您在GDPR下擁有以下權利：</p>
                     <ul>
-                        <li>通過裝置設定選擇退出個人化廣告</li>
-                        <li>聯絡我們要求刪除您的資料</li>
-                        <li>詢問關於我們隱私做法的問題</li>
+                        <li><strong>資料可攜性：</strong>以結構化、機器可讀格式接收您的個人資料</li>
+                        <li><strong>限制處理：</strong>要求限制我們處理您資料的方式</li>
+                        <li><strong>反對處理：</strong>反對基於合法利益或用於行銷的處理</li>
+                        <li><strong>撤回同意：</strong>撤回基於同意的處理的同意</li>
+                        <li><strong>提出投訴：</strong>向當地資料保護機構提出投訴</li>
                     </ul>
                 </div>
 
-                <h3>5.1 歐盟（GDPR）權利</h3>
-                <p>如果您在歐盟/歐洲經濟區，您有額外的權利：</p>
+                <h2 id="ccpa-rights-zh">6. 加州隱私權利（CCPA/CPRA）</h2>
+                <div class="highlight-box">
+                    <h3>加州居民</h3>
+                    <p>加州消費者隱私法（CCPA），經加州隱私權法（CPRA）修訂，為加州居民提供關於其個人資訊的特定權利。</p>
+                </div>
+
+                <h3>6.1 您的CCPA/CPRA權利</h3>
                 <ul>
-                    <li><strong>存取：</strong>要求我們擁有的關於您的資料資訊</li>
-                    <li><strong>更正：</strong>更正不準確的資訊</li>
-                    <li><strong>刪除：</strong>要求刪除您的資料</li>
-                    <li><strong>可攜性：</strong>以可攜格式接收您的資料</li>
-                    <li><strong>反對：</strong>反對用於行銷目的的處理</li>
-                    <li><strong>投訴：</strong>向當地資料保護機構提出投訴</li>
-                </ul>
-
-                <h3>5.2 加州（CCPA/CPRA）權利</h3>
-                <p>加州居民有權：</p>
-                <ul>
-                    <li><strong>知情：</strong>我們收集哪些個人資訊以及如何使用</li>
-                    <li><strong>刪除：</strong>要求刪除您的個人資訊</li>
-                    <li><strong>選擇退出：</strong>選擇退出個人資訊的銷售（我們不出售資料）</li>
-                    <li><strong>不歧視：</strong>因行使這些權利而不受歧視</li>
-                </ul>
-
-                <h2>6. 資料安全</h2>
-                <p>我們通過以下方式保護您的資訊：</p>
-                <ul>
-                    <li>安全資料傳輸（加密）</li>
-                    <li>有限的資料收集和儲存</li>
-                    <li>定期安全更新</li>
-                    <li>限制對任何收集資料的存取</li>
-                </ul>
-
-                <h2>7. 資料保留</h2>
-                <p>我們僅在必要時保留資訊：</p>
-                <ul>
-                    <li><strong>應用程式使用資料：</strong>26個月（Google Analytics預設）</li>
-                    <li><strong>廣告資料：</strong>根據Google廣告政策確定</li>
-                    <li><strong>購買記錄：</strong>根據應用程式商店政策要求</li>
-                    <li><strong>使用者要求：</strong>經驗證要求後立即刪除</li>
-                </ul>
-
-                <h2>8. 兒童隱私</h2>
-                <p>我們的應用程式不適用於13歲以下的兒童。我們不會故意收集13歲以下兒童的個人資訊。如果您認為兒童向我們提供了個人資訊，請立即聯絡我們。</p>
-
-                <h2>9. 國際使用者</h2>
-                <p>我們的應用程式在全球範圍內提供。資訊可能在我們的服務提供商營運的各個國家進行處理。我們確保為國際資料傳輸設置適當的保障措施。</p>
-
-                <h2>10. 第三方服務</h2>
-                <p>我們的應用程式使用這些第三方服務：</p>
-                <ul>
-                    <li><strong>Google廣告：</strong><a href="https://policies.google.com/privacy" target="_blank">Google隱私政策</a></li>
-                    <li><strong>Google Play服務：</strong><a href="https://policies.google.com/privacy" target="_blank">Google隱私政策</a></li>
-                </ul>
-
-                <h2>11. 請勿追蹤</h2>
-                <p>我們的應用程式不回應「請勿追蹤」瀏覽器信號，但您可以通過裝置的隱私設定控制廣告個人化。</p>
-
-                <h2>12. 政策變更</h2>
-                <p>我們可能偶爾更新此隱私政策。當我們這樣做時：</p>
-                <ul>
-                    <li>我們將發布更新的政策，並標註新的「最後更新」日期</li>
-                    <li>重大變更將在應用程式中突出顯示</li>
-                    <li>繼續使用我們的應用程式意味著您接受更新的政策</li>
+                    <li><strong>知情權：</strong>要求披露收集的個人資訊的類別和具體內容</li>
+                    <li><strong>刪除權：</strong>要求刪除個人資訊（受例外情況限制）</li>
+                    <li><strong>更正權：</strong>要求更正不準確的個人資訊</li>
+                    <li><strong>選擇退出權：</strong>選擇退出個人資訊的銷售或分享</li>
+                    <li><strong>限制權：</strong>限制敏感個人資訊的使用和披露</li>
+                    <li><strong>不歧視權：</strong>因行使權利而不受歧視</li>
                 </ul>
 
                 <div class="contact-info">
-                    <h2>13. 聯絡我們</h2>
-                    <p>有關本隱私政策的問題或行使您的隱私權利：</p>
-                    <p><strong>科技有限公司</strong><br>
-                    電子郵件：<strong>privacy@kidstart.com</strong></p>
+                    <h2 id="contact-zh">15. 聯絡資訊</h2>
+                    <p>有關隱私相關查詢、行使您的權利或提出投訴，請聯絡我們：</p>
                     
-                    <p><strong>回應時間：</strong></p>
-                    <ul>
-                        <li>一般查詢：5個工作日</li>
-                        <li>隱私權利要求：30天</li>
-                        <li>加州居民：45天</li>
-                    </ul>
+                    <h3>主要聯絡方式</h3>
+                    <p><strong>科技有限公司</strong><br>
+                    <strong>隱私專員</strong><br>
+                    電子郵件：<strong>privacy@kidstart.com</strong><br>
+                    一般支援：<strong>support@kidstart.com</strong></p>
+
+                    <h3>資料保護專員（歐盟/歐洲經濟區）</h3>
+                    <p>如果您位於歐盟/歐洲經濟區，您可以聯絡我們的資料保護專員：<br>
+                    <strong>dpo@kidstart.com</strong></p>
+
+                    <h3>加州隱私權利</h3>
+                    <p>加州居民行使CCPA/CPRA權利：<br>
+                    <strong>california-privacy@kidstart.com</strong></p>
                 </div>
             </div>
 
             <div id="content-zh-hans" class="content-section">
                 <h1>隐私政策</h1>
-                
+                <p><strong>科技有限公司</strong>（"我们"、"我们的"、"我们"或"公司"）致力于保护您的隐私，并确保遵守适用的数据保护法律，包括一般数据保护条例（GDPR）、加州消费者隐私法（CCPA）及加州隐私权法（CPRA）修订，以及加州在线隐私保护法（CalOPPA）。</p>
+
                 <div class="effective-date">
-                    <strong>生效日期：</strong>2025年6月25日<br>
-                    <strong>最后更新：</strong>2025年6月25日
+                    <strong>生效日期：</strong>2025年1月1日<br>
+                    <strong>最后更新：</strong>2024年12月25日
                 </div>
 
-                <p>科技有限公司（"我们"、"我们的"或"我们"）尊重您的隐私。本隐私政策说明我们的移动应用程序在您使用我们的服务时如何收集、使用和保护您的信息。</p>
+                <div class="toc">
+                    <h3>目录</h3>
+                    <ul>
+                        <li><a href="#information-collection-zh-hans">1. 我们收集的信息</a></li>
+                        <li><a href="#how-we-use-zh-hans">2. 我们如何使用您的信息</a></li>
+                        <li><a href="#sharing-disclosure-zh-hans">3. 信息共享与披露</a></li>
+                        <li><a href="#legal-basis-zh-hans">4. 处理的法律依据（GDPR）</a></li>
+                        <li><a href="#your-rights-zh-hans">5. 您的隐私权利</a></li>
+                        <li><a href="#ccpa-rights-zh-hans">6. 加州隐私权利（CCPA/CPRA）</a></li>
+                        <li><a href="#caloppa-compliance-zh-hans">7. CalOPPA合规</a></li>
+                        <li><a href="#cookies-tracking-zh-hans">8. Cookie和跟踪技术</a></li>
+                        <li><a href="#data-retention-zh-hans">9. 数据保留</a></li>
+                        <li><a href="#international-transfers-zh-hans">10. 国际数据传输</a></li>
+                        <li><a href="#security-zh-hans">11. 数据安全</a></li>
+                        <li><a href="#third-party-zh-hans">12. 第三方服务</a></li>
+                        <li><a href="#children-privacy-zh-hans">13. 儿童隐私</a></li>
+                        <li><a href="#changes-zh-hans">14. 政策变更</a></li>
+                        <li><a href="#contact-zh-hans">15. 联系信息</a></li>
+                    </ul>
+                </div>
 
-                <h2>1. 我们收集的信息</h2>
-                
-                <h3>1.1 我们不收集的信息</h3>
-                <p>我们的应用程序以隐私为设计原则。我们不收集：</p>
+                <h2 id="information-collection-zh-hans">1. 我们收集的信息</h2>
+                <p>我们可能收集以下类别的个人信息：</p>
+
+                <h3>1.1 个人信息</h3>
                 <ul>
-                    <li>姓名、电子邮件地址或电话号码等个人信息</li>
-                    <li>您在我们应用程序中创建或扫描的文本内容</li>
-                    <li>照片或图像（除了临时处理）</li>
-                    <li>精确位置数据（仅收集一般国家/地区）</li>
-                    <li>联系人列表或设备文件</li>
+                    <li><strong>标识信息：</strong>姓名、电子邮件地址、电话号码、IP地址、设备ID</li>
+                    <li><strong>商业信息：</strong>购买历史、付款信息、交易记录</li>
+                    <li><strong>网络活动：</strong>浏览历史、搜索历史、与我们服务的交互</li>
+                    <li><strong>地理位置数据：</strong>基于IP地址的一般位置</li>
+                    <li><strong>专业信息：</strong>公司名称、职位、商务电子邮件</li>
                 </ul>
 
                 <h3>1.2 自动收集的信息</h3>
-                <p>我们的应用程序和广告合作伙伴可能自动收集有限的技术信息：</p>
+                <p>当您访问我们的网站或使用我们的移动应用程序时，我们会自动收集某些信息，包括：</p>
                 <ul>
-                    <li><strong>设备信息：</strong>设备类型、操作系统版本、应用程序版本</li>
-                    <li><strong>广告数据：</strong>广告ID、一般位置（国家/地区）、应用程序使用模式用于广告个性化</li>
-                    <li><strong>使用分析：</strong>应用程序崩溃、性能数据、功能使用情况（匿名化）</li>
-                    <li><strong>购买信息：</strong>由Google Play商店处理的交易详情</li>
+                    <li>日志数据：IP地址、浏览器类型、操作系统、引用URL、访问时间</li>
+                    <li>设备信息：设备类型、唯一设备标识符、移动网络信息</li>
+                    <li>使用分析：页面浏览、停留时间、点击模式（仅在我们的移动应用程序中通过Google Analytics）</li>
+                    <li>位置信息：基于IP地址的一般地理位置</li>
                 </ul>
 
-                <h2>2. 我们如何使用信息</h2>
-                <p>收集的有限信息用于：</p>
+                <h2 id="how-we-use-zh-hans">2. 我们如何使用您的信息</h2>
+                <p>我们出于以下商业目的处理您的个人信息：</p>
+
+                <h3>2.1 服务提供与管理</h3>
                 <ul>
-                    <li><strong>显示相关广告：</strong>通过Google广告显示个性化广告</li>
-                    <li><strong>处理付款：</strong>通过Google Play计费处理应用程序内购买</li>
-                    <li><strong>改进我们的应用程序：</strong>修复错误、增强功能和优化性能</li>
-                    <li><strong>防止欺诈：</strong>检测异常活动并防止滥用</li>
+                    <li>创建和管理用户账户</li>
+                    <li>处理付款和交易</li>
+                    <li>提供客户支持和技术协助</li>
+                    <li>交付产品和服务</li>
+                    <li>管理订阅和计费</li>
                 </ul>
 
-                <h2>5. 您的隐私权利</h2>
-                
+                <h3>2.2 沟通与营销</h3>
+                <ul>
+                    <li>发送交易通信（收据、账户更新）</li>
+                    <li>提供客户服务和支持</li>
+                    <li>进行再营销和定向广告活动</li>
+                    <li>发送促销材料（在需要时经您同意）</li>
+                    <li>进行调查和收集反馈</li>
+                </ul>
+
+                <h3>2.3 分析与改进</h3>
+                <ul>
+                    <li>分析使用模式和用户行为（在移动应用程序中通过Google Analytics）</li>
+                    <li>改进我们的产品和服务</li>
+                    <li>开发新功能和功能</li>
+                    <li>进行市场研究和分析</li>
+                    <li>优化用户体验和界面设计</li>
+                </ul>
+
+                <h2 id="your-rights-zh-hans">5. 您的隐私权利</h2>
                 <div class="highlight-box">
-                    <h3>所有用户</h3>
-                    <p>无论您在何处，您都可以：</p>
+                    <h3>欧盟/欧洲经济区居民的GDPR权利</h3>
+                    <p>如果您位于欧盟/欧洲经济区，您在GDPR下拥有以下权利：</p>
                     <ul>
-                        <li>通过设备设置选择退出个性化广告</li>
-                        <li>联系我们要求删除您的数据</li>
-                        <li>询问关于我们隐私做法的问题</li>
+                        <li><strong>数据可移植性：</strong>以结构化、机器可读格式接收您的个人数据</li>
+                        <li><strong>限制处理：</strong>要求限制我们处理您数据的方式</li>
+                        <li><strong>反对处理：</strong>反对基于合法利益或用于营销的处理</li>
+                        <li><strong>撤回同意：</strong>撤回基于同意的处理的同意</li>
+                        <li><strong>提出投诉：</strong>向当地数据保护机构提出投诉</li>
                     </ul>
                 </div>
 
-                <h3>5.1 欧盟（GDPR）权利</h3>
-                <p>如果您在欧盟/欧洲经济区，您有额外的权利：</p>
+                <h2 id="ccpa-rights-zh-hans">6. 加州隐私权利（CCPA/CPRA）</h2>
+                <div class="highlight-box">
+                    <h3>加州居民</h3>
+                    <p>加州消费者隐私法（CCPA），经加州隐私权法（CPRA）修订，为加州居民提供关于其个人信息的特定权利。</p>
+                </div>
+
+                <h3>6.1 您的CCPA/CPRA权利</h3>
                 <ul>
-                    <li><strong>访问：</strong>要求我们拥有的关于您的数据信息</li>
-                    <li><strong>更正：</strong>更正不准确的信息</li>
-                    <li><strong>删除：</strong>要求删除您的数据</li>
-                    <li><strong>可移植性：</strong>以可移植格式接收您的数据</li>
-                    <li><strong>反对：</strong>反对用于营销目的的处理</li>
-                    <li><strong>投诉：</strong>向当地数据保护机构提出投诉</li>
-                </ul>
-
-                <h3>5.2 加州（CCPA/CPRA）权利</h3>
-                <p>加州居民有权：</p>
-                <ul>
-                    <li><strong>知情：</strong>我们收集哪些个人信息以及如何使用</li>
-                    <li><strong>删除：</strong>要求删除您的个人信息</li>
-                    <li><strong>选择退出：</strong>选择退出个人信息的销售（我们不出售数据）</li>
-                    <li><strong>不歧视：</strong>因行使这些权利而不受歧视</li>
-                </ul>
-
-                <h2>6. 数据安全</h2>
-                <p>我们通过以下方式保护您的信息：</p>
-                <ul>
-                    <li>安全数据传输（加密）</li>
-                    <li>有限的数据收集和存储</li>
-                    <li>定期安全更新</li>
-                    <li>限制对任何收集数据的访问</li>
-                </ul>
-
-                <h2>7. 数据保留</h2>
-                <p>我们仅在必要时保留信息：</p>
-                <ul>
-                    <li><strong>应用程序使用数据：</strong>26个月（Google Analytics默认）</li>
-                    <li><strong>广告数据：</strong>根据Google广告政策确定</li>
-                    <li><strong>购买记录：</strong>根据应用程序商店政策要求</li>
-                    <li><strong>用户请求：</strong>经验证请求后立即删除</li>
-                </ul>
-
-                <h2>8. 儿童隐私</h2>
-                <p>我们的应用程序不适用于13岁以下的儿童。我们不会故意收集13岁以下儿童的个人信息。如果您认为儿童向我们提供了个人信息，请立即联系我们。</p>
-
-                <h2>9. 国际用户</h2>
-                <p>我们的应用程序在全球范围内提供。信息可能在我们的服务提供商运营的各个国家进行处理。我们确保为国际数据传输设置适当的保障措施。</p>
-
-                <h2>10. 第三方服务</h2>
-                <p>我们的应用程序使用这些第三方服务：</p>
-                <ul>
-                    <li><strong>Google广告：</strong><a href="https://policies.google.com/privacy" target="_blank">Google隐私政策</a></li>
-                    <li><strong>Google Play服务：</strong><a href="https://policies.google.com/privacy" target="_blank">Google隐私政策</a></li>
-                </ul>
-
-                <h2>11. 请勿跟踪</h2>
-                <p>我们的应用程序不响应"请勿跟踪"浏览器信号，但您可以通过设备的隐私设置控制广告个性化。</p>
-
-                <h2>12. 政策变更</h2>
-                <p>我们可能偶尔更新此隐私政策。当我们这样做时：</p>
-                <ul>
-                    <li>我们将发布更新的政策，并标注新的"最后更新"日期</li>
-                    <li>重大变更将在应用程序中突出显示</li>
-                    <li>继续使用我们的应用程序意味着您接受更新的政策</li>
+                    <li><strong>知情权：</strong>要求披露收集的个人信息的类别和具体内容</li>
+                    <li><strong>删除权：</strong>要求删除个人信息（受例外情况限制）</li>
+                    <li><strong>更正权：</strong>要求更正不准确的个人信息</li>
+                    <li><strong>选择退出权：</strong>选择退出个人信息的销售或共享</li>
+                    <li><strong>限制权：</strong>限制敏感个人信息的使用和披露</li>
+                    <li><strong>不歧视权：</strong>因行使权利而不受歧视</li>
                 </ul>
 
                 <div class="contact-info">
-                    <h2>13. 联系我们</h2>
-                    <p>有关本隐私政策的问题或行使您的隐私权利：</p>
-                    <p><strong>科技有限公司</strong><br>
-                    电子邮件：<strong>privacy@kidstart.com</strong></p>
+                    <h2 id="contact-zh-hans">15. 联系信息</h2>
+                    <p>有关隐私相关查询、行使您的权利或提出投诉，请联系我们：</p>
                     
-                    <p><strong>响应时间：</strong></p>
-                    <ul>
-                        <li>一般查询：5个工作日</li>
-                        <li>隐私权利要求：30天</li>
-                        <li>加州居民：45天</li>
-                    </ul>
+                    <h3>主要联系方式</h3>
+                    <p><strong>科技有限公司</strong><br>
+                    <strong>隐私专员</strong><br>
+                    电子邮件：<strong>privacy@kidstart.com</strong><br>
+                    一般支持：<strong>support@kidstart.com</strong></p>
+
+                    <h3>数据保护专员（欧盟/欧洲经济区）</h3>
+                    <p>如果您位于欧盟/欧洲经济区，您可以联系我们的数据保护专员：<br>
+                    <strong>dpo@kidstart.com</strong></p>
+
+                    <h3>加州隐私权利</h3>
+                    <p>加州居民行使CCPA/CPRA权利：<br>
+                    <strong>california-privacy@kidstart.com</strong></p>
                 </div>
             </div>
         </div>
