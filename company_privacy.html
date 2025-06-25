@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - Technology Company Limited</title>
+    <link rel="icon" type="image/png" href="images/Company_Icon.png">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --border-color: #e9ecef;
+            --shadow-light: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-medium: 0 4px 16px rgba(0,0,0,0.12);
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: var(--shadow-medium);
+            position: relative;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-left {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .company-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 0;
+        }
+
+        .company-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .company-name {
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .language-selector {
+            display: flex;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            padding: 2px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+        }
+        
+        .language-btn {
+            padding: 8px 14px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            background: transparent;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            position: relative;
+            min-width: 45px;
+            z-index: 2;
+        }
+        
+        .language-btn.active {
+            background: white;
+            color: var(--primary-color);
+            font-weight: 600;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        
+        .language-btn:hover:not(.active) {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .separator {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            padding: 0 4px;
+        }
+
+        .privacy-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .privacy-content {
+            background: white;
+            padding: 60px 50px;
+            margin: 40px 0;
+            border-radius: 24px;
+            box-shadow: var(--shadow-medium);
+            border: 1px solid var(--border-color);
+        }
+        
+        .privacy-content h1 {
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .privacy-content h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.6em;
+            font-weight: 600;
+        }
+        
+        .privacy-content p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            color: #5a6c7d;
+            font-size: 1.05em;
+        }
+        
+        .privacy-content ul {
+            margin-bottom: 25px;
+            padding-left: 25px;
+        }
+        
+        .privacy-content li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+            color: #5a6c7d;
+        }
+        
+        .effective-date {
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 2px solid var(--border-color);
+            color: #6c757d;
+            font-style: italic;
+            font-size: 1.05em;
+        }
+        
+        .contact-info {
+            margin-top: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 16px;
+            border-left: 4px solid var(--primary-color);
+            box-shadow: var(--shadow-light);
+        }
+
+        .contact-info h2 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .content-section {
+            display: none;
+        }
+        
+        .content-section.active {
+            display: block;
+        }
+        
+        footer {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+
+            .language-selector {
+                align-self: flex-end;
+            }
+            
+            .language-btn {
+                padding: 6px 10px;
+                font-size: 12px;
+                min-width: 35px;
+            }
+
+            .separator {
+                font-size: 12px;
+                padding: 0 3px;
+            }
+
+            .company-title {
+                gap: 12px;
+            }
+
+            .company-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .company-name {
+                font-size: 1.3em;
+            }
+
+            .privacy-container {
+                padding: 15px;
+            }
+            
+            .privacy-content {
+                padding: 40px 30px;
+            }
+            
+            .privacy-content h1 {
+                font-size: 2em;
+            }
+            
+            .privacy-content h2 {
+                font-size: 1.4em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .language-btn {
+                padding: 5px 8px;
+                font-size: 11px;
+                min-width: 30px;
+            }
+
+            .separator {
+                font-size: 11px;
+                padding: 0 2px;
+            }
+
+            .company-title {
+                gap: 10px;
+            }
+
+            .company-icon {
+                width: 35px;
+                height: 35px;
+            }
+
+            .company-name {
+                font-size: 1.2em;
+            }
+            
+            .privacy-content {
+                padding: 30px 20px;
+            }
+            
+            .contact-info {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <h1 class="company-title">
+                        <img src="images/Company_Icon.png" alt="Company Icon" class="company-icon">
+                        <span class="company-name">Technology Company Limited</span>
+                    </h1>
+                    <nav>
+                        <ul>
+                            <li><a href="index.html" class="nav-link nav-home">Home</a></li>
+                            <li><a href="about.html" class="nav-link nav-about">About Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="language-selector">
+                    <button class="language-btn" data-lang="en">Eng</button>
+                    <span class="separator">|</span>
+                    <button class="language-btn" data-lang="zh-hant">繁</button>
+                    <span class="separator">|</span>
+                    <button class="language-btn" data-lang="zh-hans">简</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="privacy-container">
+        <div class="privacy-content">
+            <div id="content-en" class="content-section">
+                <h1>Privacy Policy</h1>
+                <p>Technology Company Limited ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.</p>
+
+                <h2>Information We Collect</h2>
+                <p>We may collect information about you in a variety of ways. The information we may collect includes:</p>
+                <ul>
+                    <li><strong>Personal Data:</strong> When you voluntarily provide it to us, such as when you contact us or use our services.</li>
+                    <li><strong>Usage Data:</strong> Information about how you access and use our website, including your IP address, browser type, and pages visited.</li>
+                    <li><strong>Cookies and Tracking Technologies:</strong> We may use cookies and similar tracking technologies to enhance your experience on our website.</li>
+                </ul>
+
+                <h2>How We Use Your Information</h2>
+                <p>We may use the information we collect about you for various purposes, including to:</p>
+                <ul>
+                    <li>Provide, operate, and maintain our website and services</li>
+                    <li>Improve, personalize, and expand our services</li>
+                    <li>Understand and analyze how you use our website</li>
+                    <li>Develop new products, services, features, and functionality</li>
+                    <li>Communicate with you for customer service and support</li>
+                    <li>Send you updates and marketing communications (with your consent)</li>
+                </ul>
+
+                <h2>Disclosure of Your Information</h2>
+                <p>We may share information we have collected about you in certain situations. Your information may be disclosed as follows:</p>
+                <ul>
+                    <li><strong>By Law or to Protect Rights:</strong> If we believe disclosure is necessary to comply with legal obligations or protect our rights.</li>
+                    <li><strong>Business Transfers:</strong> In connection with any merger, sale of assets, or acquisition of our business.</li>
+                    <li><strong>With Your Consent:</strong> We may disclose your information for any other purpose with your consent.</li>
+                </ul>
+
+                <h2>Security of Your Information</h2>
+                <p>We use administrative, technical, and physical security measures to help protect your personal information. However, no security system is impenetrable, and we cannot guarantee the security of our systems.</p>
+
+                <h2>Data Retention</h2>
+                <p>We will retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy, unless a longer retention period is required or permitted by law.</p>
+
+                <h2>Your Rights</h2>
+                <p>Depending on your location, you may have certain rights regarding your personal information, including:</p>
+                <ul>
+                    <li>The right to access your personal information</li>
+                    <li>The right to rectify inaccurate personal information</li>
+                    <li>The right to erase your personal information</li>
+                    <li>The right to restrict processing of your personal information</li>
+                    <li>The right to data portability</li>
+                </ul>
+
+                <h2>Third-Party Services</h2>
+                <p>Our website may contain links to third-party websites and services. We are not responsible for the privacy practices of these third parties. We encourage you to read their privacy policies.</p>
+
+                <h2>Children's Privacy</h2>
+                <p>Our services are not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us.</p>
+
+                <h2>Changes to This Privacy Policy</h2>
+                <p>We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
+
+                <div class="effective-date">
+                    Last Updated: December 25, 2024
+                </div>
+
+                <div class="contact-info">
+                    <h2>Contact Us</h2>
+                    <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+                    <p><strong>Technology Company Limited</strong><br>
+                    Email: support@kidstart.com</p>
+                </div>
+            </div>
+
+            <div id="content-zh-hant" class="content-section">
+                <h1>隱私政策</h1>
+                <p>科技有限公司（「我們」、「我們的」或「我們」）致力於保護您的隱私。本隱私政策說明當您訪問我們的網站和使用我們的服務時，我們如何收集、使用、披露和保護您的資訊。</p>
+
+                <h2>我們收集的資訊</h2>
+                <p>我們可能以各種方式收集有關您的資訊。我們可能收集的資訊包括：</p>
+                <ul>
+                    <li><strong>個人資料：</strong>當您自願向我們提供時，例如當您聯絡我們或使用我們的服務時。</li>
+                    <li><strong>使用資料：</strong>有關您如何存取和使用我們網站的資訊，包括您的IP地址、瀏覽器類型和訪問的頁面。</li>
+                    <li><strong>Cookie和追踪技術：</strong>我們可能使用Cookie和類似的追踪技術來增強您在我們網站上的體驗。</li>
+                </ul>
+
+                <h2>我們如何使用您的資訊</h2>
+                <p>我們可能將收集到的有關您的資訊用於各種目的，包括：</p>
+                <ul>
+                    <li>提供、運營和維護我們的網站和服務</li>
+                    <li>改進、個人化和擴展我們的服務</li>
+                    <li>理解和分析您如何使用我們的網站</li>
+                    <li>開發新的產品、服務、功能和功能</li>
+                    <li>與您溝通以提供客戶服務和支援</li>
+                    <li>向您發送更新和行銷通訊（經您同意）</li>
+                </ul>
+
+                <h2>披露您的資訊</h2>
+                <p>在某些情況下，我們可能會分享我們收集到的有關您的資訊。您的資訊可能按以下方式披露：</p>
+                <ul>
+                    <li><strong>依法或保護權利：</strong>如果我們認為披露對於遵守法律義務或保護我們的權利是必要的。</li>
+                    <li><strong>業務轉讓：</strong>與我們業務的任何合併、資產出售或收購相關。</li>
+                    <li><strong>經您同意：</strong>經您同意，我們可能為任何其他目的披露您的資訊。</li>
+                </ul>
+
+                <h2>您的資訊安全</h2>
+                <p>我們使用管理、技術和物理安全措施來幫助保護您的個人資訊。但是，沒有安全系統是不可滲透的，我們無法保證我們系統的安全性。</p>
+
+                <h2>資料保留</h2>
+                <p>我們只會在本隱私政策規定的目的所需的時間內保留您的個人資訊，除非法律要求或允許更長的保留期。</p>
+
+                <h2>您的權利</h2>
+                <p>根據您的所在地，您可能對您的個人資訊擁有某些權利，包括：</p>
+                <ul>
+                    <li>存取您的個人資訊的權利</li>
+                    <li>糾正不準確個人資訊的權利</li>
+                    <li>刪除您的個人資訊的權利</li>
+                    <li>限制處理您的個人資訊的權利</li>
+                    <li>資料可攜性的權利</li>
+                </ul>
+
+                <h2>第三方服務</h2>
+                <p>我們的網站可能包含第三方網站和服務的連結。我們不對這些第三方的隱私慣例負責。我們鼓勵您閱讀他們的隱私政策。</p>
+
+                <h2>兒童隱私</h2>
+                <p>我們的服務不適用於13歲以下的兒童。我們不會故意收集13歲以下兒童的個人資訊。如果您是父母或監護人，並相信您的孩子向我們提供了個人資訊，請聯絡我們。</p>
+
+                <h2>本隱私政策的變更</h2>
+                <p>我們可能不時更新本隱私政策。我們將通過在此頁面上發布新的隱私政策並更新「最後更新」日期來通知您任何變更。</p>
+
+                <div class="effective-date">
+                    最後更新：2024年12月25日
+                </div>
+
+                <div class="contact-info">
+                    <h2>聯絡我們</h2>
+                    <p>如果您對本隱私政策有任何問題，請聯絡我們：</p>
+                    <p><strong>科技有限公司</strong><br>
+                    電子郵件：support@kidstart.com</p>
+                </div>
+            </div>
+
+            <div id="content-zh-hans" class="content-section">
+                <h1>隐私政策</h1>
+                <p>科技有限公司（"我们"、"我们的"或"我们"）致力于保护您的隐私。本隐私政策说明当您访问我们的网站和使用我们的服务时，我们如何收集、使用、披露和保护您的信息。</p>
+
+                <h2>我们收集的信息</h2>
+                <p>我们可能以各种方式收集有关您的信息。我们可能收集的信息包括：</p>
+                <ul>
+                    <li><strong>个人数据：</strong>当您自愿向我们提供时，例如当您联系我们或使用我们的服务时。</li>
+                    <li><strong>使用数据：</strong>有关您如何访问和使用我们网站的信息，包括您的IP地址、浏览器类型和访问的页面。</li>
+                    <li><strong>Cookie和跟踪技术：</strong>我们可能使用Cookie和类似的跟踪技术来增强您在我们网站上的体验。</li>
+                </ul>
+
+                <h2>我们如何使用您的信息</h2>
+                <p>我们可能将收集到的有关您的信息用于各种目的，包括：</p>
+                <ul>
+                    <li>提供、运营和维护我们的网站和服务</li>
+                    <li>改进、个性化和扩展我们的服务</li>
+                    <li>理解和分析您如何使用我们的网站</li>
+                    <li>开发新的产品、服务、功能和功能</li>
+                    <li>与您沟通以提供客户服务和支持</li>
+                    <li>向您发送更新和营销通信（经您同意）</li>
+                </ul>
+
+                <h2>披露您的信息</h2>
+                <p>在某些情况下，我们可能会分享我们收集到的有关您的信息。您的信息可能按以下方式披露：</p>
+                <ul>
+                    <li><strong>依法或保护权利：</strong>如果我们认为披露对于遵守法律义务或保护我们的权利是必要的。</li>
+                    <li><strong>业务转让：</strong>与我们业务的任何合并、资产出售或收购相关。</li>
+                    <li><strong>经您同意：</strong>经您同意，我们可能为任何其他目的披露您的信息。</li>
+                </ul>
+
+                <h2>您的信息安全</h2>
+                <p>我们使用管理、技术和物理安全措施来帮助保护您的个人信息。但是，没有安全系统是不可渗透的，我们无法保证我们系统的安全性。</p>
+
+                <h2>数据保留</h2>
+                <p>我们只会在本隐私政策规定的目的所需的时间内保留您的个人信息，除非法律要求或允许更长的保留期。</p>
+
+                <h2>您的权利</h2>
+                <p>根据您的所在地，您可能对您的个人信息拥有某些权利，包括：</p>
+                <ul>
+                    <li>访问您的个人信息的权利</li>
+                    <li>纠正不准确个人信息的权利</li>
+                    <li>删除您的个人信息的权利</li>
+                    <li>限制处理您的个人信息的权利</li>
+                    <li>数据可携性的权利</li>
+                </ul>
+
+                <h2>第三方服务</h2>
+                <p>我们的网站可能包含第三方网站和服务的链接。我们不对这些第三方的隐私惯例负责。我们鼓励您阅读他们的隐私政策。</p>
+
+                <h2>儿童隐私</h2>
+                <p>我们的服务不适用于13岁以下的儿童。我们不会故意收集13岁以下儿童的个人信息。如果您是父母或监护人，并相信您的孩子向我们提供了个人信息，请联系我们。</p>
+
+                <h2>本隐私政策的变更</h2>
+                <p>我们可能不时更新本隐私政策。我们将通过在此页面上发布新的隐私政策并更新"最后更新"日期来通知您任何变更。</p>
+
+                <div class="effective-date">
+                    最后更新：2024年12月25日
+                </div>
+
+                <div class="contact-info">
+                    <h2>联系我们</h2>
+                    <p>如果您对本隐私政策有任何问题，请联系我们：</p>
+                    <p><strong>科技有限公司</strong><br>
+                    电子邮件：support@kidstart.com</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 <span class="footer-company">Technology Company Limited</span>. <span class="footer-rights">All rights reserved</span>.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Language switching functionality
+        const languageButtons = document.querySelectorAll('.language-btn');
+        const contentSections = document.querySelectorAll('.content-section');
+
+        // Translation data
+        const translations = {
+            'en': {
+                'nav.home': 'Home',
+                'nav.about': 'About Us',
+                'company.name': 'Technology Company Limited',
+                'footer.company': 'Technology Company Limited',
+                'footer.rights': 'All rights reserved'
+            },
+            'zh-hant': {
+                'nav.home': '首頁',
+                'nav.about': '關於我們',
+                'company.name': '科技有限公司',
+                'footer.company': '科技有限公司',
+                'footer.rights': '版權所有'
+            },
+            'zh-hans': {
+                'nav.home': '首页',
+                'nav.about': '关于我们',
+                'company.name': '科技有限公司',
+                'footer.company': '科技有限公司',
+                'footer.rights': '版权所有'
+            }
+        };
+
+        // Set default language based on browser preference
+        function getDefaultLanguage() {
+            const lang = navigator.language.toLowerCase();
+            if (lang.includes('zh')) {
+                return lang.includes('hant') || lang.includes('tw') || lang.includes('hk') 
+                    ? 'zh-hant' 
+                    : 'zh-hans';
+            }
+            return 'en';
+        }
+
+        // Update navigation and company name
+        function updateTranslations(lang) {
+            const navHome = document.querySelector('.nav-home');
+            const navAbout = document.querySelector('.nav-about');
+            const companyName = document.querySelector('.company-name');
+            const footerCompany = document.querySelector('.footer-company');
+            const footerRights = document.querySelector('.footer-rights');
+            
+            if (navHome) navHome.textContent = translations[lang]['nav.home'];
+            if (navAbout) navAbout.textContent = translations[lang]['nav.about'];
+            if (companyName) companyName.textContent = translations[lang]['company.name'];
+            if (footerCompany) footerCompany.textContent = translations[lang]['footer.company'];
+            if (footerRights) footerRights.textContent = translations[lang]['footer.rights'];
+        }
+
+        // Initialize with default language
+        function initializeLanguage() {
+            const defaultLang = getDefaultLanguage();
+            switchLanguage(defaultLang);
+        }
+
+        function switchLanguage(lang) {
+            // Update buttons
+            languageButtons.forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+
+            // Update content visibility
+            contentSections.forEach(section => {
+                section.classList.toggle('active', section.id === `content-${lang}`);
+            });
+
+            // Update translations
+            updateTranslations(lang);
+
+            // Update page language and title
+            document.documentElement.lang = lang;
+            
+            // Update page title based on language
+            const titles = {
+                'en': 'Privacy Policy - Technology Company Limited',
+                'zh-hant': '隱私政策 - 科技有限公司',
+                'zh-hans': '隐私政策 - 科技有限公司'
+            };
+            document.title = titles[lang];
+
+            // Store preference
+            localStorage.setItem('preferred-language', lang);
+        }
+
+        // Event listeners
+        languageButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                switchLanguage(btn.dataset.lang);
+            });
+        });
+
+        // Initialize with stored preference or default
+        const storedLang = localStorage.getItem('preferred-language');
+        if (storedLang) {
+            switchLanguage(storedLang);
+        } else {
+            initializeLanguage();
+        }
+    </script>
+</body>
+</html>
