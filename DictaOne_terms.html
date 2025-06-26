@@ -856,7 +856,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 <span class="footer-company">科技有限公司</span>. <span class="footer-rights">版權所有</span>.</p>
+            <p>&copy; 2025 <span class="footer-company">科技有限公司</span>. <span class="footer-rights">版權所有</span>. | <a href="company_privacy.html" class="footer-privacy" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Privacy Policy</a></p>
         </div>
     </footer>
 
@@ -872,21 +872,24 @@
                 'nav.about': 'About Us',
                 'company.name': 'Technology Company Limited',
                 'footer.company': 'Technology Company Limited',
-                'footer.rights': 'All rights reserved'
+                'footer.rights': 'All rights reserved',
+                'footer.privacy': 'Privacy Policy'
             },
             'zh-hant': {
                 'nav.home': '首頁',
                 'nav.about': '關於我們',
                 'company.name': '科技有限公司',
                 'footer.company': '科技有限公司',
-                'footer.rights': '版權所有'
+                'footer.rights': '版權所有',
+                'footer.privacy': '隱私政策'
             },
             'zh-hans': {
                 'nav.home': '首页',
                 'nav.about': '关于我们',
                 'company.name': '科技有限公司',
                 'footer.company': '科技有限公司',
-                'footer.rights': '版权所有'
+                'footer.rights': '版权所有',
+                'footer.privacy': '隐私政策'
             }
         };
 
@@ -908,14 +911,16 @@
             const companyName = document.querySelector('.company-name');
             const footerCompany = document.querySelector('.footer-company');
             const footerRights = document.querySelector('.footer-rights');
+            const footerPrivacy = document.querySelector('.footer-privacy');
             
             if (navHome) navHome.textContent = translations[lang]['nav.home'];
             if (navAbout) navAbout.textContent = translations[lang]['nav.about'];
             if (companyName) companyName.textContent = translations[lang]['company.name'];
             if (footerCompany) footerCompany.textContent = translations[lang]['footer.company'];
             if (footerRights) footerRights.textContent = translations[lang]['footer.rights'];
+            if (footerPrivacy) footerPrivacy.textContent = translations[lang]['footer.privacy'];
         }
-
+        
         // Initialize with default language
         function initializeLanguage() {
             const defaultLang = getDefaultLanguage();
