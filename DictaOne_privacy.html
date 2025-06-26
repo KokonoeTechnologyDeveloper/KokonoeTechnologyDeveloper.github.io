@@ -173,6 +173,14 @@
             font-size: 1.6em;
             font-weight: 600;
         }
+
+        .privacy-content h3 {
+            color: var(--primary-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            font-weight: 500;
+        }
         
         .privacy-content p {
             margin-bottom: 20px;
@@ -190,6 +198,37 @@
             margin-bottom: 12px;
             line-height: 1.7;
             color: #5a6c7d;
+        }
+
+        .privacy-summary {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e8f4f8 100%);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border: 1px solid #d1e7dd;
+        }
+
+        .privacy-summary h2 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .privacy-summary ul {
+            margin-bottom: 0;
+        }
+
+        .version-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            font-size: 0.95em;
+            color: #6c757d;
+        }
+
+        .version-info p {
+            margin: 5px 0;
+            color: #6c757d;
         }
         
         .effective-date {
@@ -281,6 +320,10 @@
             .privacy-content h2 {
                 font-size: 1.4em;
             }
+
+            .privacy-summary {
+                padding: 20px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -348,308 +391,506 @@
     <main class="privacy-container">
         <div class="privacy-content">
             <div id="content-en" class="content-section">
-                <h1>Privacy Policy</h1>
-                <p>This privacy policy applies to the DictaOne app (hereby referred to as "Application") for mobile devices that was created by Technology Company Limited (hereby referred to as "Service Provider") as an Ad Supported service. This service is intended for use "AS IS".</p>
+                <h1>Privacy Policy for DictaOne</h1>
 
-                <h2>Information Collection and Use</h2>
-                <p>The Application is a text dictation tool that processes and stores all data locally on your device. The Application:</p>
-                <ul>
-                    <li>Does not collect personal information</li>
-                    <li>Does not transmit your text input to any servers</li>
-                    <li>Does not transmit captured images or scanned text to any servers</li>
-                    <li>Stores all data locally on your device only</li>
-                    <li>Does not track usage or analytics</li>
-                </ul>
-
-                <p>The Application features include:</p>
-                <ul>
-                    <li>Text processing and dictation practice</li>
-                    <li>Text scanning and recognition from images</li>
-                    <li>Password protection for hidden text</li>
-                    <li>Multi-language support</li>
-                    <li>Local storage of dictation materials</li>
-                </ul>
-
-                <p>All these features operate locally on your device without data transmission.</p>
-                <p>The Application does not gather precise information about the location of your mobile device.</p>
-
-                <h2>Camera Access</h2>
-                <p>The Application requests camera access solely for text scanning functionality. Camera usage:</p>
-                <ul>
-                    <li>Images are processed locally on your device for text recognition</li>
-                    <li>No images are transmitted to external servers</li>
-                    <li>Camera data is not stored permanently unless explicitly saved by the user</li>
-                    <li>Text recognition is performed using on-device Google ML Kit services</li>
-                </ul>
-
-                <h2>Ad Support</h2>
-                <p>The Application uses Google AdMob for displaying advertisements. Google AdMob may collect and process certain device information and usage data for advertising purposes. For more information, please refer to Google's Privacy Policy.</p>
-
-                <h2>Data Storage</h2>
-                <ul>
-                    <li>All text input is stored locally on your device only</li>
-                    <li>Captured images for text scanning are processed locally and can be deleted</li>
-                    <li>No data is transmitted to external servers</li>
-                    <li>The Service Provider has no access to your stored data</li>
-                    <li>Users are responsible for their own data backup</li>
-                    <li>Data can be permanently deleted by uninstalling the Application</li>
-                    <li>Password-protected content remains local to your device</li>
-                    <li>Dictation materials and practice records are stored locally</li>
-                    <li>Language settings and preferences are stored on device only</li>
-                    <li>No cloud backup is provided by the Application</li>
-                </ul>
-
-                <h2>Third Party Access</h2>
-                <p>Only aggregated, anonymized data is periodically transmitted to external services to aid the Service Provider in improving the Application and their service. The Service Provider may share your information with third parties in the ways that are described in this privacy statement.</p>
-                <p>Please note that the Application utilizes third-party services that have their own Privacy Policy about handling data. Below are the links to the Privacy Policy of the third-party service providers used by the Application:</p>
-                <ul>
-                    <li>Google Play Services</li>
-                    <li>Google ML Kit (for text recognition)</li>
-                </ul>
-
-                <h2>Opt-Out Rights</h2>
-                <p>You can stop all use of the Application by uninstalling it. You may use the standard uninstall processes available on your mobile device or via the Google Play store.</p>
-
-                <h2>Children</h2>
-                <p>The Application does not address anyone under the age of 13. The Service Provider does not knowingly collect personally identifiable information from children under 13 years of age. Since all data is stored locally, parents can control app usage through standard device controls.</p>
-
-                <h2>Security</h2>
-                <p>Since all data is processed and stored locally on your device:</p>
-                <ul>
-                    <li>Data security depends on your device's security settings</li>
-                    <li>Camera data is processed locally for text recognition</li>
-                    <li>No server-side security is needed as no data is transmitted</li>
-                    <li>Users are responsible for their device security</li>
-                    <li>Users should regularly backup important data</li>
-                    <li>Password protection security depends on user-chosen passwords</li>
-                    <li>Users are responsible for remembering their passwords as they cannot be recovered</li>
-                </ul>
-
-                <h2>Changes</h2>
-                <p>This Privacy Policy may be updated from time to time for any reason. The Service Provider will notify you of any changes to the Privacy Policy by updating this page with the new Privacy Policy. You are advised to consult this Privacy Policy regularly for any changes, as continued use is deemed approval of all changes.</p>
-
-                <div class="effective-date">
-                    This privacy policy is effective as of 2025-06-11
+                <div class="version-info">
+                    <p><strong>Effective Date:</strong> January 1, 2025</p>
+                    <p><strong>Last Updated:</strong> January 1, 2025</p>
+                    <p><strong>Version:</strong> 1.0</p>
                 </div>
 
-                <h2>Your Consent</h2>
-                <p>By using the Application, you consent to:</p>
+                <div class="privacy-summary">
+                    <h2>Privacy Summary</h2>
+                    <p>We prioritize your privacy:</p>
+                    <ul>
+                        <li>No account creation required</li>
+                        <li>All dictation content and practice records stay on your device only</li>
+                        <li>We don't access or store your text scanning images</li>
+                        <li>Payments are handled directly by Apple/Google</li>
+                        <li>You can use our app without providing any personal information</li>
+                        <li>Children can use the app under parental supervision</li>
+                    </ul>
+                </div>
+
+                <p>Technology Company Limited ("we," "our," "us") created DictaOne as a multi-language self-dictation mobile application. This privacy policy explains how we handle information when you use our app.</p>
+
+                <h2>1. Minimal Data Collection Principle</h2>
+                <p>We are committed to minimal data collection:</p>
                 <ul>
-                    <li>Local storage of your text input on your device</li>
-                    <li>Camera access for text scanning functionality</li>
-                    <li>Local processing of captured images for text recognition</li>
-                    <li>Local storage of dictation materials and practice records</li>
-                    <li>Viewing of advertisements through Google AdMob</li>
-                    <li>The terms outlined in this Privacy Policy</li>
+                    <li>We do not require account creation</li>
+                    <li>We do not collect email addresses or personal identifiers</li>
+                    <li>All dictation content and practice records are stored locally on your device</li>
+                    <li>We only collect anonymous analytics data for app improvement</li>
+                    <li>Payment processing is handled entirely by Apple/Google</li>
                 </ul>
 
+                <h2>2. Information We Collect</h2>
+
+                <h3>2.1 Automatically Collected Information</h3>
+                <p>When you use DictaOne, we automatically collect:</p>
+                <ul>
+                    <li><strong>Device Information:</strong> Device type, operating system, app version, unique device identifiers</li>
+                    <li><strong>Usage Analytics:</strong> Features used, session duration, app performance data (anonymous)</li>
+                    <li><strong>Advertising Data:</strong> Ad interaction data, advertising ID for personalized ads</li>
+                    <li><strong>Crash Reports:</strong> Technical data for app stability and performance improvement</li>
+                    <li><strong>General Location:</strong> Based on IP address for service localization</li>
+                </ul>
+
+                <h3>2.2 Local Data Storage</h3>
+                <p>All your dictation texts, practice records, and settings are stored locally on your device:</p>
+                <ul>
+                    <li>We do not have access to your dictation content</li>
+                    <li>Password-protected content is encrypted on your device</li>
+                    <li>Captured images for text scanning are processed locally</li>
+                    <li>Uninstalling the app will delete all locally stored data</li>
+                </ul>
+
+                <h3>2.3 In-App Purchases</h3>
+                <ul>
+                    <li>Purchase transactions are processed directly by Apple App Store or Google Play Store</li>
+                    <li>We receive only purchase confirmation from the app stores</li>
+                    <li>We do not handle payment information directly</li>
+                </ul>
+
+                <h2>3. How We Use Your Information</h2>
+                <p>We use the collected information for:</p>
+                <ul>
+                    <li>Providing app functionality</li>
+                    <li>Processing in-app purchases through App Store platforms</li>
+                    <li>Displaying relevant advertisements</li>
+                    <li>Analyzing app usage to improve features</li>
+                    <li>Fixing bugs and technical issues</li>
+                    <li>Complying with legal obligations</li>
+                </ul>
+
+                <h2>4. App-Specific Features and Privacy</h2>
+
+                <h3>4.1 Text Scanning and Processing</h3>
+                <ul>
+                    <li>Images are processed locally using Google ML Kit on your device</li>
+                    <li>We do not store or transmit scanned images to our servers</li>
+                    <li>Text extracted from images is stored only on your device</li>
+                </ul>
+
+                <h3>4.2 Multi-language Support</h3>
+                <ul>
+                    <li>Language preferences are stored locally on your device</li>
+                    <li>UI language settings do not leave your device</li>
+                </ul>
+
+                <h3>4.3 Password Protection</h3>
+                <ul>
+                    <li>Passwords for hidden texts are stored locally using device encryption</li>
+                    <li>We cannot recover forgotten passwords</li>
+                    <li>Passwords are never transmitted to our servers</li>
+                </ul>
+
+                <h3>4.4 Dictation Practice</h3>
+                <ul>
+                    <li>All practice history remains on your device</li>
+                    <li>Progress tracking is entirely local</li>
+                    <li>We do not have access to your practice performance</li>
+                </ul>
+
+                <h2>5. Third-Party Services</h2>
+
+                <h3>5.1 Advertising</h3>
+                <p>We use Google AdMob for displaying advertisements. Google AdMob may collect and process certain device information for advertising purposes. You can opt-out of personalized ads through your device settings:</p>
+                <ul>
+                    <li><strong>iOS:</strong> Settings > Privacy > Apple Advertising > Turn off "Personalized Ads"</li>
+                    <li><strong>Android:</strong> Settings > Google > Ads > Opt out of Ads Personalization</li>
+                </ul>
+
+                <h3>5.2 Other Third-Party Services</h3>
+                <ul>
+                    <li><strong>Google Play Services:</strong> For app functionality</li>
+                    <li><strong>Google ML Kit:</strong> For on-device text recognition</li>
+                    <li><strong>Firebase Analytics:</strong> For anonymous usage analytics</li>
+                </ul>
+                <p>Please refer to their respective privacy policies for more information.</p>
+
+                <h2>6. Your Privacy Rights</h2>
+                <p>While we collect minimal information (device identifiers, advertising IDs, and anonymous analytics), you still have privacy rights:</p>
+                <ul>
+                    <li><strong>Opt-out:</strong> Disable personalized ads in your device settings</li>
+                    <li><strong>Access:</strong> Request what limited data we have about your device</li>
+                    <li><strong>Deletion:</strong> Request deletion of your advertising ID from our analytics</li>
+                </ul>
+                <p>For EU/EEA residents (GDPR) and California residents (CCPA/CPRA), additional rights apply. Contact us to exercise these rights.</p>
+                <p>Since your dictation content is stored only on your device, you have full control - simply delete the app to remove all local data.</p>
+
+                <h2>7. Data Retention</h2>
+                <ul>
+                    <li><strong>Device Information:</strong> While app is installed</li>
+                    <li><strong>Usage Analytics:</strong> 90 days</li>
+                    <li><strong>Advertising Data:</strong> 30 days</li>
+                    <li><strong>Local App Data:</strong> Until app is uninstalled</li>
+                </ul>
+
+                <h2>8. Children's Privacy</h2>
+                <p>Our app is designed for educational purposes and may be used by children under parental supervision:</p>
+                <ul>
+                    <li>We do not knowingly collect personal information from children under 13</li>
+                    <li>We do not display behaviorally targeted ads to users we know are under 13</li>
+                    <li>All dictation content created by children remains on the device</li>
+                    <li>Parents have full control over their child's data through device management</li>
+                </ul>
+
+                <h2>9. International Data Transfers</h2>
+                <p>Your limited analytics data may be transferred internationally with appropriate safeguards. Your dictation content always remains on your device.</p>
+
+                <h2>10. Data Security</h2>
+                <ul>
+                    <li>All personal dictation content is stored locally on your device</li>
+                    <li>Password-protected content uses device encryption</li>
+                    <li>We implement industry-standard security for the limited data we collect</li>
+                    <li>You are responsible for your device security</li>
+                </ul>
+
+                <h2>11. Changes to This Policy</h2>
+                <p>We may update this policy from time to time. We will notify you of any material changes through the app.</p>
+
                 <div class="contact-info">
-                    <h2>Contact Us</h2>
-                    <p>If you have any questions regarding privacy while using the Application, or have questions about the practices, please contact the Service Provider via email at support@kidstart.com.</p>
+                    <h2>12. Contact Us</h2>
+                    <p>If you have any questions about this privacy policy or our practices:</p>
+                    <p><strong>Technology Company Limited</strong><br>
+                    Email: support@kidstart.com</p>
                 </div>
             </div>
 
             <div id="content-zh-hant" class="content-section">
-                <h1>隱私政策</h1>
-                <p>此隱私政策適用於由科技有限公司（以下稱為「服務提供商」）創建的DictaOne應用程式（以下稱為「應用程式」），作為廣告支援服務。此服務旨在「按原樣」使用。</p>
-                
-                <h2>資訊收集和使用</h2>
-                <p>應用程式是一個文字聽寫工具，在您的裝置上本機處理和儲存所有資料。應用程式：</p>
-                <ul>
-                    <li>不收集個人資訊</li>
-                    <li>不將您的文字輸入傳輸到任何伺服器</li>
-                    <li>不將捕獲的圖像或掃描的文字傳輸到任何伺服器</li>
-                    <li>僅在您的裝置上本機儲存所有資料</li>
-                    <li>不追蹤使用情況或分析</li>
-                </ul>
+                <h1>DictaOne 隱私政策</h1>
 
-                <p>應用程式功能包括：</p>
-                <ul>
-                    <li>文字處理和聽寫練習</li>
-                    <li>從圖像中掃描和識別文字</li>
-                    <li>隱藏文字的密碼保護</li>
-                    <li>多語言支援</li>
-                    <li>聽寫材料的本機儲存</li>
-                </ul>
-
-                <p>所有這些功能都在您的裝置上本機運行，無需資料傳輸。</p>
-                <p>應用程式不收集關於您的行動裝置位置的精確資訊。</p>
-
-                <h2>相機存取</h2>
-                <p>應用程式僅為文字掃描功能請求相機存取權限。相機使用：</p>
-                <ul>
-                    <li>圖像在您的裝置上本機處理進行文字識別</li>
-                    <li>不向外部伺服器傳輸圖像</li>
-                    <li>除非使用者明確儲存，否則相機資料不會永久儲存</li>
-                    <li>文字識別使用裝置上的Google ML Kit服務執行</li>
-                </ul>
-
-                <h2>廣告支援</h2>
-                <p>應用程式使用Google AdMob顯示廣告。Google AdMob可能為了廣告目的收集和處理某些裝置資訊和使用資料。有關更多資訊，請參閱Google的隱私政策。</p>
-
-                <h2>資料儲存</h2>
-                <ul>
-                    <li>所有文字輸入僅儲存在您的裝置本機</li>
-                    <li>用於文字掃描的捕獲圖像在本機處理並可以刪除</li>
-                    <li>不向外部伺服器傳輸資料</li>
-                    <li>服務提供商無法存取您儲存的資料</li>
-                    <li>使用者負責自己的資料備份</li>
-                    <li>解除安裝應用程式可以永久刪除資料</li>
-                    <li>密碼保護的內容保留在您的裝置本機</li>
-                    <li>聽寫材料和練習記錄儲存在本機</li>
-                    <li>語言設定和偏好儲存在裝置上</li>
-                    <li>應用程式不提供雲端備份</li>
-                </ul>
-
-                <h2>第三方存取</h2>
-                <p>僅定期向外部服務傳輸聚合的匿名資料，以幫助服務提供商改進應用程式和服務。服務提供商可能以本隱私聲明中描述的方式與第三方共享您的資訊。</p>
-                <p>請注意，應用程式使用具有自己關於處理資料的隱私政策的第三方服務。以下是應用程式使用的第三方服務提供商的隱私政策連結：</p>
-                <ul>
-                    <li>Google Play服務</li>
-                    <li>Google ML Kit（用於文字識別）</li>
-                </ul>
-
-                <h2>退出權利</h2>
-                <p>您可以透過解除安裝應用程式來停止所有使用。您可以使用裝置上可用的標準解除安裝程序或透過Google Play商店。</p>
-
-                <h2>兒童</h2>
-                <p>應用程式不針對13歲以下的任何人。服務提供商不會故意收集13歲以下兒童的個人身分資訊。由於所有資料都儲存在本機，父母可以透過標準裝置控制來控制應用程式使用。</p>
-
-                <h2>安全</h2>
-                <p>由於所有資料都在您的裝置上本機處理和儲存：</p>
-                <ul>
-                    <li>資料安全取決於您的裝置安全設定</li>
-                    <li>相機資料在本機處理進行文字識別</li>
-                    <li>由於不傳輸資料，不需要伺服器端安全</li>
-                    <li>使用者負責裝置安全</li>
-                    <li>使用者應定期備份重要資料</li>
-                    <li>密碼保護安全取決於使用者選擇的密碼</li>
-                    <li>使用者負責記住密碼，因為無法恢復</li>
-                </ul>
-
-                <h2>更改</h2>
-                <p>此隱私政策可能因任何原因不時更新。服務提供商將透過更新此頁面的新隱私政策來通知您隱私政策的任何更改。建議您定期查閱此隱私政策以瞭解任何更改，因為繼續使用被視為對所有更改的批准。</p>
-
-                <div class="effective-date">
-                    此隱私政策自2025年6月11日起生效
+                <div class="version-info">
+                    <p><strong>生效日期：</strong>2025年1月1日</p>
+                    <p><strong>最後更新：</strong>2025年1月1日</p>
+                    <p><strong>版本：</strong>1.0</p>
                 </div>
 
-                <h2>您的同意</h2>
-                <p>透過使用應用程式，您同意：</p>
+                <div class="privacy-summary">
+                    <h2>隱私摘要</h2>
+                    <p>我們重視您的隱私：</p>
+                    <ul>
+                        <li>無需建立帳戶</li>
+                        <li>所有聽寫內容和練習記錄僅保存在您的裝置上</li>
+                        <li>我們不存取或儲存您的文字掃描圖像</li>
+                        <li>付款直接由 Apple/Google 處理</li>
+                        <li>您無需提供任何個人資訊即可使用我們的應用程式</li>
+                        <li>兒童可在家長監督下使用應用程式</li>
+                    </ul>
+                </div>
+
+                <p>科技有限公司（「我們」、「我方」）建立了 DictaOne 多語言自我聽寫行動應用程式。本隱私政策說明我們在您使用應用程式時如何處理資訊。</p>
+
+                <h2>1. 最少資料收集原則</h2>
+                <p>我們致力於最少資料收集：</p>
                 <ul>
-                    <li>在您的裝置上本機儲存您的文字輸入</li>
-                    <li>為文字掃描功能提供相機存取權限</li>
-                    <li>本機處理捕獲的圖像進行文字識別</li>
-                    <li>本機儲存聽寫材料和練習記錄</li>
-                    <li>透過Google AdMob檢視廣告</li>
-                    <li>此隱私政策中概述的條款</li>
+                    <li>我們不要求建立帳戶</li>
+                    <li>我們不收集電子郵件地址或個人識別碼</li>
+                    <li>所有聽寫內容和練習記錄都儲存在您的裝置本機</li>
+                    <li>我們只收集匿名分析資料以改進應用程式</li>
+                    <li>付款處理完全由 Apple/Google 處理</li>
                 </ul>
 
+                <h2>2. 我們收集的資訊</h2>
+
+                <h3>2.1 自動收集的資訊</h3>
+                <p>當您使用 DictaOne 時，我們會自動收集：</p>
+                <ul>
+                    <li><strong>裝置資訊：</strong>裝置類型、作業系統、應用程式版本、唯一裝置識別碼</li>
+                    <li><strong>使用分析：</strong>使用的功能、工作階段持續時間、應用程式效能資料（匿名）</li>
+                    <li><strong>廣告資料：</strong>廣告互動資料、用於個人化廣告的廣告 ID</li>
+                    <li><strong>當機報告：</strong>用於應用程式穩定性和效能改進的技術資料</li>
+                    <li><strong>一般位置：</strong>基於 IP 位址進行服務本地化</li>
+                </ul>
+
+                <h3>2.2 本機資料儲存</h3>
+                <p>您所有的聽寫文字、練習記錄和設定都儲存在您的裝置本機：</p>
+                <ul>
+                    <li>我們無法存取您的聽寫內容</li>
+                    <li>密碼保護的內容在您的裝置上加密</li>
+                    <li>用於文字掃描的捕獲圖像在本機處理</li>
+                    <li>解除安裝應用程式將刪除所有本機儲存的資料</li>
+                </ul>
+
+                <h3>2.3 應用程式內購買</h3>
+                <ul>
+                    <li>購買交易直接由 Apple App Store 或 Google Play Store 處理</li>
+                    <li>我們只從應用程式商店接收購買確認</li>
+                    <li>我們不直接處理付款資訊</li>
+                </ul>
+
+                <h2>3. 我們如何使用您的資訊</h2>
+                <p>我們使用收集的資訊用於：</p>
+                <ul>
+                    <li>提供應用程式功能</li>
+                    <li>透過應用程式商店平台處理應用程式內購買</li>
+                    <li>顯示相關廣告</li>
+                    <li>分析應用程式使用情況以改進功能</li>
+                    <li>修復錯誤和技術問題</li>
+                    <li>遵守法律義務</li>
+                </ul>
+
+                <h2>4. 應用程式特定功能和隱私</h2>
+
+                <h3>4.1 文字掃描和處理</h3>
+                <ul>
+                    <li>圖像使用 Google ML Kit 在您的裝置上本機處理</li>
+                    <li>我們不儲存或傳輸掃描的圖像到我們的伺服器</li>
+                    <li>從圖像中提取的文字僅儲存在您的裝置上</li>
+                </ul>
+
+                <h3>4.2 多語言支援</h3>
+                <ul>
+                    <li>語言偏好設定儲存在您的裝置本機</li>
+                    <li>使用者介面語言設定不會離開您的裝置</li>
+                </ul>
+
+                <h3>4.3 密碼保護</h3>
+                <ul>
+                    <li>隱藏文字的密碼使用裝置加密儲存在本機</li>
+                    <li>我們無法恢復忘記的密碼</li>
+                    <li>密碼永遠不會傳輸到我們的伺服器</li>
+                </ul>
+
+                <h3>4.4 聽寫練習</h3>
+                <ul>
+                    <li>所有練習歷史記錄都保留在您的裝置上</li>
+                    <li>進度追蹤完全是本機的</li>
+                    <li>我們無法存取您的練習表現</li>
+                </ul>
+
+                <h2>5. 第三方服務</h2>
+
+                <h3>5.1 廣告</h3>
+                <p>我們使用 Google AdMob 顯示廣告。Google AdMob 可能會為廣告目的收集和處理某些裝置資訊。您可以透過裝置設定選擇退出個人化廣告：</p>
+                <ul>
+                    <li><strong>iOS：</strong>設定 > 隱私權 > Apple 廣告 > 關閉「個人化廣告」</li>
+                    <li><strong>Android：</strong>設定 > Google > 廣告 > 選擇退出廣告個人化</li>
+                </ul>
+
+                <h3>5.2 其他第三方服務</h3>
+                <ul>
+                    <li><strong>Google Play 服務：</strong>用於應用程式功能</li>
+                    <li><strong>Google ML Kit：</strong>用於裝置上的文字識別</li>
+                    <li><strong>Firebase Analytics：</strong>用於匿名使用分析</li>
+                </ul>
+                <p>請參閱其各自的隱私政策以瞭解更多資訊。</p>
+
+                <h2>6. 您的隱私權利</h2>
+                <p>雖然我們收集的資訊很少（裝置識別碼、廣告 ID 和匿名分析），但您仍然擁有隱私權利：</p>
+                <ul>
+                    <li><strong>選擇退出：</strong>在裝置設定中停用個人化廣告</li>
+                    <li><strong>存取：</strong>要求我們提供關於您裝置的有限資料</li>
+                    <li><strong>刪除：</strong>要求從我們的分析中刪除您的廣告 ID</li>
+                </ul>
+                <p>對於歐盟/歐洲經濟區居民（GDPR）和加州居民（CCPA/CPRA），適用其他權利。請聯絡我們以行使這些權利。</p>
+                <p>由於您的聽寫內容僅儲存在您的裝置上，您擁有完全控制權 - 只需刪除應用程式即可移除所有本機資料。</p>
+
+                <h2>7. 資料保留</h2>
+                <ul>
+                    <li><strong>裝置資訊：</strong>在應用程式安裝期間</li>
+                    <li><strong>使用分析：</strong>90 天</li>
+                    <li><strong>廣告資料：</strong>30 天</li>
+                    <li><strong>本機應用程式資料：</strong>直到應用程式解除安裝</li>
+                </ul>
+
+                <h2>8. 兒童隱私</h2>
+                <p>我們的應用程式設計用於教育目的，可在家長監督下供兒童使用：</p>
+                <ul>
+                    <li>我們不會故意收集 13 歲以下兒童的個人資訊</li>
+                    <li>我們不會向我們知道未滿 13 歲的使用者顯示行為定向廣告</li>
+                    <li>兒童建立的所有聽寫內容都保留在裝置上</li>
+                    <li>家長可透過裝置管理完全控制孩子的資料</li>
+                </ul>
+
+                <h2>9. 國際資料傳輸</h2>
+                <p>您的有限分析資料可能會在適當保護措施下進行國際傳輸。您的聽寫內容始終保留在您的裝置上。</p>
+
+                <h2>10. 資料安全</h2>
+                <ul>
+                    <li>所有個人聽寫內容都儲存在您的裝置本機</li>
+                    <li>密碼保護的內容使用裝置加密</li>
+                    <li>我們對收集的有限資料實施業界標準安全措施</li>
+                    <li>您負責您的裝置安全</li>
+                </ul>
+
+                <h2>11. 本政策的變更</h2>
+                <p>我們可能會不時更新此政策。我們將透過應用程式通知您任何重大變更。</p>
+
                 <div class="contact-info">
-                    <h2>聯絡我們</h2>
-                    <p>如果您在使用應用程式時對隱私有任何問題，或對做法有疑問，請透過support@kidstart.com聯絡服務提供商。</p>
+                    <h2>12. 聯絡我們</h2>
+                    <p>如果您對此隱私政策或我們的做法有任何疑問：</p>
+                    <p><strong>科技有限公司</strong><br>
+                    電子郵件：support@kidstart.com</p>
                 </div>
             </div>
 
             <div id="content-zh-hans" class="content-section">
-                <h1>隐私政策</h1>
-                <p>此隐私政策适用于由科技有限公司（在此称为"服务提供商"）创建的DictaOne应用程序（在此称为"应用程序"），作为广告支持服务。此服务旨在"按原样"使用。</p>
+                <h1>DictaOne 隐私政策</h1>
 
-                <h2>信息收集和使用</h2>
-                <p>应用程序是一个文本听写工具，在您的设备上本地处理和存储所有数据。应用程序：</p>
-                <ul>
-                    <li>不收集个人信息</li>
-                    <li>不将您的文本输入传输到任何服务器</li>
-                    <li>不将捕获的图像或扫描的文本传输到任何服务器</li>
-                    <li>仅在您的设备上本地存储所有数据</li>
-                    <li>不跟踪使用情况或分析</li>
-                </ul>
-
-                <p>应用程序功能包括：</p>
-                <ul>
-                    <li>文本处理和听写练习</li>
-                    <li>从图像中扫描和识别文字</li>
-                    <li>隐藏文本的密码保护</li>
-                    <li>多语言支持</li>
-                    <li>听写材料的本地存储</li>
-                </ul>
-
-                <p>所有这些功能都在您的设备上本地运行，无需数据传输。</p>
-                <p>应用程序不收集关于您的移动设备位置的精确信息。</p>
-
-                <h2>相机访问</h2>
-                <p>应用程序仅为文字扫描功能请求相机访问权限。相机使用：</p>
-                <ul>
-                    <li>图像在您的设备上本地处理进行文字识别</li>
-                    <li>不向外部服务器传输图像</li>
-                    <li>除非用户明确保存，否则相机数据不会永久存储</li>
-                    <li>文字识别使用设备上的Google ML Kit服务执行</li>
-                </ul>
-
-                <h2>广告支持</h2>
-                <p>应用程序使用Google AdMob显示广告。Google AdMob可能为了广告目的收集和处理某些设备信息和使用数据。有关更多信息，请参阅Google的隐私政策。</p>
-
-                <h2>数据存储</h2>
-                <ul>
-                    <li>所有文本输入仅存储在您的设备本地</li>
-                    <li>用于文字扫描的捕获图像在本地处理并可以删除</li>
-                    <li>不向外部服务器传输数据</li>
-                    <li>服务提供商无法访问您存储的数据</li>
-                    <li>用户负责自己的数据备份</li>
-                    <li>卸载应用程序可以永久删除数据</li>
-                    <li>密码保护的内容保留在您的设备本地</li>
-                    <li>听写材料和练习记录存储在本地</li>
-                    <li>语言设置和偏好存储在设备上</li>
-                    <li>应用程序不提供云备份</li>
-                </ul>
-
-                <h2>第三方访问</h2>
-                <p>仅定期向外部服务传输聚合的匿名数据，以帮助服务提供商改进应用程序和服务。服务提供商可能以本隐私声明中描述的方式与第三方共享您的信息。</p>
-                <p>请注意，应用程序使用具有自己关于处理数据的隐私政策的第三方服务。以下是应用程序使用的第三方服务提供商的隐私政策链接：</p>
-                <ul>
-                    <li>Google Play服务</li>
-                    <li>Google ML Kit（用于文字识别）</li>
-                </ul>
-
-                <h2>退出权利</h2>
-                <p>您可以通过卸载应用程序来停止所有使用。您可以使用设备上可用的标准卸载过程或通过Google Play商店。</p>
-
-                <h2>儿童</h2>
-                <p>应用程序不针对13岁以下的任何人。服务提供商不会故意收集13岁以下儿童的个人身份信息。由于所有数据都存储在本地，父母可以通过标准设备控制来控制应用程序使用。</p>
-
-                <h2>安全</h2>
-                <p>由于所有数据都在您的设备上本地处理和存储：</p>
-                <ul>
-                    <li>数据安全取决于您的设备安全设置</li>
-                    <li>相机数据在本地处理进行文字识别</li>
-                    <li>由于不传输数据，不需要服务器端安全</li>
-                    <li>用户负责设备安全</li>
-                    <li>用户应定期备份重要数据</li>
-                    <li>密码保护安全取决于用户选择的密码</li>
-                    <li>用户负责记住密码，因为无法恢复</li>
-                </ul>
-
-                <h2>更改</h2>
-                <p>此隐私政策可能因任何原因不时更新。服务提供商将通过更新此页面的新隐私政策来通知您隐私政策的任何更改。建议您定期查阅此隐私政策以了解任何更改，因为继续使用被视为对所有更改的批准。</p>
-
-                <div class="effective-date">
-                    此隐私政策自2025年6月11日起生效
+                <div class="version-info">
+                    <p><strong>生效日期：</strong>2025年1月1日</p>
+                    <p><strong>最后更新：</strong>2025年1月1日</p>
+                    <p><strong>版本：</strong>1.0</p>
                 </div>
 
-                <h2>您的同意</h2>
-                <p>通过使用应用程序，您同意：</p>
+                <div class="privacy-summary">
+                    <h2>隐私摘要</h2>
+                    <p>我们重视您的隐私：</p>
+                    <ul>
+                        <li>无需创建账户</li>
+                        <li>所有听写内容和练习记录仅保存在您的设备上</li>
+                        <li>我们不访问或存储您的文字扫描图像</li>
+                        <li>付款直接由 Apple/Google 处理</li>
+                        <li>您无需提供任何个人信息即可使用我们的应用程序</li>
+                        <li>儿童可在家长监督下使用应用程序</li>
+                    </ul>
+                </div>
+
+                <p>科技有限公司（"我们"、"我方"）创建了 DictaOne 多语言自我听写移动应用程序。本隐私政策说明我们在您使用应用程序时如何处理信息。</p>
+
+                <h2>1. 最少数据收集原则</h2>
+                <p>我们致力于最少数据收集：</p>
                 <ul>
-                    <li>在您的设备上本地存储您的文本输入</li>
-                    <li>为文字扫描功能提供相机访问权限</li>
-                    <li>本地处理捕获的图像进行文字识别</li>
-                    <li>本地存储听写材料和练习记录</li>
-                    <li>通过Google AdMob查看广告</li>
-                    <li>此隐私政策中概述的条款</li>
+                    <li>我们不要求创建账户</li>
+                    <li>我们不收集电子邮件地址或个人识别码</li>
+                    <li>所有听写内容和练习记录都存储在您的设备本地</li>
+                    <li>我们只收集匿名分析数据以改进应用程序</li>
+                    <li>付款处理完全由 Apple/Google 处理</li>
                 </ul>
 
+                <h2>2. 我们收集的信息</h2>
+
+                <h3>2.1 自动收集的信息</h3>
+                <p>当您使用 DictaOne 时，我们会自动收集：</p>
+                <ul>
+                    <li><strong>设备信息：</strong>设备类型、操作系统、应用程序版本、唯一设备标识符</li>
+                    <li><strong>使用分析：</strong>使用的功能、会话持续时间、应用程序性能数据（匿名）</li>
+                    <li><strong>广告数据：</strong>广告互动数据、用于个性化广告的广告 ID</li>
+                    <li><strong>崩溃报告：</strong>用于应用程序稳定性和性能改进的技术数据</li>
+                    <li><strong>一般位置：</strong>基于 IP 地址进行服务本地化</li>
+                </ul>
+
+                <h3>2.2 本地数据存储</h3>
+                <p>您所有的听写文字、练习记录和设置都存储在您的设备本地：</p>
+                <ul>
+                    <li>我们无法访问您的听写内容</li>
+                    <li>密码保护的内容在您的设备上加密</li>
+                    <li>用于文字扫描的捕获图像在本地处理</li>
+                    <li>卸载应用程序将删除所有本地存储的数据</li>
+                </ul>
+
+                <h3>2.3 应用内购买</h3>
+                <ul>
+                    <li>购买交易直接由 Apple App Store 或 Google Play Store 处理</li>
+                    <li>我们只从应用商店接收购买确认</li>
+                    <li>我们不直接处理付款信息</li>
+                </ul>
+
+                <h2>3. 我们如何使用您的信息</h2>
+                <p>我们使用收集的信息用于：</p>
+                <ul>
+                    <li>提供应用程序功能</li>
+                    <li>通过应用商店平台处理应用内购买</li>
+                    <li>显示相关广告</li>
+                    <li>分析应用程序使用情况以改进功能</li>
+                    <li>修复错误和技术问题</li>
+                    <li>遵守法律义务</li>
+                </ul>
+
+                <h2>4. 应用程序特定功能和隐私</h2>
+
+                <h3>4.1 文字扫描和处理</h3>
+                <ul>
+                    <li>图像使用 Google ML Kit 在您的设备上本地处理</li>
+                    <li>我们不存储或传输扫描的图像到我们的服务器</li>
+                    <li>从图像中提取的文字仅存储在您的设备上</li>
+                </ul>
+
+                <h3>4.2 多语言支持</h3>
+                <ul>
+                    <li>语言偏好设置存储在您的设备本地</li>
+                    <li>用户界面语言设置不会离开您的设备</li>
+                </ul>
+
+                <h3>4.3 密码保护</h3>
+                <ul>
+                    <li>隐藏文字的密码使用设备加密存储在本地</li>
+                    <li>我们无法恢复忘记的密码</li>
+                    <li>密码永远不会传输到我们的服务器</li>
+                </ul>
+
+                <h3>4.4 听写练习</h3>
+                <ul>
+                    <li>所有练习历史记录都保留在您的设备上</li>
+                    <li>进度跟踪完全是本地的</li>
+                    <li>我们无法访问您的练习表现</li>
+                </ul>
+
+                <h2>5. 第三方服务</h2>
+
+                <h3>5.1 广告</h3>
+                <p>我们使用 Google AdMob 显示广告。Google AdMob 可能会为广告目的收集和处理某些设备信息。您可以通过设备设置选择退出个性化广告：</p>
+                <ul>
+                    <li><strong>iOS：</strong>设置 > 隐私 > Apple 广告 > 关闭"个性化广告"</li>
+                    <li><strong>Android：</strong>设置 > Google > 广告 > 选择退出广告个性化</li>
+                </ul>
+
+                <h3>5.2 其他第三方服务</h3>
+                <ul>
+                    <li><strong>Google Play 服务：</strong>用于应用程序功能</li>
+                    <li><strong>Google ML Kit：</strong>用于设备上的文字识别</li>
+                    <li><strong>Firebase Analytics：</strong>用于匿名使用分析</li>
+                </ul>
+                <p>请参阅其各自的隐私政策以了解更多信息。</p>
+
+                <h2>6. 您的隐私权利</h2>
+                <p>虽然我们收集的信息很少（设备标识符、广告 ID 和匿名分析），但您仍然拥有隐私权利：</p>
+                <ul>
+                    <li><strong>选择退出：</strong>在设备设置中禁用个性化广告</li>
+                    <li><strong>访问：</strong>要求我们提供关于您设备的有限数据</li>
+                    <li><strong>删除：</strong>要求从我们的分析中删除您的广告 ID</li>
+                </ul>
+                <p>对于欧盟/欧洲经济区居民（GDPR）和加州居民（CCPA/CPRA），适用其他权利。请联系我们以行使这些权利。</p>
+                <p>由于您的听写内容仅存储在您的设备上，您拥有完全控制权 - 只需删除应用程序即可移除所有本地数据。</p>
+
+                <h2>7. 数据保留</h2>
+                <ul>
+                    <li><strong>设备信息：</strong>在应用程序安装期间</li>
+                    <li><strong>使用分析：</strong>90 天</li>
+                    <li><strong>广告数据：</strong>30 天</li>
+                    <li><strong>本地应用程序数据：</strong>直到应用程序卸载</li>
+                </ul>
+
+                <h2>8. 儿童隐私</h2>
+                <p>我们的应用程序设计用于教育目的，可在家长监督下供儿童使用：</p>
+                <ul>
+                    <li>我们不会故意收集 13 岁以下儿童的个人信息</li>
+                    <li>我们不会向我们知道未满 13 岁的用户显示行为定向广告</li>
+                    <li>儿童创建的所有听写内容都保留在设备上</li>
+                    <li>家长可通过设备管理完全控制孩子的数据</li>
+                </ul>
+
+                <h2>9. 国际数据传输</h2>
+                <p>您的有限分析数据可能会在适当保护措施下进行国际传输。您的听写内容始终保留在您的设备上。</p>
+
+                <h2>10. 数据安全</h2>
+                <ul>
+                    <li>所有个人听写内容都存储在您的设备本地</li>
+                    <li>密码保护的内容使用设备加密</li>
+                    <li>我们对收集的有限数据实施行业标准安全措施</li>
+                    <li>您负责您的设备安全</li>
+                </ul>
+
+                <h2>11. 本政策的变更</h2>
+                <p>我们可能会不时更新此政策。我们将通过应用程序通知您任何重大变更。</p>
+
                 <div class="contact-info">
-                    <h2>联系我们</h2>
-                    <p>如果您在使用应用程序时对隐私有任何问题，或对做法有疑问，请通过support@kidstart.com联系服务提供商。</p>
+                    <h2>12. 联系我们</h2>
+                    <p>如果您对此隐私政策或我们的做法有任何疑问：</p>
+                    <p><strong>科技有限公司</strong><br>
+                    电子邮件：support@kidstart.com</p>
                 </div>
             </div>
         </div>
