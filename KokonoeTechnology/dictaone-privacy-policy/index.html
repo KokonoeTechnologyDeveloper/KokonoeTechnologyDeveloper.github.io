@@ -1,1 +1,1018 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隱私政策 - 科技有限公司</title>
+    <link rel="icon" type="image/png" href="images/Company_Icon.png">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --border-color: #e9ecef;
+            --shadow-light: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-medium: 0 4px 16px rgba(0,0,0,0.12);
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: var(--shadow-medium);
+            position: relative;
+        }
 
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-left {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .company-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 0;
+        }
+
+        .company-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .company-name {
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .language-selector {
+            display: flex;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            padding: 2px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+        }
+        
+        .language-btn {
+            padding: 8px 14px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            background: transparent;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            position: relative;
+            min-width: 45px;
+            z-index: 2;
+        }
+        
+        .language-btn.active {
+            background: white;
+            color: var(--primary-color);
+            font-weight: 600;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        
+        .language-btn:hover:not(.active) {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .separator {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            padding: 0 4px;
+        }
+
+        .privacy-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .privacy-content {
+            background: white;
+            padding: 60px 50px;
+            margin: 40px 0;
+            border-radius: 24px;
+            box-shadow: var(--shadow-medium);
+            border: 1px solid var(--border-color);
+        }
+        
+        .privacy-content h1 {
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .privacy-content h2 {
+            color: var(--primary-color);
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.6em;
+            font-weight: 600;
+        }
+
+        .privacy-content h3 {
+            color: var(--primary-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            font-weight: 500;
+        }
+        
+        .privacy-content p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            color: #5a6c7d;
+            font-size: 1.05em;
+        }
+        
+        .privacy-content ul {
+            margin-bottom: 25px;
+            padding-left: 25px;
+        }
+        
+        .privacy-content li {
+            margin-bottom: 12px;
+            line-height: 1.7;
+            color: #5a6c7d;
+        }
+
+        .privacy-summary {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e8f4f8 100%);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 40px;
+            border: 1px solid #d1e7dd;
+        }
+
+        .privacy-summary h2 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .privacy-summary ul {
+            margin-bottom: 0;
+        }
+
+        .version-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            font-size: 0.95em;
+            color: #6c757d;
+        }
+
+        .version-info p {
+            margin: 5px 0;
+            color: #6c757d;
+        }
+        
+        .effective-date {
+            margin-top: 40px;
+            padding-top: 25px;
+            border-top: 2px solid var(--border-color);
+            color: #6c757d;
+            font-style: italic;
+            font-size: 1.05em;
+        }
+        
+        .contact-info {
+            margin-top: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            border-radius: 16px;
+            border-left: 4px solid var(--primary-color);
+            box-shadow: var(--shadow-light);
+        }
+
+        .contact-info h2 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+
+        .content-section {
+            display: none;
+        }
+        
+        .content-section.active {
+            display: block;
+        }
+        
+        footer {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+
+            .language-selector {
+                align-self: flex-end;
+            }
+            
+            .language-btn {
+                padding: 6px 10px;
+                font-size: 12px;
+                min-width: 35px;
+            }
+
+            .separator {
+                font-size: 12px;
+                padding: 0 3px;
+            }
+
+            .company-title {
+                gap: 12px;
+            }
+
+            .company-icon {
+                width: 40px;
+                height: 40px;
+            }
+
+            .company-name {
+                font-size: 1.3em;
+            }
+
+            .privacy-container {
+                padding: 15px;
+            }
+            
+            .privacy-content {
+                padding: 40px 30px;
+            }
+            
+            .privacy-content h1 {
+                font-size: 2em;
+            }
+            
+            .privacy-content h2 {
+                font-size: 1.4em;
+            }
+
+            .privacy-summary {
+                padding: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .language-btn {
+                padding: 5px 8px;
+                font-size: 11px;
+                min-width: 30px;
+            }
+
+            .separator {
+                font-size: 11px;
+                padding: 0 2px;
+            }
+
+            .company-title {
+                gap: 10px;
+            }
+
+            .company-icon {
+                width: 35px;
+                height: 35px;
+            }
+
+            .company-name {
+                font-size: 1.2em;
+            }
+            
+            .privacy-content {
+                padding: 30px 20px;
+            }
+            
+            .contact-info {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <h1 class="company-title">
+                        <img src="images/Company_Icon.png" alt="Company Icon" class="company-icon">
+                        <span class="company-name">科技有限公司</span>
+                    </h1>
+                    <nav>
+                        <ul>
+                            <li><a href="/" class="nav-link nav-home">首頁</a></li>
+                            <li><a href="/about" class="nav-link nav-about">關於我們</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="language-selector">
+                    <button class="language-btn" data-lang="en">Eng</button>
+                    <span class="separator">|</span>
+                    <button class="language-btn" data-lang="zh-hant">繁</button>
+                    <span class="separator">|</span>
+                    <button class="language-btn" data-lang="zh-hans">简</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="privacy-container">
+        <div class="privacy-content">
+            <div id="content-en" class="content-section">
+                <h1>Privacy Policy for DictaOne</h1>
+
+                <div class="version-info">
+                    <p><strong>Effective Date:</strong> January 1, 2025</p>
+                    <p><strong>Last Updated:</strong> January 1, 2025</p>
+                    <p><strong>Version:</strong> 1.0</p>
+                </div>
+
+                <div class="privacy-summary">
+                    <h2>Privacy Summary</h2>
+                    <p>We prioritize your privacy:</p>
+                    <ul>
+                        <li>No account creation required</li>
+                        <li>All dictation content and practice records stay on your device only</li>
+                        <li>We don't access or store your text scanning images</li>
+                        <li>Payments are handled directly by Apple/Google</li>
+                        <li>You can use our app without providing any personal information</li>
+                        <li>Children can use the app under parental supervision</li>
+                    </ul>
+                </div>
+
+                <p>Technology Company Limited ("we," "our," "us") created DictaOne as a multi-language self-dictation mobile application. This privacy policy explains how we handle information when you use our app.</p>
+
+                <h2>1. Minimal Data Collection Principle</h2>
+                <p>We are committed to minimal data collection:</p>
+                <ul>
+                    <li>We do not require account creation</li>
+                    <li>We do not collect email addresses or personal identifiers</li>
+                    <li>All dictation content and practice records are stored locally on your device</li>
+                    <li>We only collect anonymous analytics data for app improvement</li>
+                    <li>Payment processing is handled entirely by Apple/Google</li>
+                </ul>
+
+                <h2>2. Information We Collect</h2>
+
+                <h3>2.1 Automatically Collected Information</h3>
+                <p>When you use DictaOne, we automatically collect:</p>
+                <ul>
+                    <li><strong>Device Information:</strong> Device type, operating system, app version, unique device identifiers</li>
+                    <li><strong>Usage Analytics:</strong> Features used, session duration, app performance data (anonymous)</li>
+                    <li><strong>Advertising Data:</strong> Ad interaction data, advertising ID for personalized ads</li>
+                    <li><strong>Crash Reports:</strong> Technical data for app stability and performance improvement</li>
+                    <li><strong>General Location:</strong> Based on IP address for service localization</li>
+                </ul>
+
+                <h3>2.2 Local Data Storage</h3>
+                <p>All your dictation texts, practice records, and settings are stored locally on your device:</p>
+                <ul>
+                    <li>We do not have access to your dictation content</li>
+                    <li>Password-protected content is encrypted on your device</li>
+                    <li>Captured images for text scanning are processed locally</li>
+                    <li>Uninstalling the app will delete all locally stored data</li>
+                </ul>
+
+                <h3>2.3 In-App Purchases</h3>
+                <ul>
+                    <li>Purchase transactions are processed directly by Apple App Store or Google Play Store</li>
+                    <li>We receive only purchase confirmation from the app stores</li>
+                    <li>We do not handle payment information directly</li>
+                </ul>
+
+                <h2>3. How We Use Your Information</h2>
+                <p>We use the collected information for:</p>
+                <ul>
+                    <li>Providing app functionality</li>
+                    <li>Processing in-app purchases through App Store platforms</li>
+                    <li>Displaying relevant advertisements</li>
+                    <li>Analyzing app usage to improve features</li>
+                    <li>Fixing bugs and technical issues</li>
+                    <li>Complying with legal obligations</li>
+                </ul>
+
+                <h2>4. App-Specific Features and Privacy</h2>
+
+                <h3>4.1 Text Scanning and Processing</h3>
+                <ul>
+                    <li>Images are processed locally using Google ML Kit on your device</li>
+                    <li>We do not store or transmit scanned images to our servers</li>
+                    <li>Text extracted from images is stored only on your device</li>
+                </ul>
+
+                <h3>4.2 Multi-language Support</h3>
+                <ul>
+                    <li>Language preferences are stored locally on your device</li>
+                    <li>UI language settings do not leave your device</li>
+                </ul>
+
+                <h3>4.3 Password Protection</h3>
+                <ul>
+                    <li>Passwords for hidden texts are stored locally using device encryption</li>
+                    <li>We cannot recover forgotten passwords</li>
+                    <li>Passwords are never transmitted to our servers</li>
+                </ul>
+
+                <h3>4.4 Dictation Practice</h3>
+                <ul>
+                    <li>All practice history remains on your device</li>
+                    <li>Progress tracking is entirely local</li>
+                    <li>We do not have access to your practice performance</li>
+                </ul>
+
+                <h2>5. Third-Party Services</h2>
+
+                <h3>5.1 Advertising</h3>
+                <p>We use Google AdMob for displaying advertisements. Google AdMob may collect and process certain device information for advertising purposes. You can opt-out of personalized ads through your device settings:</p>
+                <ul>
+                    <li><strong>iOS:</strong> Settings > Privacy > Apple Advertising > Turn off "Personalized Ads"</li>
+                    <li><strong>Android:</strong> Settings > Google > Ads > Opt out of Ads Personalization</li>
+                </ul>
+
+                <h3>5.2 Other Third-Party Services</h3>
+                <ul>
+                    <li><strong>Google Play Services:</strong> For app functionality</li>
+                    <li><strong>Google ML Kit:</strong> For on-device text recognition</li>
+                    <li><strong>Firebase Analytics:</strong> For anonymous usage analytics</li>
+                </ul>
+                <p>Please refer to their respective privacy policies for more information.</p>
+
+                <h2>6. Your Privacy Rights</h2>
+                <p>While we collect minimal information (device identifiers, advertising IDs, and anonymous analytics), you still have privacy rights:</p>
+                <ul>
+                    <li><strong>Opt-out:</strong> Disable personalized ads in your device settings</li>
+                    <li><strong>Access:</strong> Request what limited data we have about your device</li>
+                    <li><strong>Deletion:</strong> Request deletion of your advertising ID from our analytics</li>
+                </ul>
+                <p>For EU/EEA residents (GDPR) and California residents (CCPA/CPRA), additional rights apply. Contact us to exercise these rights.</p>
+                <p>Since your dictation content is stored only on your device, you have full control - simply delete the app to remove all local data.</p>
+
+                <h2>7. Data Retention</h2>
+                <ul>
+                    <li><strong>Device Information:</strong> While app is installed</li>
+                    <li><strong>Usage Analytics:</strong> 90 days</li>
+                    <li><strong>Advertising Data:</strong> 30 days</li>
+                    <li><strong>Local App Data:</strong> Until app is uninstalled</li>
+                </ul>
+
+                <h2>8. Children's Privacy</h2>
+                <p>Our app is designed for educational purposes and may be used by children under parental supervision:</p>
+                <ul>
+                    <li>We do not knowingly collect personal information from children under 13</li>
+                    <li>We do not display behaviorally targeted ads to users we know are under 13</li>
+                    <li>All dictation content created by children remains on the device</li>
+                    <li>Parents have full control over their child's data through device management</li>
+                </ul>
+
+                <h2>9. International Data Transfers</h2>
+                <p>Your limited analytics data may be transferred internationally with appropriate safeguards. Your dictation content always remains on your device.</p>
+
+                <h2>10. Data Security</h2>
+                <ul>
+                    <li>All personal dictation content is stored locally on your device</li>
+                    <li>Password-protected content uses device encryption</li>
+                    <li>We implement industry-standard security for the limited data we collect</li>
+                    <li>You are responsible for your device security</li>
+                </ul>
+
+                <h2>11. Changes to This Policy</h2>
+                <p>We may update this policy from time to time. We will notify you of any material changes through the app.</p>
+
+                <div class="contact-info">
+                    <h2>12. Contact Us</h2>
+                    <p>If you have any questions about this privacy policy or our practices:</p>
+                    <p><strong>Technology Company Limited</strong><br>
+                    Email: support@kidstart.com</p>
+                </div>
+            </div>
+
+            <div id="content-zh-hant" class="content-section">
+                <h1>DictaOne 隱私政策</h1>
+
+                <div class="version-info">
+                    <p><strong>生效日期：</strong>2025年1月1日</p>
+                    <p><strong>最後更新：</strong>2025年1月1日</p>
+                    <p><strong>版本：</strong>1.0</p>
+                </div>
+
+                <div class="privacy-summary">
+                    <h2>隱私摘要</h2>
+                    <p>我們重視您的隱私：</p>
+                    <ul>
+                        <li>無需建立帳戶</li>
+                        <li>所有聽寫內容和練習記錄僅保存在您的裝置上</li>
+                        <li>我們不存取或儲存您的文字掃描圖像</li>
+                        <li>付款直接由 Apple/Google 處理</li>
+                        <li>您無需提供任何個人資訊即可使用我們的應用程式</li>
+                        <li>兒童可在家長監督下使用應用程式</li>
+                    </ul>
+                </div>
+
+                <p>科技有限公司（「我們」、「我方」）建立了 DictaOne 多語言自我聽寫行動應用程式。本隱私政策說明我們在您使用應用程式時如何處理資訊。</p>
+
+                <h2>1. 最少資料收集原則</h2>
+                <p>我們致力於最少資料收集：</p>
+                <ul>
+                    <li>我們不要求建立帳戶</li>
+                    <li>我們不收集電子郵件地址或個人識別碼</li>
+                    <li>所有聽寫內容和練習記錄都儲存在您的裝置本機</li>
+                    <li>我們只收集匿名分析資料以改進應用程式</li>
+                    <li>付款處理完全由 Apple/Google 處理</li>
+                </ul>
+
+                <h2>2. 我們收集的資訊</h2>
+
+                <h3>2.1 自動收集的資訊</h3>
+                <p>當您使用 DictaOne 時，我們會自動收集：</p>
+                <ul>
+                    <li><strong>裝置資訊：</strong>裝置類型、作業系統、應用程式版本、唯一裝置識別碼</li>
+                    <li><strong>使用分析：</strong>使用的功能、工作階段持續時間、應用程式效能資料（匿名）</li>
+                    <li><strong>廣告資料：</strong>廣告互動資料、用於個人化廣告的廣告 ID</li>
+                    <li><strong>當機報告：</strong>用於應用程式穩定性和效能改進的技術資料</li>
+                    <li><strong>一般位置：</strong>基於 IP 位址進行服務本地化</li>
+                </ul>
+
+                <h3>2.2 本機資料儲存</h3>
+                <p>您所有的聽寫文字、練習記錄和設定都儲存在您的裝置本機：</p>
+                <ul>
+                    <li>我們無法存取您的聽寫內容</li>
+                    <li>密碼保護的內容在您的裝置上加密</li>
+                    <li>用於文字掃描的捕獲圖像在本機處理</li>
+                    <li>解除安裝應用程式將刪除所有本機儲存的資料</li>
+                </ul>
+
+                <h3>2.3 應用程式內購買</h3>
+                <ul>
+                    <li>購買交易直接由 Apple App Store 或 Google Play Store 處理</li>
+                    <li>我們只從應用程式商店接收購買確認</li>
+                    <li>我們不直接處理付款資訊</li>
+                </ul>
+
+                <h2>3. 我們如何使用您的資訊</h2>
+                <p>我們使用收集的資訊用於：</p>
+                <ul>
+                    <li>提供應用程式功能</li>
+                    <li>透過應用程式商店平台處理應用程式內購買</li>
+                    <li>顯示相關廣告</li>
+                    <li>分析應用程式使用情況以改進功能</li>
+                    <li>修復錯誤和技術問題</li>
+                    <li>遵守法律義務</li>
+                </ul>
+
+                <h2>4. 應用程式特定功能和隱私</h2>
+
+                <h3>4.1 文字掃描和處理</h3>
+                <ul>
+                    <li>圖像使用 Google ML Kit 在您的裝置上本機處理</li>
+                    <li>我們不儲存或傳輸掃描的圖像到我們的伺服器</li>
+                    <li>從圖像中提取的文字僅儲存在您的裝置上</li>
+                </ul>
+
+                <h3>4.2 多語言支援</h3>
+                <ul>
+                    <li>語言偏好設定儲存在您的裝置本機</li>
+                    <li>使用者介面語言設定不會離開您的裝置</li>
+                </ul>
+
+                <h3>4.3 密碼保護</h3>
+                <ul>
+                    <li>隱藏文字的密碼使用裝置加密儲存在本機</li>
+                    <li>我們無法恢復忘記的密碼</li>
+                    <li>密碼永遠不會傳輸到我們的伺服器</li>
+                </ul>
+
+                <h3>4.4 聽寫練習</h3>
+                <ul>
+                    <li>所有練習歷史記錄都保留在您的裝置上</li>
+                    <li>進度追蹤完全是本機的</li>
+                    <li>我們無法存取您的練習表現</li>
+                </ul>
+
+                <h2>5. 第三方服務</h2>
+
+                <h3>5.1 廣告</h3>
+                <p>我們使用 Google AdMob 顯示廣告。Google AdMob 可能會為廣告目的收集和處理某些裝置資訊。您可以透過裝置設定選擇退出個人化廣告：</p>
+                <ul>
+                    <li><strong>iOS：</strong>設定 > 隱私權 > Apple 廣告 > 關閉「個人化廣告」</li>
+                    <li><strong>Android：</strong>設定 > Google > 廣告 > 選擇退出廣告個人化</li>
+                </ul>
+
+                <h3>5.2 其他第三方服務</h3>
+                <ul>
+                    <li><strong>Google Play 服務：</strong>用於應用程式功能</li>
+                    <li><strong>Google ML Kit：</strong>用於裝置上的文字識別</li>
+                    <li><strong>Firebase Analytics：</strong>用於匿名使用分析</li>
+                </ul>
+                <p>請參閱其各自的隱私政策以瞭解更多資訊。</p>
+
+                <h2>6. 您的隱私權利</h2>
+                <p>雖然我們收集的資訊很少（裝置識別碼、廣告 ID 和匿名分析），但您仍然擁有隱私權利：</p>
+                <ul>
+                    <li><strong>選擇退出：</strong>在裝置設定中停用個人化廣告</li>
+                    <li><strong>存取：</strong>要求我們提供關於您裝置的有限資料</li>
+                    <li><strong>刪除：</strong>要求從我們的分析中刪除您的廣告 ID</li>
+                </ul>
+                <p>對於歐盟/歐洲經濟區居民（GDPR）和加州居民（CCPA/CPRA），適用其他權利。請聯絡我們以行使這些權利。</p>
+                <p>由於您的聽寫內容僅儲存在您的裝置上，您擁有完全控制權 - 只需刪除應用程式即可移除所有本機資料。</p>
+
+                <h2>7. 資料保留</h2>
+                <ul>
+                    <li><strong>裝置資訊：</strong>在應用程式安裝期間</li>
+                    <li><strong>使用分析：</strong>90 天</li>
+                    <li><strong>廣告資料：</strong>30 天</li>
+                    <li><strong>本機應用程式資料：</strong>直到應用程式解除安裝</li>
+                </ul>
+
+                <h2>8. 兒童隱私</h2>
+                <p>我們的應用程式設計用於教育目的，可在家長監督下供兒童使用：</p>
+                <ul>
+                    <li>我們不會故意收集 13 歲以下兒童的個人資訊</li>
+                    <li>我們不會向我們知道未滿 13 歲的使用者顯示行為定向廣告</li>
+                    <li>兒童建立的所有聽寫內容都保留在裝置上</li>
+                    <li>家長可透過裝置管理完全控制孩子的資料</li>
+                </ul>
+
+                <h2>9. 國際資料傳輸</h2>
+                <p>您的有限分析資料可能會在適當保護措施下進行國際傳輸。您的聽寫內容始終保留在您的裝置上。</p>
+
+                <h2>10. 資料安全</h2>
+                <ul>
+                    <li>所有個人聽寫內容都儲存在您的裝置本機</li>
+                    <li>密碼保護的內容使用裝置加密</li>
+                    <li>我們對收集的有限資料實施業界標準安全措施</li>
+                    <li>您負責您的裝置安全</li>
+                </ul>
+
+                <h2>11. 本政策的變更</h2>
+                <p>我們可能會不時更新此政策。我們將透過應用程式通知您任何重大變更。</p>
+
+                <div class="contact-info">
+                    <h2>12. 聯絡我們</h2>
+                    <p>如果您對此隱私政策或我們的做法有任何疑問：</p>
+                    <p><strong>科技有限公司</strong><br>
+                    電子郵件：support@kidstart.com</p>
+                </div>
+            </div>
+
+            <div id="content-zh-hans" class="content-section">
+                <h1>DictaOne 隐私政策</h1>
+
+                <div class="version-info">
+                    <p><strong>生效日期：</strong>2025年1月1日</p>
+                    <p><strong>最后更新：</strong>2025年1月1日</p>
+                    <p><strong>版本：</strong>1.0</p>
+                </div>
+
+                <div class="privacy-summary">
+                    <h2>隐私摘要</h2>
+                    <p>我们重视您的隐私：</p>
+                    <ul>
+                        <li>无需创建账户</li>
+                        <li>所有听写内容和练习记录仅保存在您的设备上</li>
+                        <li>我们不访问或存储您的文字扫描图像</li>
+                        <li>付款直接由 Apple/Google 处理</li>
+                        <li>您无需提供任何个人信息即可使用我们的应用程序</li>
+                        <li>儿童可在家长监督下使用应用程序</li>
+                    </ul>
+                </div>
+
+                <p>科技有限公司（"我们"、"我方"）创建了 DictaOne 多语言自我听写移动应用程序。本隐私政策说明我们在您使用应用程序时如何处理信息。</p>
+
+                <h2>1. 最少数据收集原则</h2>
+                <p>我们致力于最少数据收集：</p>
+                <ul>
+                    <li>我们不要求创建账户</li>
+                    <li>我们不收集电子邮件地址或个人识别码</li>
+                    <li>所有听写内容和练习记录都存储在您的设备本地</li>
+                    <li>我们只收集匿名分析数据以改进应用程序</li>
+                    <li>付款处理完全由 Apple/Google 处理</li>
+                </ul>
+
+                <h2>2. 我们收集的信息</h2>
+
+                <h3>2.1 自动收集的信息</h3>
+                <p>当您使用 DictaOne 时，我们会自动收集：</p>
+                <ul>
+                    <li><strong>设备信息：</strong>设备类型、操作系统、应用程序版本、唯一设备标识符</li>
+                    <li><strong>使用分析：</strong>使用的功能、会话持续时间、应用程序性能数据（匿名）</li>
+                    <li><strong>广告数据：</strong>广告互动数据、用于个性化广告的广告 ID</li>
+                    <li><strong>崩溃报告：</strong>用于应用程序稳定性和性能改进的技术数据</li>
+                    <li><strong>一般位置：</strong>基于 IP 地址进行服务本地化</li>
+                </ul>
+
+                <h3>2.2 本地数据存储</h3>
+                <p>您所有的听写文字、练习记录和设置都存储在您的设备本地：</p>
+                <ul>
+                    <li>我们无法访问您的听写内容</li>
+                    <li>密码保护的内容在您的设备上加密</li>
+                    <li>用于文字扫描的捕获图像在本地处理</li>
+                    <li>卸载应用程序将删除所有本地存储的数据</li>
+                </ul>
+
+                <h3>2.3 应用内购买</h3>
+                <ul>
+                    <li>购买交易直接由 Apple App Store 或 Google Play Store 处理</li>
+                    <li>我们只从应用商店接收购买确认</li>
+                    <li>我们不直接处理付款信息</li>
+                </ul>
+
+                <h2>3. 我们如何使用您的信息</h2>
+                <p>我们使用收集的信息用于：</p>
+                <ul>
+                    <li>提供应用程序功能</li>
+                    <li>通过应用商店平台处理应用内购买</li>
+                    <li>显示相关广告</li>
+                    <li>分析应用程序使用情况以改进功能</li>
+                    <li>修复错误和技术问题</li>
+                    <li>遵守法律义务</li>
+                </ul>
+
+                <h2>4. 应用程序特定功能和隐私</h2>
+
+                <h3>4.1 文字扫描和处理</h3>
+                <ul>
+                    <li>图像使用 Google ML Kit 在您的设备上本地处理</li>
+                    <li>我们不存储或传输扫描的图像到我们的服务器</li>
+                    <li>从图像中提取的文字仅存储在您的设备上</li>
+                </ul>
+
+                <h3>4.2 多语言支持</h3>
+                <ul>
+                    <li>语言偏好设置存储在您的设备本地</li>
+                    <li>用户界面语言设置不会离开您的设备</li>
+                </ul>
+
+                <h3>4.3 密码保护</h3>
+                <ul>
+                    <li>隐藏文字的密码使用设备加密存储在本地</li>
+                    <li>我们无法恢复忘记的密码</li>
+                    <li>密码永远不会传输到我们的服务器</li>
+                </ul>
+
+                <h3>4.4 听写练习</h3>
+                <ul>
+                    <li>所有练习历史记录都保留在您的设备上</li>
+                    <li>进度跟踪完全是本地的</li>
+                    <li>我们无法访问您的练习表现</li>
+                </ul>
+
+                <h2>5. 第三方服务</h2>
+
+                <h3>5.1 广告</h3>
+                <p>我们使用 Google AdMob 显示广告。Google AdMob 可能会为广告目的收集和处理某些设备信息。您可以通过设备设置选择退出个性化广告：</p>
+                <ul>
+                    <li><strong>iOS：</strong>设置 > 隐私 > Apple 广告 > 关闭"个性化广告"</li>
+                    <li><strong>Android：</strong>设置 > Google > 广告 > 选择退出广告个性化</li>
+                </ul>
+
+                <h3>5.2 其他第三方服务</h3>
+                <ul>
+                    <li><strong>Google Play 服务：</strong>用于应用程序功能</li>
+                    <li><strong>Google ML Kit：</strong>用于设备上的文字识别</li>
+                    <li><strong>Firebase Analytics：</strong>用于匿名使用分析</li>
+                </ul>
+                <p>请参阅其各自的隐私政策以了解更多信息。</p>
+
+                <h2>6. 您的隐私权利</h2>
+                <p>虽然我们收集的信息很少（设备标识符、广告 ID 和匿名分析），但您仍然拥有隐私权利：</p>
+                <ul>
+                    <li><strong>选择退出：</strong>在设备设置中禁用个性化广告</li>
+                    <li><strong>访问：</strong>要求我们提供关于您设备的有限数据</li>
+                    <li><strong>删除：</strong>要求从我们的分析中删除您的广告 ID</li>
+                </ul>
+                <p>对于欧盟/欧洲经济区居民（GDPR）和加州居民（CCPA/CPRA），适用其他权利。请联系我们以行使这些权利。</p>
+                <p>由于您的听写内容仅存储在您的设备上，您拥有完全控制权 - 只需删除应用程序即可移除所有本地数据。</p>
+
+                <h2>7. 数据保留</h2>
+                <ul>
+                    <li><strong>设备信息：</strong>在应用程序安装期间</li>
+                    <li><strong>使用分析：</strong>90 天</li>
+                    <li><strong>广告数据：</strong>30 天</li>
+                    <li><strong>本地应用程序数据：</strong>直到应用程序卸载</li>
+                </ul>
+
+                <h2>8. 儿童隐私</h2>
+                <p>我们的应用程序设计用于教育目的，可在家长监督下供儿童使用：</p>
+                <ul>
+                    <li>我们不会故意收集 13 岁以下儿童的个人信息</li>
+                    <li>我们不会向我们知道未满 13 岁的用户显示行为定向广告</li>
+                    <li>儿童创建的所有听写内容都保留在设备上</li>
+                    <li>家长可通过设备管理完全控制孩子的数据</li>
+                </ul>
+
+                <h2>9. 国际数据传输</h2>
+                <p>您的有限分析数据可能会在适当保护措施下进行国际传输。您的听写内容始终保留在您的设备上。</p>
+
+                <h2>10. 数据安全</h2>
+                <ul>
+                    <li>所有个人听写内容都存储在您的设备本地</li>
+                    <li>密码保护的内容使用设备加密</li>
+                    <li>我们对收集的有限数据实施行业标准安全措施</li>
+                    <li>您负责您的设备安全</li>
+                </ul>
+
+                <h2>11. 本政策的变更</h2>
+                <p>我们可能会不时更新此政策。我们将通过应用程序通知您任何重大变更。</p>
+
+                <div class="contact-info">
+                    <h2>12. 联系我们</h2>
+                    <p>如果您对此隐私政策或我们的做法有任何疑问：</p>
+                    <p><strong>科技有限公司</strong><br>
+                    电子邮件：support@kidstart.com</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 <span class="footer-company">科技有限公司</span>. <span class="footer-rights">版權所有</span>. | <a href="/privacy-policy" class="footer-privacy" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Language switching functionality
+        const languageButtons = document.querySelectorAll('.language-btn');
+        const contentSections = document.querySelectorAll('.content-section');
+
+        // Translation data
+        const translations = {
+            'en': {
+                'nav.home': 'Home',
+                'nav.about': 'About Us',
+                'company.name': 'Technology Company Limited',
+                'footer.company': 'Technology Company Limited',
+                'footer.rights': 'All rights reserved',
+                'footer.privacy': 'Privacy Policy'
+            },
+            'zh-hant': {
+                'nav.home': '首頁',
+                'nav.about': '關於我們',
+                'company.name': '科技有限公司',
+                'footer.company': '科技有限公司',
+                'footer.rights': '版權所有',
+                'footer.privacy': '隱私政策'
+            },
+            'zh-hans': {
+                'nav.home': '首页',
+                'nav.about': '关于我们',
+                'company.name': '科技有限公司',
+                'footer.company': '科技有限公司',
+                'footer.rights': '版权所有',
+                'footer.privacy': '隐私政策'
+            }
+        };
+
+        // Set default language based on browser preference
+        function getDefaultLanguage() {
+            const lang = navigator.language.toLowerCase();
+            if (lang.includes('zh')) {
+                return lang.includes('hant') || lang.includes('tw') || lang.includes('hk') 
+                    ? 'zh-hant' 
+                    : 'zh-hans';
+            }
+            return 'en';
+        }
+
+        // Update navigation and company name
+        function updateTranslations(lang) {
+            const navHome = document.querySelector('.nav-home');
+            const navAbout = document.querySelector('.nav-about');
+            const companyName = document.querySelector('.company-name');
+            const footerCompany = document.querySelector('.footer-company');
+            const footerRights = document.querySelector('.footer-rights');
+            const footerPrivacy = document.querySelector('.footer-privacy');
+            
+            if (navHome) navHome.textContent = translations[lang]['nav.home'];
+            if (navAbout) navAbout.textContent = translations[lang]['nav.about'];
+            if (companyName) companyName.textContent = translations[lang]['company.name'];
+            if (footerCompany) footerCompany.textContent = translations[lang]['footer.company'];
+            if (footerRights) footerRights.textContent = translations[lang]['footer.rights'];
+            if (footerPrivacy) footerPrivacy.textContent = translations[lang]['footer.privacy'];
+        }
+
+        // Initialize with default language
+        function initializeLanguage() {
+            const defaultLang = getDefaultLanguage();
+            switchLanguage(defaultLang);
+        }
+
+        function switchLanguage(lang) {
+            // Update buttons
+            languageButtons.forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+
+            // Update content visibility
+            contentSections.forEach(section => {
+                section.classList.toggle('active', section.id === `content-${lang}`);
+            });
+
+            // Update translations
+            updateTranslations(lang);
+
+            // Update page language and title
+            document.documentElement.lang = lang;
+            
+            // Update page title based on language
+            const titles = {
+                'en': 'Privacy Policy - Technology Company Limited',
+                'zh-hant': '隱私政策 - 科技有限公司',
+                'zh-hans': '隐私政策 - 科技有限公司'
+            };
+            document.title = titles[lang];
+
+            // Store preference
+            localStorage.setItem('preferred-language', lang);
+        }
+
+        // Event listeners
+        languageButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                switchLanguage(btn.dataset.lang);
+            });
+        });
+
+        // Initialize with stored preference or default
+        const storedLang = localStorage.getItem('preferred-language');
+        if (storedLang) {
+            switchLanguage(storedLang);
+        } else {
+            initializeLanguage();
+        }
+    </script>
+</body>
+</html>
