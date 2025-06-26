@@ -173,6 +173,14 @@
             font-size: 1.6em;
             font-weight: 600;
         }
+
+        .terms-content h3 {
+            color: var(--primary-color);
+            margin-top: 30px;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            font-weight: 500;
+        }
         
         .terms-content p {
             margin-bottom: 20px;
@@ -190,6 +198,20 @@
             margin-bottom: 12px;
             line-height: 1.7;
             color: #5a6c7d;
+        }
+
+        .version-info {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            font-size: 0.95em;
+            color: #6c757d;
+        }
+
+        .version-info p {
+            margin: 5px 0;
+            color: #6c757d;
         }
         
         .effective-date {
@@ -349,18 +371,38 @@
         <div class="terms-content">
             <div id="content-en" class="content-section">
                 <h1>Terms & Conditions</h1>
+
+                <div class="version-info">
+                    <p><strong>Effective Date:</strong> January 1, 2025</p>
+                    <p><strong>Last Updated:</strong> January 1, 2025</p>
+                    <p><strong>Version:</strong> 1.0</p>
+                </div>
+
                 <p>These terms and conditions apply to the DictaOne app (hereby referred to as "Application") for mobile devices that was created by Technology Company Limited (hereby referred to as "Service Provider") as an Ad Supported service. This service is intended for use "AS IS".</p>
 
-                <h2>Acceptance of Terms</h2>
+                <h2>1. Acceptance of Terms</h2>
                 <p>Upon downloading or utilizing the Application, you are automatically agreeing to the following terms. It is strongly advised that you thoroughly read and understand these terms prior to using the Application. Unauthorized copying, modification of the Application, any part of the Application, or our trademarks is strictly prohibited. Any attempts to extract the source code of the Application, translate the Application into other languages, or create derivative versions are not permitted. All trademarks, copyrights, database rights, and other intellectual property rights related to the Application remain the property of the Service Provider.</p>
 
-                <h2>App Functionality and Data</h2>
+                <h2>2. License Grant</h2>
+                <p>Subject to these Terms, the Service Provider grants you a limited, non-exclusive, non-transferable, revocable license to use the Application for personal, non-commercial purposes.</p>
+
+                <h2>3. Privacy</h2>
+                <p>Your use of the Application is also governed by our Privacy Policy, which describes our data practices. By using the Application, you agree to both these Terms and our Privacy Policy.</p>
+
+                <h2>4. Age Requirements</h2>
+                <ul>
+                    <li>Users must be at least 13 years old to use the Application independently</li>
+                    <li>Children under 13 may use the Application under parental supervision</li>
+                    <li>Parents are responsible for monitoring their children's use</li>
+                </ul>
+
+                <h2>5. App Functionality and Data</h2>
                 <p>The Application operates entirely on your device with the following characteristics:</p>
                 <ul>
                     <li>All text input and dictation materials are stored locally on your device only</li>
                     <li>Text scanner captures are processed locally and not transmitted to external servers</li>
                     <li>Text scanning functionality requires camera permission for image processing</li>
-                    <li>Camera data is processed using on-device Google ML Kit services</li>
+                    <li>Camera data is processed using on-device ML services</li>
                     <li>The Service Provider is not responsible for any loss of saved dictation materials</li>
                     <li>Users are responsible for backing up their own content</li>
                     <li>The Service Provider makes no guarantees about the accuracy of text-to-speech functionality or text recognition</li>
@@ -368,9 +410,12 @@
                     <li>No data synchronization or cloud backup is provided</li>
                 </ul>
 
-                <h2>Content Responsibility</h2>
+                <h2>6. User Content</h2>
                 <ul>
-                    <li>Users are responsible for all content created and stored in the Application</li>
+                    <li>You retain ownership of all content you create</li>
+                    <li>You grant the Service Provider no rights to your content</li>
+                    <li>All content remains on your device only</li>
+                    <li>You are responsible for content legality and copyright compliance</li>
                     <li>Users are responsible for ensuring they have rights to photograph and scan text materials</li>
                     <li>The Service Provider is not responsible for any copyright violations from user-created content or scanned materials</li>
                     <li>Users should ensure they have rights to use any text they input for dictation purposes</li>
@@ -378,8 +423,32 @@
                     <li>Users must comply with local laws regarding photography and text scanning</li>
                 </ul>
 
-                <h2>App Updates and Modifications</h2>
-                <p>The Service Provider may update the Application at any time. This includes:</p>
+                <h2>7. In-App Purchases</h2>
+                <ul>
+                    <li>The Application offers in-app purchases for additional features</li>
+                    <li>All purchases are processed through Apple App Store or Google Play Store</li>
+                    <li>Prices may vary by region and are subject to change</li>
+                    <li>Purchases are non-transferable between platforms</li>
+                    <li>Refunds are subject to Apple/Google policies</li>
+                </ul>
+
+                <h2>8. Analytics and Advertising</h2>
+                <p>The Application:</p>
+                <ul>
+                    <li>Displays third-party advertisements</li>
+                    <li>Collects anonymous usage analytics</li>
+                    <li>Uses advertising IDs for ad personalization</li>
+                    <li>You can opt-out through device settings</li>
+                </ul>
+
+                <h2>9. App Updates and Modifications</h2>
+                <p>The Service Provider may update the Application at any time. We will notify you of material changes through:</p>
+                <ul>
+                    <li>In-app notifications</li>
+                    <li>Update notices in app stores</li>
+                    <li>Email (if provided for support)</li>
+                </ul>
+                <p>Updates may include:</p>
                 <ul>
                     <li>Changes to available features and functionality</li>
                     <li>Updates to supported languages for dictation and interface</li>
@@ -388,22 +457,25 @@
                     <li>Updates to text recognition functionality and accuracy</li>
                     <li>Security updates and bug fixes</li>
                 </ul>
-                <p>You agree to accept these updates to continue using the Application. Some updates may require additional permissions or change how data is stored locally.</p>
+                <p>Continued use after changes constitutes acceptance. Some updates may require additional permissions or change how data is stored locally.</p>
 
-                <h2>Third-Party Services</h2>
+                <h2>10. Third-Party Services</h2>
                 <p>The Application utilizes the following third-party services:</p>
                 <ul>
-                    <li>Google Play Services for core Android functionality</li>
-                    <li>Google AdMob for advertisement display and management</li>
-                    <li>Google ML Kit for local text recognition and processing</li>
+                    <li>Google Play Services (Android)</li>
+                    <li>Apple iOS Services (iOS)</li>
+                    <li>Google/Apple payment processing</li>
+                    <li>Google AdMob/Apple advertising services</li>
+                    <li>Google ML Kit/Apple Vision (for text recognition)</li>
+                    <li>Firebase Analytics (for anonymous usage analytics)</li>
                 </ul>
                 <p>These services are subject to their own terms and conditions. Users should review the privacy policies and terms of these services independently.</p>
 
-                <h2>Technical Requirements and Limitations</h2>
+                <h2>11. Technical Requirements and Limitations</h2>
                 <ul>
                     <li>The Application requires adequate device storage for local data storage</li>
                     <li>Text scanning functionality requires camera access permission</li>
-                    <li>Some features require an active internet connection for advertisements</li>
+                    <li>Some features require an active internet connection for advertisements and analytics</li>
                     <li>Device performance may affect text recognition accuracy and speed</li>
                     <li>The Service Provider is not responsible for:
                         <ul>
@@ -417,7 +489,7 @@
                     </li>
                 </ul>
 
-                <h2>Limitations of Liability</h2>
+                <h2>12. Limitations of Liability</h2>
                 <p>The Service Provider is not liable for:</p>
                 <ul>
                     <li>Loss of saved dictation materials due to device issues or user actions</li>
@@ -431,18 +503,26 @@
                     <li>Interruptions in service due to device or network issues</li>
                 </ul>
 
-                <h2>Termination</h2>
+                <h2>13. Indemnification</h2>
+                <p>You agree to indemnify and hold harmless the Service Provider from any claims, damages, or expenses arising from your use of the Application or violation of these Terms.</p>
+
+                <h2>14. Termination</h2>
                 <p>The Service Provider may terminate your access to the Application at any time without notice. Upon termination:</p>
                 <ul>
                     <li>All rights granted under these terms will cease immediately</li>
                     <li>You must stop using the Application and delete it from your device</li>
                     <li>All local data may be lost upon application deletion</li>
-                    <li>No refunds will be provided for any paid features (if applicable)</li>
+                    <li>No refunds will be provided for any paid features</li>
                 </ul>
 
-                <div class="effective-date">
-                    These terms and conditions are effective as of 2025-06-11
-                </div>
+                <h2>15. Governing Law and Dispute Resolution</h2>
+                <p>These Terms are governed by the laws of Hong Kong. Any disputes shall be resolved through good faith negotiations, and if necessary, through the courts of Hong Kong.</p>
+
+                <h2>16. Severability</h2>
+                <p>If any provision of these Terms is found to be invalid or unenforceable, the remaining provisions shall continue in full force and effect.</p>
+
+                <h2>17. Entire Agreement</h2>
+                <p>These Terms, together with our Privacy Policy, constitute the entire agreement between you and the Service Provider regarding the use of the Application.</p>
 
                 <div class="contact-info">
                     <h2>Contact Us</h2>
@@ -452,18 +532,38 @@
 
             <div id="content-zh-hant" class="content-section">
                 <h1>服務條款</h1>
+
+                <div class="version-info">
+                    <p><strong>生效日期：</strong>2025年1月1日</p>
+                    <p><strong>最後更新：</strong>2025年1月1日</p>
+                    <p><strong>版本：</strong>1.0</p>
+                </div>
+
                 <p>這些條款和條件適用於由科技有限公司（以下稱為「服務提供商」）創建的DictaOne應用程式（以下稱為「應用程式」），作為廣告支援服務。此服務旨在「按原樣」使用。</p>
 
-                <h2>條款接受</h2>
+                <h2>1. 條款接受</h2>
                 <p>下載或使用應用程式時，您自動同意以下條款。強烈建議您在使用應用程式之前徹底閱讀並理解這些條款。嚴格禁止未經授權複製、修改應用程式、應用程式的任何部分或我們的商標。不允許嘗試提取應用程式的原始碼、將應用程式翻譯成其他語言或創建衍生版本。與應用程式相關的所有商標、版權、資料庫權利和其他智慧財產權仍屬於服務提供商。</p>
 
-                <h2>應用功能和資料</h2>
+                <h2>2. 授權許可</h2>
+                <p>根據這些條款，服務提供商授予您有限的、非專屬的、不可轉讓的、可撤銷的許可，以供個人非商業用途使用應用程式。</p>
+
+                <h2>3. 隱私權</h2>
+                <p>您使用應用程式還受我們的隱私政策約束，該政策描述了我們的資料實踐。使用應用程式即表示您同意這些條款和我們的隱私政策。</p>
+
+                <h2>4. 年齡要求</h2>
+                <ul>
+                    <li>使用者必須年滿13歲才能獨立使用應用程式</li>
+                    <li>13歲以下兒童可在家長監督下使用應用程式</li>
+                    <li>家長負責監督孩子的使用</li>
+                </ul>
+
+                <h2>5. 應用功能和資料</h2>
                 <p>應用程式完全在您的裝置上運行，具有以下特性：</p>
                 <ul>
                     <li>所有文字輸入和聽寫材料僅儲存在您的裝置本機</li>
                     <li>文字掃描器捕獲在本機處理且不傳輸到外部伺服器</li>
                     <li>文字掃描功能需要相機權限進行圖像處理</li>
-                    <li>相機資料使用裝置上的Google ML Kit服務處理</li>
+                    <li>相機資料使用裝置上的機器學習服務處理</li>
                     <li>服務提供商不對任何儲存的聽寫材料的遺失負責</li>
                     <li>使用者負責備份自己的內容</li>
                     <li>服務提供商不保證文字轉語音功能或文字識別的準確性</li>
@@ -471,9 +571,12 @@
                     <li>不提供資料同步或雲端備份</li>
                 </ul>
 
-                <h2>內容責任</h2>
+                <h2>6. 使用者內容</h2>
                 <ul>
-                    <li>使用者對在應用程式中建立和儲存的所有內容負責</li>
+                    <li>您保留所創建的所有內容的所有權</li>
+                    <li>您不授予服務提供商任何內容權利</li>
+                    <li>所有內容僅保留在您的裝置上</li>
+                    <li>您負責內容的合法性和版權合規性</li>
                     <li>使用者負責確保他們有權拍攝和掃描文字材料</li>
                     <li>服務提供商不對使用者建立內容或掃描材料的任何版權違規行為負責</li>
                     <li>使用者應確保他們有權使用任何輸入用於聽寫目的的文字</li>
@@ -481,8 +584,32 @@
                     <li>使用者必須遵守有關攝影和文字掃描的當地法律</li>
                 </ul>
 
-                <h2>應用程式更新和修改</h2>
-                <p>服務提供商可能隨時更新應用程式。這包括：</p>
+                <h2>7. 應用程式內購買</h2>
+                <ul>
+                    <li>應用程式提供應用程式內購買以獲得額外功能</li>
+                    <li>所有購買都透過Apple App Store或Google Play商店處理</li>
+                    <li>價格可能因地區而異並可能發生變化</li>
+                    <li>購買不可在平台之間轉移</li>
+                    <li>退款受Apple/Google政策約束</li>
+                </ul>
+
+                <h2>8. 分析和廣告</h2>
+                <p>應用程式：</p>
+                <ul>
+                    <li>顯示第三方廣告</li>
+                    <li>收集匿名使用分析</li>
+                    <li>使用廣告ID進行廣告個人化</li>
+                    <li>您可以透過裝置設定選擇退出</li>
+                </ul>
+
+                <h2>9. 應用程式更新和修改</h2>
+                <p>服務提供商可能隨時更新應用程式。我們將透過以下方式通知您重大變更：</p>
+                <ul>
+                    <li>應用程式內通知</li>
+                    <li>應用程式商店中的更新通知</li>
+                    <li>電子郵件（如果提供給支援）</li>
+                </ul>
+                <p>更新可能包括：</p>
                 <ul>
                     <li>可用功能和功能性的更改</li>
                     <li>聽寫和介面支援語言的更新</li>
@@ -491,22 +618,25 @@
                     <li>文字識別功能和準確性的更新</li>
                     <li>安全更新和錯誤修復</li>
                 </ul>
-                <p>您同意接受這些更新以繼續使用應用程式。某些更新可能需要額外權限或更改資料在本機的儲存方式。</p>
+                <p>變更後繼續使用即表示接受。某些更新可能需要額外權限或更改資料在本機的儲存方式。</p>
 
-                <h2>第三方服務</h2>
+                <h2>10. 第三方服務</h2>
                 <p>應用程式使用以下第三方服務：</p>
                 <ul>
-                    <li>Google Play服務用於核心Android功能</li>
-                    <li>Google AdMob用於廣告顯示和管理</li>
-                    <li>Google ML Kit用於本機文字識別和處理</li>
+                    <li>Google Play服務（Android）</li>
+                    <li>Apple iOS服務（iOS）</li>
+                    <li>Google/Apple支付處理</li>
+                    <li>Google AdMob/Apple廣告服務</li>
+                    <li>Google ML Kit/Apple Vision（用於文字識別）</li>
+                    <li>Firebase Analytics（用於匿名使用分析）</li>
                 </ul>
                 <p>這些服務受其自己的條款和條件約束。使用者應獨立審查這些服務的隱私政策和條款。</p>
 
-                <h2>技術要求和限制</h2>
+                <h2>11. 技術要求和限制</h2>
                 <ul>
                     <li>應用程式需要足夠的裝置儲存空間用於本機資料儲存</li>
                     <li>文字掃描功能需要相機存取權限</li>
-                    <li>某些功能需要活躍的網際網路連線用於廣告</li>
+                    <li>某些功能需要活躍的網際網路連線用於廣告和分析</li>
                     <li>裝置效能可能影響文字識別準確性和速度</li>
                     <li>服務提供商不對以下情況負責：
                         <ul>
@@ -520,7 +650,7 @@
                     </li>
                 </ul>
 
-                <h2>責任限制</h2>
+                <h2>12. 責任限制</h2>
                 <p>服務提供商不對以下情況負責：</p>
                 <ul>
                     <li>由於裝置問題或使用者操作導致的儲存聽寫材料遺失</li>
@@ -534,18 +664,26 @@
                     <li>由於裝置或網路問題導致的服務中斷</li>
                 </ul>
 
-                <h2>終止</h2>
+                <h2>13. 賠償</h2>
+                <p>您同意賠償並使服務提供商免受因您使用應用程式或違反這些條款而產生的任何索賠、損害或費用的損害。</p>
+
+                <h2>14. 終止</h2>
                 <p>服務提供商可能隨時無通知終止您對應用程式的存取。終止後：</p>
                 <ul>
                     <li>在這些條款下授予的所有權利將立即停止</li>
                     <li>您必須停止使用應用程式並從裝置中刪除它</li>
                     <li>應用程式刪除後可能會遺失所有本機資料</li>
-                    <li>不會為任何付費功能提供退款（如適用）</li>
+                    <li>不會為任何付費功能提供退款</li>
                 </ul>
 
-                <div class="effective-date">
-                    這些條款和條件自2025年6月11日起生效
-                </div>
+                <h2>15. 適用法律和爭議解決</h2>
+                <p>這些條款受香港法律管轄。任何爭議應透過誠意協商解決，如有必要，透過香港法院解決。</p>
+
+                <h2>16. 可分割性</h2>
+                <p>如果這些條款的任何條款被認定為無效或不可執行，其餘條款應繼續完全有效。</p>
+
+                <h2>17. 完整協議</h2>
+                <p>這些條款與我們的隱私政策一起，構成您與服務提供商之間關於使用應用程式的完整協議。</p>
 
                 <div class="contact-info">
                     <h2>聯絡我們</h2>
@@ -555,18 +693,38 @@
 
             <div id="content-zh-hans" class="content-section">
                 <h1>服务条款</h1>
+
+                <div class="version-info">
+                    <p><strong>生效日期：</strong>2025年1月1日</p>
+                    <p><strong>最后更新：</strong>2025年1月1日</p>
+                    <p><strong>版本：</strong>1.0</p>
+                </div>
+
                 <p>这些条款和条件适用于由科技有限公司（在此称为"服务提供商"）创建的DictaOne应用程序（在此称为"应用程序"），作为广告支持服务。此服务旨在"按原样"使用。</p>
 
-                <h2>条款接受</h2>
+                <h2>1. 条款接受</h2>
                 <p>下载或使用应用程序时，您自动同意以下条款。强烈建议您在使用应用程序之前彻底阅读并理解这些条款。严格禁止未经授权复制、修改应用程序、应用程序的任何部分或我们的商标。不允许尝试提取应用程序的源代码、将应用程序翻译成其他语言或创建派生版本。与应用程序相关的所有商标、版权、数据库权利和其他知识产权仍属于服务提供商。</p>
 
-                <h2>应用功能和数据</h2>
+                <h2>2. 授权许可</h2>
+                <p>根据这些条款，服务提供商授予您有限的、非专属的、不可转让的、可撤销的许可，以供个人非商业用途使用应用程序。</p>
+
+                <h2>3. 隐私权</h2>
+                <p>您使用应用程序还受我们的隐私政策约束，该政策描述了我们的数据实践。使用应用程序即表示您同意这些条款和我们的隐私政策。</p>
+
+                <h2>4. 年龄要求</h2>
+                <ul>
+                    <li>用户必须年满13岁才能独立使用应用程序</li>
+                    <li>13岁以下儿童可在家长监督下使用应用程序</li>
+                    <li>家长负责监督孩子的使用</li>
+                </ul>
+
+                <h2>5. 应用功能和数据</h2>
                 <p>应用程序完全在您的设备上运行，具有以下特性：</p>
                 <ul>
                     <li>所有文本输入和听写材料仅存储在您的设备本地</li>
                     <li>文字扫描器捕获在本地处理且不传输到外部服务器</li>
                     <li>文字扫描功能需要相机权限进行图像处理</li>
-                    <li>相机数据使用设备上的Google ML Kit服务处理</li>
+                    <li>相机数据使用设备上的机器学习服务处理</li>
                     <li>服务提供商不对任何保存的听写材料的丢失负责</li>
                     <li>用户负责备份自己的内容</li>
                     <li>服务提供商不保证文本转语音功能或文字识别的准确性</li>
@@ -574,9 +732,12 @@
                     <li>不提供数据同步或云备份</li>
                 </ul>
 
-                <h2>内容责任</h2>
+                <h2>6. 用户内容</h2>
                 <ul>
-                    <li>用户对在应用程序中创建和存储的所有内容负责</li>
+                    <li>您保留所创建的所有内容的所有权</li>
+                    <li>您不授予服务提供商任何内容权利</li>
+                    <li>所有内容仅保留在您的设备上</li>
+                    <li>您负责内容的合法性和版权合规性</li>
                     <li>用户负责确保他们有权拍摄和扫描文字材料</li>
                     <li>服务提供商不对用户创建内容或扫描材料的任何版权违规行为负责</li>
                     <li>用户应确保他们有权使用任何输入用于听写目的的文本</li>
@@ -584,8 +745,32 @@
                     <li>用户必须遵守有关摄影和文字扫描的当地法律</li>
                 </ul>
 
-                <h2>应用程序更新和修改</h2>
-                <p>服务提供商可能随时更新应用程序。这包括：</p>
+                <h2>7. 应用内购买</h2>
+                <ul>
+                    <li>应用程序提供应用内购买以获得额外功能</li>
+                    <li>所有购买都通过Apple App Store或Google Play商店处理</li>
+                    <li>价格可能因地区而异并可能发生变化</li>
+                    <li>购买不可在平台之间转移</li>
+                    <li>退款受Apple/Google政策约束</li>
+                </ul>
+
+                <h2>8. 分析和广告</h2>
+                <p>应用程序：</p>
+                <ul>
+                    <li>显示第三方广告</li>
+                    <li>收集匿名使用分析</li>
+                    <li>使用广告ID进行广告个性化</li>
+                    <li>您可以通过设备设置选择退出</li>
+                </ul>
+
+                <h2>9. 应用程序更新和修改</h2>
+                <p>服务提供商可能随时更新应用程序。我们将通过以下方式通知您重大变更：</p>
+                <ul>
+                    <li>应用内通知</li>
+                    <li>应用商店中的更新通知</li>
+                    <li>电子邮件（如果提供给支持）</li>
+                </ul>
+                <p>更新可能包括：</p>
                 <ul>
                     <li>可用功能和功能性的更改</li>
                     <li>听写和界面支持语言的更新</li>
@@ -594,22 +779,25 @@
                     <li>文字识别功能和准确性的更新</li>
                     <li>安全更新和错误修复</li>
                 </ul>
-                <p>您同意接受这些更新以继续使用应用程序。某些更新可能需要额外权限或更改数据在本地的存储方式。</p>
+                <p>变更后继续使用即表示接受。某些更新可能需要额外权限或更改数据在本地的存储方式。</p>
 
-                <h2>第三方服务</h2>
+                <h2>10. 第三方服务</h2>
                 <p>应用程序使用以下第三方服务：</p>
                 <ul>
-                    <li>Google Play服务用于核心Android功能</li>
-                    <li>Google AdMob用于广告显示和管理</li>
-                    <li>Google ML Kit用于本地文字识别和处理</li>
+                    <li>Google Play服务（Android）</li>
+                    <li>Apple iOS服务（iOS）</li>
+                    <li>Google/Apple支付处理</li>
+                    <li>Google AdMob/Apple广告服务</li>
+                    <li>Google ML Kit/Apple Vision（用于文字识别）</li>
+                    <li>Firebase Analytics（用于匿名使用分析）</li>
                 </ul>
                 <p>这些服务受其自己的条款和条件约束。用户应独立审查这些服务的隐私政策和条款。</p>
 
-                <h2>技术要求和限制</h2>
+                <h2>11. 技术要求和限制</h2>
                 <ul>
                     <li>应用程序需要足够的设备存储空间用于本地数据存储</li>
                     <li>文字扫描功能需要相机访问权限</li>
-                    <li>某些功能需要活动的互联网连接用于广告</li>
+                    <li>某些功能需要活动的互联网连接用于广告和分析</li>
                     <li>设备性能可能影响文字识别准确性和速度</li>
                     <li>服务提供商不对以下情况负责：
                         <ul>
@@ -623,7 +811,7 @@
                     </li>
                 </ul>
 
-                <h2>责任限制</h2>
+                <h2>12. 责任限制</h2>
                 <p>服务提供商不对以下情况负责：</p>
                 <ul>
                     <li>由于设备问题或用户操作导致的保存听写材料丢失</li>
@@ -637,18 +825,26 @@
                     <li>由于设备或网络问题导致的服务中断</li>
                 </ul>
 
-                <h2>终止</h2>
+                <h2>13. 赔偿</h2>
+                <p>您同意赔偿并使服务提供商免受因您使用应用程序或违反这些条款而产生的任何索赔、损害或费用的损害。</p>
+
+                <h2>14. 终止</h2>
                 <p>服务提供商可能随时无通知终止您对应用程序的访问。终止后：</p>
                 <ul>
                     <li>在这些条款下授予的所有权利将立即停止</li>
                     <li>您必须停止使用应用程序并从设备中删除它</li>
                     <li>应用程序删除后可能会丢失所有本地数据</li>
-                    <li>不会为任何付费功能提供退款（如适用）</li>
+                    <li>不会为任何付费功能提供退款</li>
                 </ul>
 
-                <div class="effective-date">
-                    这些条款和条件自2025年6月11日起生效
-                </div>
+                <h2>15. 适用法律和争议解决</h2>
+                <p>这些条款受香港法律管辖。任何争议应通过诚意协商解决，如有必要，通过香港法院解决。</p>
+
+                <h2>16. 可分割性</h2>
+                <p>如果这些条款的任何条款被认定为无效或不可执行，其余条款应继续完全有效。</p>
+
+                <h2>17. 完整协议</h2>
+                <p>这些条款与我们的隐私政策一起，构成您与服务提供商之间关于使用应用程序的完整协议。</p>
 
                 <div class="contact-info">
                     <h2>联系我们</h2>
