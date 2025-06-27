@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <base href="/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>資料刪除要求 - [應用程式名稱] | 科技有限公司</title>
+    <link rel="icon" type="image/png" href="images/Company_Icon.png">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #34495e;
+            --accent-color: #3498db;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --border-color: #e9ecef;
+            --shadow-light: 0 2px 8px rgba(0,0,0,0.08);
+            --shadow-medium: 0 4px 16px rgba(0,0,0,0.12);
+            --danger-color: #e74c3c;
+            --success-color: #27ae60;
+            --warning-color: #f39c12;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 1rem 0;
+            box-shadow: var(--shadow-medium);
+            position: relative;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-left {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .company-title {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin: 0;
+        }
+
+        .company-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+        }
+
+        .company-name {
+            font-size: 1.5em;
+            font-weight: 600;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 12px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+        
+        nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+        }
+
+        .language-selector {
+            display: flex;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            padding: 2px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+        }
+        
+        .language-btn {
+            padding: 8px 14px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            background: transparent;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 13px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            position: relative;
+            min-width: 45px;
+            z-index: 2;
+        }
+        
+        .language-btn.active {
+            background: white;
+            color: var(--primary-color);
+            font-weight: 600;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        
+        .language-btn:hover:not(.active) {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .separator {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 13px;
+            display: flex;
+            align-items: center;
+            padding: 0 4px;
+        }
+
+        .main-content {
+            background: white;
+            padding: 60px 0;
+            margin: 40px 0;
+            border-radius: 24px;
+            box-shadow: var(--shadow-medium);
+            border: 1px solid var(--border-color);
+        }
+
+        .content-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .page-title {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            color: var(--primary-color);
+            font-weight: 700;
+            text-align: center;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .app-info {
+            background: var(--light-bg);
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 1.4em;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+        }
+
+        .icon-local { background: var(--success-color); }
+        .icon-cloud { background: var(--warning-color); }
+        .icon-contact { background: var(--accent-color); }
+
+        .data-category {
+            background: white;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: var(--shadow-light);
+        }
+
+        .category-title {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        .steps-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .steps-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+            padding-left: 40px;
+        }
+
+        .steps-list li:last-child {
+            border-bottom: none;
+        }
+
+        .steps-list li::before {
+            content: counter(step-counter);
+            counter-increment: step-counter;
+            position: absolute;
+            left: 0;
+            top: 12px;
+            background: var(--accent-color);
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9em;
+            font-weight: 600;
+        }
+
+        .steps-list {
+            counter-reset: step-counter;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .contact-email {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 12px 20px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-email:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .timeline-info {
+            background: var(--light-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px;
+            margin-top: 30px;
+        }
+
+        .note {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            color: #856404;
+        }
+
+        .note strong {
+            color: #533301;
+        }
+
+        .content-section {
+            display: none;
+        }
+        
+        .content-section.active {
+            display: block;
+        }
+
+        footer {
+            background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+                align-items: flex-start;
+            }
+
+            .language-selector {
+                align-self: flex-end;
+            }
+            
+            .language-btn {
+                padding: 6px 10px;
+                font-size: 12px;
+                min-width: 35px;
+            }
+
+            .separator {
+                font-size: 12px;
+                padding: 0 3px;
+            }
+
+            .company-title {
+                gap: 10px;
+            }
+
+            .company-icon {
+                width: 32px;
+                height: 32px;
+            }
+
+            .company-name {
+                font-size: 1.5em;
+            }
+
+            .content-wrapper {
+                padding: 0 20px;
+            }
+
+            .page-title {
+                font-size: 2em;
+            }
+
+            .container {
+                padding: 15px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content-wrapper {
+                padding: 0 15px;
+            }
+
+            .page-title {
+                font-size: 1.8em;
+            }
+
+            .steps-list li {
+                padding-left: 35px;
+            }
+
+            .steps-list li::before {
+                width: 20px;
+                height: 20px;
+                font-size: 0.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <h1 class="company-title">
+                        <img src="images/Company_Icon.png" alt="Company Icon" class="company-icon">
+                        <span class="company-name">科技有限公司</span>
+                    </h1>
+                    <nav>
+                        <ul>
+                            <li><a href="/Technology/" class="nav-link nav-home">首頁</a></li>
+                            <li><a href="/Technology/about" class="nav-link nav-about">關於我們</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="language-selector">
+                    <button class="language-btn" data-lang="en">Eng</button>
+                    <span class="separator">|</span>
+                    <button class="language-btn" data-lang="zh-hant">繁</button>
+                    <span class="separator">|</span>
+                    <button class="language-btn" data-lang="zh-hans">简</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="main-content">
+            <div class="content-wrapper">
+
+                <!-- English Content -->
+                <div id="content-en" class="content-section">
+                    <h1 class="page-title">Data Deletion Request</h1>
+                    
+                    <div class="app-info">
+                        <strong>[App Name]</strong> - Multi-language Self-dictation Mobile App<br>
+                        Developed by  Technology Company Limited
+                    </div>
+
+                    <div class="section">
+                        <h2 class="section-title">
+                            <span class="icon icon-local" style="border-radius: 4px;"></span>
+                            Local Data Deletion
+                        </h2>
+                        <div class="data-category">
+                            <div class="category-title">📱 Stored on Your Device</div>
+                            <p>All your practice records, dictation texts, settings, and password-protected content are stored locally on your device.</p>
+                            <p><strong>To delete:</strong> Simply uninstall the app from your device. This will immediately remove all local data.</p>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2 class="section-title">
+                            <span class="icon icon-cloud" style="border-radius: 4px;"></span>
+                            Anonymous Analytics Data
+                        </h2>
+                        <div class="data-category">
+                            <div class="category-title">📊 What We Collect</div>
+                            <p>We collect anonymous device information including:</p>
+                            <ul>
+                                <li>Device type and operating system</li>
+                                <li>App usage statistics (anonymous)</li>
+                                <li>Advertising ID for personalized ads</li>
+                                <li>Crash reports for app improvement</li>
+                            </ul>
+                            
+                            <div class="note">
+                                <strong>Important:</strong> Since this data is anonymous and cannot be linked to specific users, we cannot identify or delete individual user data from our analytics.
+                            </div>
+
+                            <div class="category-title">🔄 Recommended Actions</div>
+                            <ol class="steps-list">
+                                <li>Reset your Advertising ID in device settings:
+                                    <br><strong>iOS:</strong> Settings > Privacy & Security > Apple Advertising > Reset Advertising Identifier
+                                    <br><strong>Android:</strong> Settings > Google > Ads > Reset advertising ID
+                                </li>
+                                <li>Disable personalized ads:
+                                    <br><strong>iOS:</strong> Settings > Privacy & Security > Apple Advertising > Turn off "Personalized Ads"
+                                    <br><strong>Android:</strong> Settings > Google > Ads > Opt out of Ads Personalization
+                                </li>
+                                <li>Uninstall the app to remove all local data</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2 class="section-title">
+                            <span class="icon icon-contact" style="border-radius: 4px;"></span>
+                            Contact Us
+                        </h2>
+                        <div class="contact-info">
+                            <p>If you have questions about data deletion or need assistance:</p>
+                            <a href="mailto:[your-email]" class="contact-email">[your-email]</a>
+                            <p style="margin-top: 15px; font-size: 0.9em; opacity: 0.9;">
+                                Include "Data Deletion Request - [App Name]" in the subject line
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-info">
+                        <h3 style="margin-top: 0; color: var(--primary-color);">⏱️ Processing Timeline</h3>
+                        <ul>
+                            <li><strong>Local Data:</strong> Immediate (upon app deletion)</li>
+                            <li><strong>Analytics Data:</strong> Automatically expires within 90 days</li>
+                            <li><strong>Advertising Data:</strong> Automatically expires within 30 days</li>
+                            <li><strong>Email Response:</strong> 7-14 business days</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Traditional Chinese Content -->
+                <div id="content-zh-hant" class="content-section">
+                    <h1 class="page-title">資料刪除要求</h1>
+                    
+                    <div class="app-info">
+                        <strong>[應用程式名稱]</strong> - 多語言自主聽寫手機應用程式<br>
+                        由科技有限公司開發
+                    </div>
+
+                    <div class="section">
+                        <h2 class="section-title">
+                            <span class="icon icon-local" style="border-radius: 4px;"></span>
+                            本地資料刪除
+                        </h2>
+                        <div class="data-category">
+                            <div class="category-title">📱 儲存在您的裝置上</div>
+                            <p>您的所有練習記錄、聽寫文本、設定和密碼保護內容都儲存在您的裝置本地。</p>
+                            <p><strong>刪除方法：</strong>直接從您的裝置卸載應用程式，這將立即移除所有本地資料。</p>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2 class="section-title">
+                            <span class="icon icon-cloud" style="border-radius: 4px;"></span>
+                            匿名分析資料
+                        </h2>
+                        <div class="data-category">
+                            <div class="category-title">📊 我們收集的資料</div>
+                            <p>我們收集匿名裝置資訊，包括：</p>
+                            <ul>
+                                <li>裝置類型和作業系統</li>
+                                <li>應用程式使用統計（匿名）</li>
+                                <li>用於個人化廣告的廣告ID</li>
+                                <li>用於應用程式改進的當機報告</li>
+                            </ul>
+                            
+                            <div class="note">
+                                <strong>重要提醒：</strong>由於這些資料是匿名的，無法與特定使用者關聯，我們無法識別或從分析中刪除個別使用者資料。
+                            </div>
+
+                            <div class="category-title">🔄 建議操作</div>
+                            <ol class="steps-list">
+                                <li>在裝置設定中重置您的廣告ID：
+                                    <br><strong>iOS：</strong>設定 > 隱私與安全性 > Apple 廣告 > 重置廣告識別符
+                                    <br><strong>Android：</strong>設定 > Google > 廣告 > 重置廣告ID
+                                </li>
+                                <li>停用個人化廣告：
+                                    <br><strong>iOS：</strong>設定 > 隱私與安全性 > Apple 廣告 > 關閉「個人化廣告」
+                                    <br><strong>Android：</strong>設定 > Google > 廣告 > 選擇停用廣告個人化
+                                </li>
+                                <li>卸載應用程式以移除所有本地資料</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2 class="section-title">
+                            <span class="icon icon-contact" style="border-radius: 4px;"></span>
+                            聯絡我們
+                        </h2>
+                        <div class="contact-info">
+                            <p>如果您對資料刪除有疑問或需要協助：</p>
+                            <a href="mailto:[your-email]" class="contact-email">[your-email]</a>
+                            <p style="margin-top: 15px; font-size: 0.9em; opacity: 0.9;">
+                                請在主旨中註明「資料刪除要求 - [應用程式名稱]」
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-info">
+                        <h3 style="margin-top: 0; color: var(--primary-color);">⏱️ 處理時間</h3>
+                        <ul>
+                            <li><strong>本地資料：</strong>立即（卸載應用程式後）</li>
+                            <li><strong>分析資料：</strong>90天內自動過期</li>
+                            <li><strong>廣告資料：</strong>30天內自動過期</li>
+                            <li><strong>電郵回覆：</strong>7-14個工作天</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Simplified Chinese Content -->
+                <div id="content-zh-hans" class="content-section">
+                    <h1 class="page-title">数据删除请求</h1>
+                    
+                    <div class="app-info">
+                        <strong>[应用程序名称]</strong> - 多语言自主听写手机应用程序<br>
+                        由科技有限公司开发
+                    </div>
+
+                    <div class="section">
+                        <h2 class="section-title">
+                            <span class="icon icon-local" style="border-radius: 4px;"></span>
+                            本地数据删除
+                        </h2>
+                        <div class="data-category">
+                            <div class="category-title">📱 存储在您的设备上</div>
+                            <p>您的所有练习记录、听写文本、设置和密码保护内容都存储在您的设备本地。</p>
+                            <p><strong>删除方法：</strong>直接从您的设备卸载应用程序，这将立即删除所有本地数据。</p>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2 class="section-title">
+                            <span class="icon icon-cloud" style="border-radius: 4px;"></span>
+                            匿名分析数据
+                        </h2>
+                        <div class="data-category">
+                            <div class="category-title">📊 我们收集的数据</div>
+                            <p>我们收集匿名设备信息，包括：</p>
+                            <ul>
+                                <li>设备类型和操作系统</li>
+                                <li>应用程序使用统计（匿名）</li>
+                                <li>用于个性化广告的广告ID</li>
+                                <li>用于应用程序改进的崩溃报告</li>
+                            </ul>
+                            
+                            <div class="note">
+                                <strong>重要提醒：</strong>由于这些数据是匿名的，无法与特定用户关联，我们无法识别或从分析中删除个别用户数据。
+                            </div>
+
+                            <div class="category-title">🔄 建议操作</div>
+                            <ol class="steps-list">
+                                <li>在设备设置中重置您的广告ID：
+                                    <br><strong>iOS：</strong>设置 > 隐私与安全性 > Apple 广告 > 重置广告标识符
+                                    <br><strong>Android：</strong>设置 > Google > 广告 > 重置广告ID
+                                </li>
+                                <li>停用个性化广告：
+                                    <br><strong>iOS：</strong>设置 > 隐私与安全性 > Apple 广告 > 关闭「个性化广告」
+                                    <br><strong>Android：</strong>设置 > Google > 广告 > 选择停用广告个性化
+                                </li>
+                                <li>卸载应用程序以删除所有本地数据</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="section">
+                        <h2 class="section-title">
+                            <span class="icon icon-contact" style="border-radius: 4px;"></span>
+                            联系我们
+                        </h2>
+                        <div class="contact-info">
+                            <p>如果您对数据删除有疑问或需要帮助：</p>
+                            <a href="mailto:[your-email]" class="contact-email">[your-email]</a>
+                            <p style="margin-top: 15px; font-size: 0.9em; opacity: 0.9;">
+                                请在主题中注明「数据删除请求 - [应用程序名称]」
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-info">
+                        <h3 style="margin-top: 0; color: var(--primary-color);">⏱️ 处理时间</h3>
+                        <ul>
+                            <li><strong>本地数据：</strong>立即（卸载应用程序后）</li>
+                            <li><strong>分析数据：</strong>90天内自动过期</li>
+                            <li><strong>广告数据：</strong>30天内自动过期</li>
+                            <li><strong>邮件回复：</strong>7-14个工作日</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 <span class="footer-company">科技有限公司</span>. <span class="footer-rights">版權所有</span>. | <a href="/Technology/privacy-policy" class="footer-privacy" style="color: rgba(255, 255, 255, 0.8); text-decoration: none;">Privacy Policy</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Language switching functionality (same as your homepage)
+        const languageButtons = document.querySelectorAll('.language-btn');
+        const contentSections = document.querySelectorAll('.content-section');
+
+        const translations = {
+            'en': {
+                'nav.home': 'Home',
+                'nav.about': 'About Us',
+                'company.name': ' Technology Company Limited',
+                'footer.company': ' Technology Company Limited',
+                'footer.rights': 'All rights reserved',
+                'footer.privacy': 'Privacy Policy'
+            },
+            'zh-hant': {
+                'nav.home': '首頁',
+                'nav.about': '關於我們',
+                'company.name': '科技有限公司',
+                'footer.company': '科技有限公司',
+                'footer.rights': '版權所有',
+                'footer.privacy': '隱私政策'
+            },
+            'zh-hans': {
+                'nav.home': '首页',
+                'nav.about': '关于我们',
+                'company.name': '科技有限公司',
+                'footer.company': '科技有限公司',
+                'footer.rights': '版权所有',
+                'footer.privacy': '隐私政策'
+            }
+        };
+
+        function getDefaultLanguage() {
+            const lang = navigator.language.toLowerCase();
+            if (lang.includes('zh')) {
+                return lang.includes('hant') || lang.includes('tw') || lang.includes('hk') 
+                    ? 'zh-hant' 
+                    : 'zh-hans';
+            }
+            return 'en';
+        }
+
+        function updateTranslations(lang) {
+            const navHome = document.querySelector('.nav-home');
+            const navAbout = document.querySelector('.nav-about');
+            const companyName = document.querySelector('.company-name');
+            const footerCompany = document.querySelector('.footer-company');
+            const footerRights = document.querySelector('.footer-rights');
+            const footerPrivacy = document.querySelector('.footer-privacy');
+            
+            if (navHome) navHome.textContent = translations[lang]['nav.home'];
+            if (navAbout) navAbout.textContent = translations[lang]['nav.about'];
+            if (companyName) companyName.textContent = translations[lang]['company.name'];
+            if (footerCompany) footerCompany.textContent = translations[lang]['footer.company'];
+            if (footerRights) footerRights.textContent = translations[lang]['footer.rights'];
+            if (footerPrivacy) footerPrivacy.textContent = translations[lang]['footer.privacy'];
+        }
+
+        function switchLanguage(lang) {
+            languageButtons.forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+
+            contentSections.forEach(section => {
+                section.classList.toggle('active', section.id === `content-${lang}`);
+            });
+
+            updateTranslations(lang);
+            document.documentElement.lang = lang;
+
+            const titles = {
+                'en': 'Data Deletion Request - [App Name] |  Technology Company Limited',
+                'zh-hant': '資料刪除要求 - [應用程式名稱] | 科技有限公司',
+                'zh-hans': '数据删除请求 - [应用程序名称] | 科技有限公司'
+            };
+            document.title = titles[lang];
+
+            localStorage.setItem('preferred-language', lang);
+        }
+
+        languageButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                switchLanguage(btn.dataset.lang);
+            });
+        });
+
+        const storedLang = localStorage.getItem('preferred-language') || getDefaultLanguage();
+        switchLanguage(storedLang);
+    </script>
+</body>
+</html>
