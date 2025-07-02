@@ -152,7 +152,7 @@
         
         .app-content {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 50px;
             max-width: 1000px;
             margin: 0 auto;
@@ -172,6 +172,7 @@
             font-size: 3em;
             font-weight: bold;
             overflow: hidden;
+            flex-shrink: 0;
         }
 
         .app-icon img {
@@ -197,10 +198,50 @@
         }
         
         .app-description {
-            font-size: 1.2em;
+            font-size: 1.1em;
             color: #5a6c7d;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             line-height: 1.7;
+        }
+
+        .app-detailed-description {
+            font-size: 0.95em;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: var(--light-bg);
+            border-radius: 12px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        .feature-section {
+            margin: 15px 0;
+        }
+
+        .feature-title {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 8px;
+        }
+
+        .feature-list {
+            margin: 10px 0;
+            padding-left: 0;
+        }
+
+        .feature-item {
+            margin: 8px 0;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .feature-item::before {
+            content: "•";
+            color: var(--accent-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
         }
         
         .app-links {
@@ -309,6 +350,7 @@
                 width: 140px;
                 height: 140px;
                 font-size: 2.5em;
+                align-self: center;
             }
             
             .app-title {
@@ -317,6 +359,11 @@
             
             .app-description {
                 font-size: 1.1em;
+            }
+
+            .app-detailed-description {
+                font-size: 0.9em;
+                padding: 15px;
             }
             
             .app-links {
@@ -351,6 +398,11 @@
 
             .company-name {
                 font-size: 1.3em;
+            }
+
+            .app-detailed-description {
+                font-size: 0.85em;
+                padding: 12px;
             }
         }
     </style>
@@ -399,6 +451,32 @@
                             listening and memorizing efficiently. Scan, process, and practice with minimal effort!
                         </p>
                         
+                        <div class="app-detailed-description">
+                            <p>Smart Dictation Assistant is an innovative language learning tool designed for self-learners and parents. Let this intelligent assistant help you save preparation time and focus on learning! Through smart processing, natural voice playback, and flexible learning modes, convert any text into ready-to-use practice materials.</p>
+                            
+                            <div class="feature-section">
+                                <div class="feature-title">Core Function Advantages:</div>
+                                <div class="feature-list">
+                                    <div class="feature-item"><strong>Fast Intelligent Conversion</strong> - Quick scan, instant processing! One-click conversion of textbooks, articles, or any text content into dictation exercises, dramatically reducing preparation time. Parents no longer need to spend hours preparing dictation materials for their children.</div>
+                                    <div class="feature-item"><strong>Smart Text Processing</strong> - Supports text scanning functionality to digitize physical book content, with multiple splitting and editing options for easy customization of practice materials.</div>
+                                    <div class="feature-item"><strong>Natural Voice Playback</strong> - Features natural voice technology providing clear and accurate pronunciation, effectively improving listening comprehension and pronunciation practice.</div>
+                                    <div class="feature-item"><strong>Flexible Learning Modes</strong> - Offers sequential, loop, and random playback modes. Whether preparing for dictation tests or daily practice, efficiently improve pronunciation, listening, and memory skills.</div>
+                                    <div class="feature-item"><strong>Multi-language Learning Support</strong> - Supports multiple language interfaces and content, serving as an ideal companion for learning new languages. Whether studying English, Chinese, or other languages, provides effective dictation practice.</div>
+                                </div>
+                            </div>
+
+                            <div class="feature-section">
+                                <div class="feature-title">Additional Practical Features:</div>
+                                <div class="feature-list">
+                                    <div class="feature-item">Password-protected text hiding functionality</div>
+                                    <div class="feature-item">Comprehensive record management system</div>
+                                    <div class="feature-item">Adjustable playback speed and intervals</div>
+                                </div>
+                            </div>
+
+                            <p>Easy practice, efficient learning! This app perfectly combines smart processing, natural voice, and flexible practice features, providing a comprehensive solution for independent learners and parents supporting their children's education. By simplifying the preparation process and offering diverse learning options, language learning becomes easier and more efficient.</p>
+                        </div>
+                        
                         <!--
                         <div class="app-links">
                             <a href="your-android-app-link" class="store-button" target="_blank">
@@ -429,6 +507,32 @@
                             快速掃描，立即處理，輕鬆練習！
                         </p>
 
+                        <div class="app-detailed-description">
+                            <p>智能聽寫助理是一款創新的語言學習工具，專為自學者和家長而設計。讓這款智能助理幫你節省準備時間，專注學習！透過智慧處理、自然語音播放和靈活的學習模式，將任何文字轉換為隨時可用的練習材料。</p>
+                            
+                            <div class="feature-section">
+                                <div class="feature-title">核心功能優勢：</div>
+                                <div class="feature-list">
+                                    <div class="feature-item"><strong>快速智能轉換</strong> - 快速掃描，立即處理！一鍵將課本、文章或任何文字內容轉換為聽寫練習，大幅節省準備時間。家長不再需要花費大量時間準備孩子的默書材料。</div>
+                                    <div class="feature-item"><strong>智慧文字處理</strong> - 支援文字掃描功能，將實體書本內容數位化，並提供多種分割和編輯選項，讓用戶輕鬆客製化練習內容。</div>
+                                    <div class="feature-item"><strong>自然語音播放</strong> - 採用自然語音技術，提供清晰準確的發音，有效提升聽力理解和發音練習效果。</div>
+                                    <div class="feature-item"><strong>靈活學習模式</strong> - 提供順序播放、循環播放和隨機播放等多種模式，無論是備考聽寫測驗還是日常練習，都能有效率地提升發音、聽力和記憶。</div>
+                                    <div class="feature-item"><strong>多語言學習支援</strong> - 支援多種語言介面和內容，是學習新語言的理想伙伴。無論學習英語、中文或其他語言，都能提供有效的聽寫練習。</div>
+                                </div>
+                            </div>
+
+                            <div class="feature-section">
+                                <div class="feature-title">其他實用功能：</div>
+                                <div class="feature-list">
+                                    <div class="feature-item">密碼保護的文字隱藏功能</div>
+                                    <div class="feature-item">完整的記錄管理系統</div>
+                                    <div class="feature-item">可調整的播放速度和間隔</div>
+                                </div>
+                            </div>
+
+                            <p>輕鬆練習，高效學習！這款應用程式完美結合了智慧處理、自然語音和靈活練習功能，為獨立學習者和支持孩子教育的家長提供全面的解決方案。通過簡化準備過程和提供多樣化的學習選項，讓語言學習變得更加輕鬆高效。</p>
+                        </div>
+
                         <!--
                         <div class="app-links">
                             <a href="your-android-app-link" class="store-button" target="_blank">
@@ -458,6 +562,33 @@
                             无论是备考听写测试还是日常练习，都能高效地提升发音、听力和记忆。
                             快速扫描，立即处理，轻松练习！
                         </p>
+
+                        <div class="app-detailed-description">
+                            <p>智能听写助理是一款创新的语言学习工具，专为自学者和家长而设计。让这款智能助理帮你节省准备时间，专注学习！通过智能处理、自然语音播放和灵活的学习模式，将任何文字转换为随时可用的练习材料。</p>
+                            
+                            <div class="feature-section">
+                                <div class="feature-title">核心功能优势：</div>
+                                <div class="feature-list">
+                                    <div class="feature-item"><strong>快速智能转换</strong> - 快速扫描，立即处理！一键将课本、文章或任何文字内容转换为听写练习，大幅节省准备时间。家长不再需要花费大量时间准备孩子的默书材料。</div>
+                                    <div class="feature-item"><strong>智慧文字处理</strong> - 支持文字扫描功能，将实体书本内容数字化，并提供多种分割和编辑选项，让用户轻松定制练习内容。</div>
+                                    <div class="feature-item"><strong>自然语音播放</strong> - 采用自然语音技术，提供清晰准确的发音，有效提升听力理解和发音练习效果。</div>
+                                    <div class="feature-item"><strong>灵活学习模式</strong> - 提供顺序播放、循环播放和随机播放等多种模式，无论是备考听写测试还是日常练习，都能高效地提升发音、听力和记忆。</div>
+                                    <div class="feature-item"><strong>多语言学习支持</strong> - 支持多种语言界面和内容，是学习新语言的理想伙伴。无论学习英语、中文或其他语言，都能提供有效的听写练习。</div>
+                                </div>
+                            </div>
+
+                            <div class="feature-section">
+                                <div class="feature-title">其他实用功能：</div>
+                                <div class="feature-list">
+                                    <div class="feature-item">密码保护的文字隐藏功能</div>
+                                    <div class="feature-item">完整的记录管理系统</div>
+                                    <div class="feature-item">可调整的播放速度和间隔</div>
+                                </div>
+                            </div>
+
+                            <p>轻松练习，高效学习！这款应用程序完美结合了智能处理、自然语音和灵活练习功能，为独立学习者和支持孩子教育的家长提供全面的解决方案。通过简化准备过程和提供多样化的学习选项，让语言学习变得更加轻松高效。</p>
+                        </div>
+                        
                         <!--
                         <div class="app-links">
                             <a href="your-android-app-link" class="store-button" target="_blank">
